@@ -1,0 +1,7 @@
+@mixin light-box-shadow {
+    box-shadow: 2px 2px 16px -2px;
+}
+
+@mixin light-text-shadow ($power: 1) {
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, .25 * $power);
+}
