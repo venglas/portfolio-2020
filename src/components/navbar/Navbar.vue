@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar">
         <ul class="navbar__menu">
-            <li class="item" v-for="item in menu" :key="item">{{item}}</li>
+            <li class="item" v-for="item in $router.options.routes" :key="item.name">{{item.name}}</li>
         </ul>
     </nav>
 </template>
@@ -9,9 +9,7 @@
 <script>
 export default {
     data(){
-        return {
-            menu: ["About", "Portfolio", "Contact", "Sociales"]       
-        }
+        return {}
     }
 }
 </script>
@@ -40,6 +38,7 @@ export default {
                 transition: text-shadow ease-in-out $TIME_fast;
                 transition: transform ease-in-out 100ms;
                 outline: none;
+                text-transform: capitalize;
                 @include light-text-shadow();
                 &:hover {
                     @include light-text-shadow(2.1);
