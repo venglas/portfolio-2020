@@ -36,8 +36,6 @@ svg {
     padding: 0 2.5rem;
 }
 
-.g-ants {}
-
 .text-copy {
     fill: none;
     stroke: white;
