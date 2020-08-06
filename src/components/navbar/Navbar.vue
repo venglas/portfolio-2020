@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar">
+        <Logo />
         <ul class="navbar__menu">
             <li class="item" v-for="item in $router.options.routes" :key="item.name">{{item.name}}</li>
         </ul>
@@ -7,9 +8,14 @@
 </template>
 
 <script>
+import Logo from "./Logo";
+
 export default {
     data(){
         return {}
+    },
+    components: {
+        Logo
     }
 }
 </script>
@@ -19,7 +25,7 @@ export default {
         width: 100%;
         height: $SIZE_navbar;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         @include light-box-shadow();
 
