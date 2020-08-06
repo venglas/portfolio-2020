@@ -2,7 +2,7 @@
     <nav class="navbar">
         <Logo />
         <ul class="navbar__menu">
-            <li class="item" v-for="item in $router.options.routes" :key="item.name">{{item.name}}</li>
+            <router-link v-for="item in $router.options.routes" :key="item.name" :to="item.path" tag="li" class="item">{{item.name}}</router-link>
         </ul>
     </nav>
 </template>
@@ -16,11 +16,38 @@ export default {
     },
     components: {
         Logo
+    },
+    created(){
+        console.log(this.$router);
+        
+        
     }
 }
 </script>
 
 <style lang="scss" scoped>
+    .router-active-link {
+        &::after {
+            content: '';
+            display: block;
+            margin: -2.5px 0 0 -1rem;
+            height: 2.5px;
+            background: #000;
+            transition: width .3s;
+            animation-name: activeLink;
+            animation-duration: $TIME_fast;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes activeLink {
+            from {
+                width: 0%;
+            }
+            to {
+                width: calc(100% + 2rem);
+            }
+        }
+    }
     .navbar {
         width: 100%;
         height: $SIZE_navbar;
@@ -36,8 +63,7 @@ export default {
             list-style-type: none;
             margin: 0 1rem;
             .item {
-                margin: 0 1rem;
-                padding: 0 1rem;
+                padding: 0 2rem;
                 line-height: $SIZE_navbar;
                 height: 100%;
                 cursor: pointer;
