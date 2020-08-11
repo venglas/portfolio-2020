@@ -17,8 +17,10 @@ export default {
       showInfoRequiredRoutes: {
         PORTFOLIO: "portfolio",
         CONTACT: "contact",
+        ABOUT: "about",
         portfolio: 0,
-        contact: 0
+        contact: 0,
+        about: 0
       }
     }
   },
@@ -33,18 +35,12 @@ export default {
     '$route'() {
       if (this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO || this.$route.name === this.showInfoRequiredRoutes.CONTACT)
       this.visitedRoutes.push(this.$route.name);
-      if( this.$route === this.showInfoRequiredRoutes.PORTFOLIO ) this.showInfoRequiredRoutes.portfolio++;
-      if( this.$route === this.showInfoRequiredRoutes.CONTACT ) this.showInfoRequiredRoutes.contact++;
-      if( this.showInfoRequiredRoutes.portfolio > 0 && this.showInfoRequiredRoutes.contact > 0 ) {
-        console.log(1232);
-        
-        this.showContactInfo()
+      if( this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO ) this.showInfoRequiredRoutes.portfolio++;
+      if( this.$route.name === this.showInfoRequiredRoutes.CONTACT ) this.showInfoRequiredRoutes.contact++;
+      if( this.$route.name === this.showInfoRequiredRoutes.ABOUT ) this.showInfoRequiredRoutes.about++;
+      if( this.showInfoRequiredRoutes.portfolio > 0 && this.showInfoRequiredRoutes.contact > 0 && this.showInfoRequiredRoutes.about > 0 && !this.getContactInfo ) {
+        this.showContactInfo();
       };
-    },
-    getContactInfo() {
-      console.log(123);
-        
-      
     }
   },
   methods: {
