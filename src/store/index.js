@@ -5,8 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    contactInfo: false
   },
   mutations: {
+    showContactInfo: state => state.contactInfo = true
+  },
+  getters: {
+    getContactInfo: state => state.contactInfo
   },
   actions: {
   },
