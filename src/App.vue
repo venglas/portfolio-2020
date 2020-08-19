@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <Navbar />
-    <router-view/>
+    <router-view class="router-view"/>
   </div>
 </template>
 
@@ -64,5 +64,25 @@ body {
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
+}
+.app {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.router-view {
+  background-color: red;
+  height: calc(100vh - #{$SIZE_navbar});
+  width: 100%;
+  z-index: $SIZE_router-view-index;
+  top: $SIZE_navbar;
+  animation-name: routerEnter;
+  animation-duration: $TIME_fast;
+  animation-timing-function: ease-in-out;
+  animation-play-state: infinite;
+}
+
+@keyframes routerEnter {
+  from {transform: translateY(100%);}
+  to {transform: translateY(0%);}
 }
 </style>

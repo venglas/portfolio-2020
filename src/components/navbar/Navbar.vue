@@ -28,6 +28,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: $SIZE_header-index;
     @include light-box-shadow();
 
     &__menu {
@@ -41,7 +42,7 @@ export default {
             line-height: $SIZE_navbar;
             height: 100%;
             cursor: pointer;
-            transition: text-shadow ease-in-out $TIME_fast;
+            transition: text-shadow ease-in-out $TIME_fast-max;
             transition: transform ease-in-out 100ms;
             outline: none;
             text-transform: capitalize;
@@ -64,7 +65,7 @@ export default {
         background: #000;
         transition: width .3s;
         animation-name: activeLink;
-        animation-duration: $TIME_fast;
+        animation-duration: $TIME_fast-max;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
