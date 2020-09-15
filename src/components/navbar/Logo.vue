@@ -1,6 +1,6 @@
 <template>
     <div class="logo">
-        <svg viewBox="0 0 960 300">
+        <svg viewBox="0 0 960 300" :class="{ 'mobile-menu-open': getIsMobileMenuOpen }">
             <symbol id="s-text">
                 <text text-anchor="middle" x="50%" y="50%">Space Code</text>
             </symbol>
@@ -17,23 +17,37 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+import { mapGetters } from "vuex";
+
+export default {
+    computed: {
+        ...mapGetters('app', ['getIsMobileMenuOpen'])
+    }    
+}
 </script>
 
 <style lang="scss" scoped>
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .logo {
-    margin-top: 2rem;;
+    margin-top: 2rem;
+    @media (max-width: $MEDIUM_mobile2) {
+        align-self: flex-start;
+    }
 }
 
 svg {
     display: block;
     font: 17rem 'Montserrat';
-    height: $SIZE_navbar;
     padding: 0 2.5rem;
+    height: $SIZE_navbar;
+    @media (max-width: $MAX_mobile) and (min-width: $MEDIUM_mobile2) {
+        height: $SIZE_navbar * 1.1;
+    }
+}
+
+.mobile-menu-open {
+    height: $SIZE_navbar * 1.5;
 }
 
 .text-copy {

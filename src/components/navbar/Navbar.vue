@@ -36,6 +36,14 @@ export default {
         height: 100%;
         list-style-type: none;
         margin: 0 1rem;
+        @media (max-width: $MAX_mobile) {
+            font-size: 1.7rem;
+        }
+        @media (max-width: $MEDIUM_mobile) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .item {
             padding: 0 2rem;
             line-height: $SIZE_navbar;
