@@ -12,17 +12,7 @@ import Navbar from "./components/navbar/Navbar";
 export default {
   name: "App",
   data() {
-    return {
-      visitedRoutes: [],
-      showInfoRequiredRoutes: {
-        PORTFOLIO: "portfolio",
-        CONTACT: "contact",
-        ABOUT: "about",
-        portfolio: 0,
-        contact: 0,
-        about: 0
-      }
-    }
+    return {}
   },
   components: {
     Navbar
@@ -31,20 +21,20 @@ export default {
     ...mapGetters(['getContactInfo'])
   },
   beforeCreate() {},
+  created() {
+    window.addEventListener('resize', this.detectMobileView);
+    this.detectMobileView();
+  },
   watch: {
-    '$route'() {
-      if (this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO || this.$route.name === this.showInfoRequiredRoutes.CONTACT)
-      this.visitedRoutes.push(this.$route.name);
-      if( this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO ) this.showInfoRequiredRoutes.portfolio++;
-      if( this.$route.name === this.showInfoRequiredRoutes.CONTACT ) this.showInfoRequiredRoutes.contact++;
-      if( this.$route.name === this.showInfoRequiredRoutes.ABOUT ) this.showInfoRequiredRoutes.about++;
-      if( this.showInfoRequiredRoutes.portfolio > 0 && this.showInfoRequiredRoutes.contact > 0 && this.showInfoRequiredRoutes.about > 0 && !this.getContactInfo ) {
-        this.showContactInfo();
-      };
-    }
+    '$route'() {},
   },
   methods: {
-    ...mapMutations(['showContactInfo'])
+    ...mapMutations('app', ['setMobileView', 'unsetMobileView']),
+
+    detectMobileView() {
+      if( window.innerWidth < 720) this.setMobileView();
+      else this.unsetMobileView();
+    }
   }
 }
 </script>
@@ -70,7 +60,7 @@ body {
   overflow-y: hidden;
 }
 .router-view {
-  background-color: red;
+  background-color: gray;
   height: calc(100vh - #{$SIZE_navbar});
   width: 100%;
   z-index: $SIZE_router-view-index;

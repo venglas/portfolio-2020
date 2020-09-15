@@ -1,27 +1,26 @@
 <template>
-    <nav class="navbar">
-        <Logo />
-        <ul class="navbar__menu">
-            <router-link v-for="item in $router.options.routes" :key="item.name" :to="item.path" tag="li" class="item">{{item.name}}</router-link>
-        </ul>
-    </nav>
+  <component :is="getMobileView ? 'Navbar-mobile' : 'Navbar-web'"/>
 </template>
 
 <script>
-import Logo from "./Logo";
+import { mapGetters } from "vuex";
+
+import NavbarWeb from "./NavbarWeb";
+import NavbarMobile from "./NavbarMobile";
 
 export default {
-    data(){
-        return {}
-    },
     components: {
-        Logo
+        "Navbar-web": NavbarWeb,
+        "Navbar-mobile": NavbarMobile
     },
-    created(){}
+    
+    computed: {
+        ...mapGetters('app', ['getMobileView'])
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navbar {
     width: 100%;
     height: $SIZE_navbar;
