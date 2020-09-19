@@ -1,10 +1,9 @@
-// TODO: fix routing
 <template>
     <ul class="navbar__menu">
-        <router-link 
-            v-for="item in $router.options.routes[0].children" 
+        <router-link
+            v-for="item in $router.options.routes[1].children" 
             :key="item.name" 
-            :to="item.path" 
+            :to="{name: item.name, params: {lang: locale}}"
             tag="li" 
             class="item"
         >
@@ -14,9 +13,11 @@
 </template>
 
 <script>
+import i18n from "../../i18n";
+
 export default {
-    created() {
-        console.log(this.$router.options.routes);
+    computed: {
+        locale: () => `${i18n.locale}`
     }
 }
 </script>
