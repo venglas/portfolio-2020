@@ -60,14 +60,13 @@ body {
   overflow-y: hidden;
 }
 .router-view {
-  background-color: gray;
   height: calc(100vh - #{$SIZE_navbar});
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
   animation-name: routerEnter;
   animation-duration: $TIME_fast;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   animation-play-state: infinite;
 }
 
