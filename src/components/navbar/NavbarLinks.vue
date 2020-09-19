@@ -1,3 +1,4 @@
+// TODO: fix routing
 <template>
     <ul class="navbar__menu">
         <router-link 
