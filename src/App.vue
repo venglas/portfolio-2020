@@ -2,12 +2,14 @@
   <div id="app" class="app">
     <Navbar />
     <router-view class="router-view"/>
+    <Language-switcher />
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/navbar/Navbar";
+import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 
 export default {
   name: "App",
@@ -15,7 +17,8 @@ export default {
     return {}
   },
   components: {
-    Navbar
+    Navbar,
+    "Language-switcher": LanguageSwitcher
   },
   computed: {
     ...mapGetters(['getContactInfo'])
