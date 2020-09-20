@@ -2,6 +2,7 @@
   <div id="app" class="app">
     <Navbar />
     <router-view class="router-view"/>
+    <Language-info-modal />
     <Language-switcher />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/navbar/Navbar";
 import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
+import LanguageInfoModal from "./components/language-switcher/InfoModal";
 
 export default {
   name: "App",
@@ -18,7 +20,8 @@ export default {
   },
   components: {
     Navbar,
-    "Language-switcher": LanguageSwitcher
+    "Language-switcher": LanguageSwitcher,
+    "Language-info-modal": LanguageInfoModal
   },
   computed: {
     ...mapGetters(['getContactInfo'])
