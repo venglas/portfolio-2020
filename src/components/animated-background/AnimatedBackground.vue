@@ -26,10 +26,6 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
 .wrapper {
     display: flex;
@@ -41,6 +37,8 @@ export default {};
 .slot-wrapper {
   z-index: 999;
   position: absolute;
+  text-align: center;
+  font-size: 2rem;
 }
 
 @keyframes move_wave {

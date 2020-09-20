@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Animated-background> 
-      <h1>Elo</h1>
+      <div v-for="(text, i) in $t('home.hello')" v-html="text" :key="i"/>
     </Animated-background>
   </div>
 </template>

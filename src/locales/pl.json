@@ -1,3 +1,10 @@
 {
-    "message": "siema i18n !!"
-  }
+    "message": "siema i18n !!",
+    "home": {
+        "hello": [
+            "<h1>Cześć, Mam na imię Bartek</h1>",
+            "<h2>Znajdziesz tutaj projekty zrealizowane przeze mnie</h2>",
+            "<h3>Oraz ktrótkie przedstawienie moich umijętności</h3>"
+        ]
+    }
+}

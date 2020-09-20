@@ -1,3 +1,10 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "home": {
+    "hello": [
+      "<h1>Hello, I'm Bartek</h1>",
+      "<h2>You can find here my projects</h2>",
+      "<h3>And short presentation of my skills</h3>"
+    ]
+  }
 }
