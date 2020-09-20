@@ -1,7 +1,7 @@
 <template>
   <div class="language-info-modal" v-if="showInfo">
     <p class="language-info-modal__info-text">
-        Tutaj mozesz wybrać język strony
+        {{$t('home.languageModalInfo')}}
     </p>
     
     <img src="../../assets/img/icons/arrow.png" alt="jumping arrow" class="img img--arrow">
@@ -29,7 +29,6 @@ methods: {
     },
     createCookieTime(days) {
         const day = 1000*36000;
-
         const now = new Date();
         const time = now.getTime();
         const expireTime = time + day * days;
