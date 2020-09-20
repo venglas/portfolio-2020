@@ -13,19 +13,20 @@
 
 <script>
 export default {
-    methods: {
-        changeRouterParam() {
-            this.$router.push({params: {lang: this.$i18n.locale}})
-        }
+  methods: {
+    changeRouterParam() {
+      this.$router.push({params: {lang: this.$i18n.locale}})
     }
+  }
 }
 </script>
 
 <style lang="scss">
 .language-switcher {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: $size_z-max;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: $size_z-max;
+  width: $SIZE_language-selector-width;
 }
 </style>
