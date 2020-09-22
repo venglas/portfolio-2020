@@ -5,16 +5,16 @@
     </div>
 
     <div class="wave-wrapper wave-animation">
-      <div class="wave-wrapper__inner bgTop">
-        <div class="wave waveTop"></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--top">
+        <div class="wave wave-top"></div>
       </div>
 
-      <div class="wave-wrapper__inner bgMiddle">
-        <div class="wave waveMiddle"></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--middle">
+        <div class="wave wave-middle"></div>
       </div>
 
-      <div class="wave-wrapper__inner bgBottom">
-        <div class="wave waveBottom"></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--bottom">
+        <div class="wave wave-bottom"></div>
       </div>
     </div>
   </div>
@@ -51,6 +51,16 @@
       bottom: -1px;
       background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
 
+      &--top {
+        z-index: 15;
+        opacity: 0.5;
+      }
+      &--middle {
+        z-index: 10;
+        opacity: 0.75;
+      }
+      &--bottom { z-index: 5; }
+
       .wave {
         position: absolute;
         left: 0;
@@ -62,35 +72,25 @@
       }
     }
   }
+  .wave-animation {
+    .wave-top {
+      animation: move-wave 3s;
+      background-size: 50% 100px;
+      animation-delay: 1s;
+      background-image: url('../../assets/img/background/wave-top.png');
+    }
+    .wave-middle {
+      animation: move_wave 10s linear infinite;
+      background-size: 50% 120px;
+      background-image: url('../../assets/img/background/wave-mid.png');
+    }
+    .wave-bottom {
+      animation: move_wave 15s linear infinite;
+      background-size: 50% 100px;
+      background-image: url('../../assets/img/background/wave-bot.png');
+    }
+  }
 }
-.wave-animation .waveTop {
-  animation: move-wave 3s;
-  -webkit-animation: move-wave 3s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  background-image: url('../../assets/img/background/wave-top.png');
-}
-.waveMiddle { background-size: 50% 120px; }
-.wave-animation .waveMiddle { 
-  animation: move_wave 10s linear infinite; 
-  background-image: url('../../assets/img/background/wave-mid.png');
-}
-.waveBottom { 
-  background-size: 50% 100px;
-  background-image: url('../../assets/img/background/wave-bot.png');
-}
-.wave-animation .waveBottom { animation: move_wave 15s linear infinite; }
-
-.bgTop {
-  z-index: 15;
-  opacity: 0.5;
-}
-.bgMiddle {
-  z-index: 10;
-  opacity: 0.75;
-}
-.bgBottom { z-index: 5; }
-.waveTop { background-size: 50% 100px; }
 
 @keyframes move_wave {
   0% {
