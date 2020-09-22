@@ -8,11 +8,9 @@
       <div class="wave-wrapper__inner wave-wrapper__inner--top">
         <div class="wave wave-top"></div>
       </div>
-
       <div class="wave-wrapper__inner wave-wrapper__inner--middle">
         <div class="wave wave-middle"></div>
       </div>
-
       <div class="wave-wrapper__inner wave-wrapper__inner--bottom">
         <div class="wave wave-bottom"></div>
       </div>
@@ -33,7 +31,6 @@
     text-align: center;
     font-size: 2rem;
   }
-
   .wave-wrapper {
     overflow: hidden;
     position: absolute;
@@ -41,8 +38,7 @@
     right: 0;
     bottom: 0;
     top: $SIZE_navbar;
-    margin: auto;
-    
+    margin: auto; 
     &__inner {
       position: absolute;
       width: 100%;
@@ -50,7 +46,6 @@
       height: 100%;
       bottom: -1px;
       background-image: linear-gradient(to top, $COLOR_animated-bg-1 20%, $COLOR_animated-bg-2 80%);
-
       &--top {
         z-index: 15;
         opacity: 0.5;
@@ -60,7 +55,6 @@
         opacity: 0.75;
       }
       &--bottom { z-index: 5; }
-
       .wave {
         position: absolute;
         left: 0;
