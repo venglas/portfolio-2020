@@ -6,24 +6,15 @@
 
     <div class="wave-wrapper wave-animation">
       <div class="wave-wrapper__inner bgTop">
-        <div
-          class="wave waveTop"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"
-        ></div>
+        <div class="wave waveTop"></div>
       </div>
 
       <div class="wave-wrapper__inner bgMiddle">
-        <div
-          class="wave waveMiddle"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"
-        ></div>
+        <div class="wave waveMiddle"></div>
       </div>
 
       <div class="wave-wrapper__inner bgBottom">
-        <div
-          class="wave waveBottom"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"
-        ></div>
+        <div class="wave waveBottom"></div>
       </div>
     </div>
   </div>
@@ -77,10 +68,17 @@
   -webkit-animation: move-wave 3s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  background-image: url('../../assets/img/background/wave-top.png');
 }
 .waveMiddle { background-size: 50% 120px; }
-.wave-animation .waveMiddle { animation: move_wave 10s linear infinite; }
-.waveBottom { background-size: 50% 100px; }
+.wave-animation .waveMiddle { 
+  animation: move_wave 10s linear infinite; 
+  background-image: url('../../assets/img/background/wave-mid.png');
+}
+.waveBottom { 
+  background-size: 50% 100px;
+  background-image: url('../../assets/img/background/wave-bot.png');
+}
 .wave-animation .waveBottom { animation: move_wave 15s linear infinite; }
 
 .bgTop {
