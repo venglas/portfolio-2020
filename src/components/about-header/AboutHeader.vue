@@ -1,19 +1,27 @@
 <template>
     <header class="header">
         <Skill>
-            <img src="../../assets/img/icons/responsive.png" class="img img--skill">
+            <template v-slot:img>
+                <img src="../../assets/img/icons/responsive.png" class="img img--skill">
+            </template>
         </Skill>
 
         <Skill>
-            <img src="../../assets/img/icons/dynamic.png" class="img img--skill">
+            <template v-slot:img>
+                <img src="../../assets/img/icons/dynamic.png" class="img img--skill">
+            </template>
         </Skill>
 
         <Skill>
-            <img src="../../assets/img/icons/clear.png" class="img img--skill">
+            <template v-slot:img>
+                <img src="../../assets/img/icons/clear.png" class="img img--skill">
+            </template>
         </Skill>
 
         <Skill>
-            <img src="../../assets/img/icons/precise.png" class="img img--skill">
+            <template v-slot:img>
+                <img src="../../assets/img/icons/precise.png" class="img img--skill">
+            </template>
         </Skill>
     </header>
 </template>
