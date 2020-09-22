@@ -7,5 +7,31 @@
       "<h3>And short presentation of my skills</h3>"
     ],
     "languageModalInfo": "Here you can choose site language"
+  },
+  "about": {
+    "header": {
+      "skills": [
+        {
+          "img": "responsive",
+          "title": "Responsive",
+          "description": "Websites and apps are compatible with any device size."
+        },
+        {
+          "img": "dynamic",
+          "title": "Dynamic",
+          "description": "Websites haven't to be static. Reactive web application - this is what i love!"
+        },
+        {
+          "img": "clear",
+          "title": "Purity",
+          "description": "Code that I write is pure and friendly with other developers."
+        },
+        {
+          "img": "precise",
+          "title": "Precise",
+          "description": "I implement each solution with care and precision."
+        }
+      ]
+    }
   }
 }

@@ -1,58 +1,16 @@
 <template>
     <header class="header">
-        <Skill>
+        <Skill v-for="(skill, i) in $t('about.header.skills')" :key="i">
             <template v-slot:skillImg>
-                <img src="../../assets/img/icons/responsive.png" class="img img--skill">
+                <img :src="require(`../../assets/img/icons/${skill.img}.png`)" class="img img--skill">
             </template>
 
             <template v-slot:skillTitle>
-                <h2>Responsywność</h2>
+                <h2>{{skill.title}}</h2>
             </template>
 
             <template v-slot:skillDescription>
-                Projekty dopasowywuje do wszystkich rozmiarów urządzeń.
-            </template>
-        </Skill>
-
-        <Skill>
-            <template v-slot:skillImg>
-                <img src="../../assets/img/icons/dynamic.png" class="img img--skill">
-            </template>
-
-            <template v-slot:skillTitle>
-                <h2>Dynamiczność</h2>
-            </template>
-
-            <template v-slot:skillDescription>
-                Strony nie muszą być statyczne! Reaktywne aplikacje webowe to jest to co lubię
-            </template>
-        </Skill>
-
-        <Skill>
-            <template v-slot:skillImg>
-                <img src="../../assets/img/icons/clear.png" class="img img--skill">
-            </template>
-
-            <template v-slot:skillTitle>
-                <h2>Czystość</h2>
-            </template>
-
-            <template v-slot:skillDescription>
-                Kod który wychodzi spod moich rąk jest czysty, pozbawiony bałaganu.
-            </template>
-        </Skill>
-
-        <Skill>
-            <template v-slot:skillImg>
-                <img src="../../assets/img/icons/precise.png" class="img img--skill">
-            </template>
-
-            <template v-slot:skillTitle>
-                <h2>Precyzyjność</h2>
-            </template>
-
-            <template v-slot:skillDescription>
-                Kazde stosowane przeze mnie rozwiązanie staram się wdrazać z pieczołowitością i precyzją.
+                {{skill.description}}
             </template>
         </Skill>
     </header>
