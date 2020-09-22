@@ -7,5 +7,31 @@
             "<h3>Oraz ktrótkie przedstawienie moich umijętności</h3>"
         ],
         "languageModalInfo": "Tutaj mozesz wybrać język strony"
+    },
+    "about": {
+        "header": {
+            "skills": [
+                {
+                    "img": "responsive",
+                    "title": "Responsywność",
+                    "description": "Strony i aplikacje są kompatybilne z każdym rozmiarem urządzeń."
+                },
+                {
+                    "img": "dynamic",
+                    "title": "Dynamiczność",
+                    "description": "Strony nie muszą być statyczne! Reaktywne aplikacje webowe to jest to co lubię."
+                },
+                {
+                    "img": "clear",
+                    "title": "Czystość",
+                    "description": "Kod który piszę jest schludny i przyjazny dla innych developerów."
+                },
+                {
+                    "img": "precise",
+                    "title": "Precyzyjność",
+                    "description": "Kazde stosowane przeze mnie rozwiązanie wdrazam z pieczołowitością i precyzją."
+                }
+            ]
+        }
     }
 }
