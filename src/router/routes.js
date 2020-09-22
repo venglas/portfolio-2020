@@ -1,4 +1,4 @@
-import home from "../views/Home.vue"
+import home from "../views/home.vue"
 import about from "../views/about.vue"
 import portfolio from "../views/portfolio.vue"
 import contact from "../views/contact.vue"

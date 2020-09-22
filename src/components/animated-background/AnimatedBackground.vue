@@ -5,25 +5,14 @@
     </div>
 
     <div class="wave-wrapper wave-animation">
-      <div class="wave-wrapper__inner bgTop">
-        <div
-          class="wave waveTop"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"
-        ></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--top">
+        <div class="wave wave-top"></div>
       </div>
-
-      <div class="wave-wrapper__inner bgMiddle">
-        <div
-          class="wave waveMiddle"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"
-        ></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--middle">
+        <div class="wave wave-middle"></div>
       </div>
-
-      <div class="wave-wrapper__inner bgBottom">
-        <div
-          class="wave waveBottom"
-          style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"
-        ></div>
+      <div class="wave-wrapper__inner wave-wrapper__inner--bottom">
+        <div class="wave wave-bottom"></div>
       </div>
     </div>
   </div>
@@ -42,7 +31,6 @@
     text-align: center;
     font-size: 2rem;
   }
-
   .wave-wrapper {
     overflow: hidden;
     position: absolute;
@@ -50,16 +38,23 @@
     right: 0;
     bottom: 0;
     top: $SIZE_navbar;
-    margin: auto;
-    
+    margin: auto; 
     &__inner {
       position: absolute;
       width: 100%;
       overflow: hidden;
       height: 100%;
       bottom: -1px;
-      background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
-
+      background-image: linear-gradient(to top, $COLOR_animated-bg-1 20%, $COLOR_animated-bg-2 80%);
+      &--top {
+        z-index: 15;
+        opacity: 0.5;
+      }
+      &--middle {
+        z-index: 10;
+        opacity: 0.75;
+      }
+      &--bottom { z-index: 5; }
       .wave {
         position: absolute;
         left: 0;
@@ -71,28 +66,25 @@
       }
     }
   }
+  .wave-animation {
+    .wave-top {
+      animation: move-wave 3s;
+      background-size: 50% 100px;
+      animation-delay: 1s;
+      background-image: url('../../assets/img/background/wave-top.png');
+    }
+    .wave-middle {
+      animation: move_wave 10s linear infinite;
+      background-size: 50% 120px;
+      background-image: url('../../assets/img/background/wave-mid.png');
+    }
+    .wave-bottom {
+      animation: move_wave 15s linear infinite;
+      background-size: 50% 100px;
+      background-image: url('../../assets/img/background/wave-bot.png');
+    }
+  }
 }
-.wave-animation .waveTop {
-  animation: move-wave 3s;
-  -webkit-animation: move-wave 3s;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-.waveMiddle { background-size: 50% 120px; }
-.wave-animation .waveMiddle { animation: move_wave 10s linear infinite; }
-.waveBottom { background-size: 50% 100px; }
-.wave-animation .waveBottom { animation: move_wave 15s linear infinite; }
-
-.bgTop {
-  z-index: 15;
-  opacity: 0.5;
-}
-.bgMiddle {
-  z-index: 10;
-  opacity: 0.75;
-}
-.bgBottom { z-index: 5; }
-.waveTop { background-size: 50% 100px; }
 
 @keyframes move_wave {
   0% {
