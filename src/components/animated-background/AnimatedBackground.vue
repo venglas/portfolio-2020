@@ -49,7 +49,7 @@
       overflow: hidden;
       height: 100%;
       bottom: -1px;
-      background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+      background-image: linear-gradient(to top, $COLOR_animated-bg-1 20%, $COLOR_animated-bg-2 80%);
 
       &--top {
         z-index: 15;
