@@ -1,7 +1,9 @@
 <template>
     <div class="skill">
         <div class="skill__img-wrapper">
-            <slot name="skillImg"/>
+            <Hexagen-wrapper>
+                <slot name="skillImg"/>
+            </Hexagen-wrapper>
         </div>
         <div class="skill__description">
             <header class="header">
@@ -15,6 +17,16 @@
     </div>
 </template>
 
+<script>
+import HexagenWrapper from "./HexagenWrapper";
+
+export default {
+    components: {
+        "Hexagen-wrapper": HexagenWrapper
+    }
+}
+</script>
+
 <style lang="scss">
 .skill {
     min-width: 250px;
@@ -23,14 +35,6 @@
     align-items: center;
 
     &__img-wrapper {
-        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-        background-color: $COLOR_about-header-skill-bg;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         .img {
             &--skill {
                 filter: invert(.7);
