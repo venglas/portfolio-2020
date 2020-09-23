@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <Single-skill v-for="(skill, i) in skills" :key="i">
+        <Single-skill v-for="skill in skills" :key="skill.title">
             <template v-slot:skillImg>
                 <img :src="img(skill.img)" class="img img--skill">
             </template>
