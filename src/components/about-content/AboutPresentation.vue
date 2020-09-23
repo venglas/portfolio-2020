@@ -1,5 +1,15 @@
 <template>
     <div>
-        <h1>elo</h1>
+        
     </div>
 </template>
+
+<script>
+import OctagonWrapper from "../about-header/OctagonWrapper";
+
+export default {
+    components: {
+        'Octagon-wrapper': OctagonWrapper
+    }    
+}
+</script>
