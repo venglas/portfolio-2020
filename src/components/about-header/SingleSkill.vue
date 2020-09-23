@@ -59,6 +59,9 @@ export default {
         align-items: center;
         font-size: $SIZE_small-font;
         text-align: center;
+        .description {
+            @include space-h-padding-small;
+        }
     }
     
 }

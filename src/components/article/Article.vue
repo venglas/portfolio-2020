@@ -4,15 +4,9 @@
     </article>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
 <style lang="scss">
 .article {
-    width: 55%;
+    width: 75%;
     margin: 5rem auto;
 }
 </style>
