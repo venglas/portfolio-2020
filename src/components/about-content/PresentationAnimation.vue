@@ -47,21 +47,21 @@
       </g>
       <g id="Frame 1">
         <g id="table-text">
-          <rect id="table-text1" x="332" y="67" width="138" height="7" fill="#C4C4C4" />
-          <rect id="table-text2" x="332" y="118" width="95" height="7" fill="#C4C4C4" />
-          <rect id="table-text3" x="332" y="153" width="120" height="7" fill="#C4C4C4" />
-          <rect id="table-text4" x="332" y="135" width="109" height="7" fill="#C4C4C4" />
-          <rect id="table-text5" x="332" y="101" width="130" height="7" fill="#C4C4C4" />
-          <rect id="table-text6" x="332" y="84" width="120" height="7" fill="#C4C4C4" />
-          <rect id="table-text7" x="332" y="169" width="153" height="7" fill="#C4C4C4" />
-          <rect id="table-text8" x="332" y="185" width="120" height="7" fill="#C4C4C4" />
-          <rect id="table-text9" x="332" y="201" width="90" height="7" fill="#C4C4C4" />
-          <rect id="table-text10" x="332" y="217" width="109" height="7" fill="#C4C4C4" />
-          <rect id="table-text11" x="332" y="233" width="64" height="7" fill="#C4C4C4" />
-          <rect id="table-text12" x="332" y="249" width="120" height="7" fill="#C4C4C4" />
-          <rect id="table-text13" x="332" y="265" width="95" height="7" fill="#C4C4C4" />
+          <rect class="table-text1" x="332" y="67" width="138" height="7" fill="#C4C4C4" />
+          <rect class="table-text2" x="332" y="118" width="95" height="7" fill="#C4C4C4" />
+          <rect class="table-text3" x="332" y="153" width="120" height="7" fill="#C4C4C4" />
+          <rect class="table-text4" x="332" y="135" width="109" height="7" fill="#C4C4C4" />
+          <rect class="table-text5" x="332" y="101" width="130" height="7" fill="#C4C4C4" />
+          <rect class="table-text6" x="332" y="84" width="120" height="7" fill="#C4C4C4" />
+          <rect class="table-text7" x="332" y="169" width="153" height="7" fill="#C4C4C4" />
+          <rect class="table-text8" x="332" y="185" width="120" height="7" fill="#C4C4C4" />
+          <rect class="table-text9" x="332" y="201" width="90" height="7" fill="#C4C4C4" />
+          <rect class="table-text10" x="332" y="217" width="109" height="7" fill="#C4C4C4" />
+          <rect class="table-text11" x="332" y="233" width="64" height="7" fill="#C4C4C4" />
+          <rect class="table-text12" x="332" y="249" width="120" height="7" fill="#C4C4C4" />
+          <rect class="table-text13" x="332" y="265" width="95" height="7" fill="#C4C4C4" />
         </g>
-        <g id="Chart">
+        <g class="Chart">
           <path
             id="Ellipse 2"
             d="M380.5 299C380.5 311.397 369.785 321.5 356.5 321.5C343.215 321.5 332.5 311.397 332.5 299C332.5 286.603 343.215 276.5 356.5 276.5C369.785 276.5 380.5 286.603 380.5 299Z"
@@ -83,10 +83,10 @@
             stroke-width="0.7"
           />
         </g>
-        <line id="chart-text1" x1="392" y1="285.5" x2="445" y2="285.5" stroke="black" />
-        <line id="chart-text2" x1="392" y1="290.5" x2="430" y2="290.5" stroke="black" />
-        <line id="chart-text3" x1="392" y1="297.5" x2="439" y2="297.5" stroke="black" />
-        <line id="chart-text4" x1="392" y1="302.5" x2="421" y2="302.5" stroke="black" />
+        <line class="chart-text1" x1="392" y1="285.5" x2="445" y2="285.5" stroke="black" />
+        <line class="chart-text2" x1="392" y1="290.5" x2="430" y2="290.5" stroke="black" />
+        <line class="chart-text3" x1="392" y1="297.5" x2="439" y2="297.5" stroke="black" />
+        <line class="chart-text4" x1="392" y1="302.5" x2="421" y2="302.5" stroke="black" />
       </g>
     </g>
     <defs>
@@ -98,35 +98,36 @@
 </template>
 
 <style lang="scss">
-@for $i from 1 through 13 {
-    #table-text#{$i} {
-        $animationDelay: $i * 110;
+@function calcAnimationDelay($elementsCount, $animationCountDelay) {
+    @return #{$elementsCount * $animationCountDelay}ms;
+}
+$animationCountDelay: 110;
 
+@for $i from 1 through 13 {
+    .table-text#{$i} {
         animation-name: tableText#{$i};
-        animation-delay: #{$animationDelay}ms;
+        animation-delay: calcAnimationDelay($i, $animationCountDelay);
         animation-duration: $TIME_slow-min;
     }
     @keyframes tableText#{$i} {
         from { width: 0; }
     }
 }
-#Chart {
+.Chart {
     opacity: 0;
     animation-name: chart;
     animation-duration: 1s;
-    animation-delay: $TIME_slow-min + 1400ms;
+    animation-delay: calcAnimationDelay(15, $animationCountDelay);
     animation-fill-mode: forwards;
 }
 @keyframes chart {
-    to {opacity: 1;}
+    to { opacity: 1; }
 }
 @for $i from 1 through 4 {
-    #chart-text#{$i} {
+    .chart-text#{$i} {
         opacity: 0;
-        $animationDelay: $i * 110;
-
         animation-name: chartText#{$i};
-        animation-delay: $TIME_slow-min + $animationDelay + 1400ms;
+        animation-delay: calcAnimationDelay($i + 17, $animationCountDelay);
         animation-duration: $TIME_slow-min;
         animation-fill-mode: forwards;
     }
@@ -134,6 +135,4 @@
         to { opacity: 1; }
     }
 }
-
-
 </style>
