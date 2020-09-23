@@ -1,11 +1,11 @@
 <template>
-    <div class="hexagen">
+    <div class="octagon">
         <slot />
     </div>
 </template>
 
 <style lang="scss">
-.hexagen {
+.octagon {
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     background-color: $COLOR_about-header-skill-bg;
     width: 100px;

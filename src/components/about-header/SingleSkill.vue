@@ -1,9 +1,9 @@
 <template>
     <div class="skill">
         <div class="skill__img-wrapper">
-            <Hexagen-wrapper>
+            <Octagon-wrapper>
                 <slot name="skillImg"/>
-            </Hexagen-wrapper>
+            </Octagon-wrapper>
         </div>
         <div class="skill__description">
             <header class="header">
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import HexagenWrapper from "./HexagenWrapper";
+import OctagonWrapper from "./OctagonWrapper";
 
 export default {
     components: {
-        "Hexagen-wrapper": HexagenWrapper
+        "Octagon-wrapper": OctagonWrapper
     }
 }
 </script>
