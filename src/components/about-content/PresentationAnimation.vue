@@ -1,12 +1,12 @@
 <template>
   <svg
-    width="512"
-    height="512"
+    width="100%"
+    height="100%"
     viewBox="0 0 512 512"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="512" height="512" />
+    <rect />
     <g id="presentation 1" clip-path="url(#clip0)">
       <g id="Group">
         <path id="Vector" d="M311 8H296V53H311H326V8H311Z" fill="#665151" />
