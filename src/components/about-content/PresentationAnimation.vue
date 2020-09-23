@@ -6,7 +6,7 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="512" height="512" fill="#E5E5E5" />
+    <rect width="512" height="512" />
     <g id="presentation 1" clip-path="url(#clip0)">
       <g id="Group">
         <path id="Vector" d="M311 8H296V53H311H326V8H311Z" fill="#665151" />

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <!-- <Octagon-wrapper> -->
+        <Octagon-wrapper>
             <Presentation-animation />
-        <!-- </Octagon-wrapper> -->
+        </Octagon-wrapper>
     </div>
 </template>
 
