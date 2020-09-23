@@ -1,8 +1,8 @@
 <template>
     <header class="header">
-        <Skill v-for="(skill, i) in $t('about.header.skills')" :key="i">
+        <Single-skill v-for="(skill, i) in skills" :key="i">
             <template v-slot:skillImg>
-                <img :src="require(`../../assets/img/icons/${skill.img}.png`)" class="img img--skill">
+                <img :src="img(skill.img)" class="img img--skill">
             </template>
 
             <template v-slot:skillTitle>
@@ -12,16 +12,27 @@
             <template v-slot:skillDescription>
                 {{skill.description}}
             </template>
-        </Skill>
+        </Single-skill>
     </header>
 </template>
 
 <script>
-import Skill from "./SingleSkill";
+import SingleSkill from "./SingleSkill";
 
 export default {
+    data() {
+        return {
+            skills: null
+        }
+    },
     components: {
-        Skill
+        'Single-skill': SingleSkill
+    },
+    created() {
+        this.skills = this.$t('about.header.skills')
+    },
+    methods: {
+        img: (name) => require(`../../assets/img/icons/${name}.png`)
     }
 }
 </script>
