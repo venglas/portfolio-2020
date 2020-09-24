@@ -1,6 +1,6 @@
 <template>
     <div class="presentation">
-        <Octagon-wrapper :width="400" :height="400" padding="4rem">
+        <Octagon-wrapper style="width: 400px; height: 400px; padding: 4rem">
             <Presentation-animation />
         </Octagon-wrapper>
 
