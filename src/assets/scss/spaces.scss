@@ -1,3 +1,4 @@
+//margin vertical
 @mixin space-v-margin-small {
     margin: .5rem 0;
 }
@@ -11,6 +12,18 @@
     margin: 7rem 0;
 }
 
+//padding horizontal
 @mixin space-h-padding-small {
     padding: 0 .5rem;
+}
+@mixin space-h-padding-med {
+    padding: 0 1rem;
+}
+
+//padding around
+@mixin space-padding-small {
+    padding: .5rem;
+}
+@mixin space-padding-med {
+    padding: 1rem;
 }
