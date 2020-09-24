@@ -1,8 +1,21 @@
 <template>
-    <article class="article">
+    <article class="article" :style="{ width: articleWidth }">
         <slot />
     </article>
 </template>
+
+<script>
+export default {
+    props: {
+        fullWidth: { type: Boolean, default: false}
+    },
+    computed: {
+        articleWidth() {
+            return this.fullWidth ? "100%" : ''
+        }
+    }
+}
+</script>
 
 <style lang="scss">
 .article {
