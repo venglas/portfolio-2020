@@ -1,18 +1,8 @@
 <template>
-    <div class="octagon" :style="{ width: width+'px', height: height+'px', padding: padding}">
+    <div class="octagon">
         <slot />
     </div>
 </template>
-
-<script>
-export default {
-    props: {
-        width: { type: Number, default: 100 },
-        height: { type: Number, default: 100 },
-        padding: { type: String }
-    }
-}
-</script>
 
 <style lang="scss">
 .octagon {
@@ -21,5 +11,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 100px;
+    min-height: 100px;
 }
 </style>

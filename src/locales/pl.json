@@ -32,6 +32,10 @@
                     "description": "Kazde stosowane przeze mnie rozwiązanie wdrazam z pieczołowitością i precyzją."
                 }
             ]
+        },
+        "presentation": {
+            "title": "Kim jestem?",
+            "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!"
         }
     }
 }
