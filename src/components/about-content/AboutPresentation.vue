@@ -9,7 +9,7 @@
         </div>
 
         <div class="technologies">
-            <Single-technology />
+            <Single-technology :percentage="70"/>
         </div>
     </Article>
 </template>

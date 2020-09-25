@@ -5,34 +5,37 @@
                 <span>javascript</span>
             </div>
             <div class="proggress-bar">
-                <div class="proggress"></div>
-                <div class="proggress-bar__percentage">70%</div>
+                <div class="proggress" :style="{ width: `${percentage}%` }"></div>
+                <div class="proggress-bar__percentage">{{percentage}}%</div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    props: {
+        percentage: { type: Number }
+    }
+}
 </script>
 
 <style lang="scss">
 .single-technology {
     &__proggress {
         display: flex;
-        // justify-content: space-between;
         min-height: 25px;
         background-color: $COLOR_about_proggress_bg-1;
         color: $COLOR_white;
         cursor: pointer;
         transition: background-color ease-in-out $TIME_fast-max;
-        &:hover {
-            background-color: $COLOR_about_proggress_bg-2;
-        }
+        
         .technology-name {
             display: flex;
             align-items: center;
             @include space-h-padding-med;
+            border: solid black;
+            border-width: 0 1px 0 0;
             font-weight: 600;
             letter-spacing: 1px;
             background-color: $COLOR_about_proggress_bg-2;
@@ -44,8 +47,7 @@ export default {}
             justify-content: space-between;
             .proggress {
                 height: 100%;
-                width: 30%; //simulation of proggress
-                background-color: red;
+                background-color: $COLOR_about-proggress_bg-3;
             }
             &__percentage {
                 @include space-h-padding-med;
