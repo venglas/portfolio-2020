@@ -17,21 +17,25 @@
             Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Necessitatibus adipisci illo fugiat quibusdam cumque.  "/>
 
-            <Single-technology name="JavaScript" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <Single-technology name="react" :percentage="45" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
 
+            <Single-technology name="scss" :percentage="85" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
 
+            <Single-technology name="java" :percentage="35" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
 
-            <!-- <Single-technology :percentage="50"/>
-            <Single-technology :percentage="60"/>
-            <Single-technology :percentage="45"/>
-            <Single-technology :percentage="55"/>
-            <Single-technology :percentage="65"/>
-            <Single-technology :percentage="76"/>
-            <Single-technology :percentage="81"/>
-            <Single-technology :percentage="25"/>
-            <Single-technology :percentage="30"/> -->
+            <Single-technology name="spring boot" :percentage="30" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
+
+            <Single-technology name="i18n" :percentage="45" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
 
         </div>
 

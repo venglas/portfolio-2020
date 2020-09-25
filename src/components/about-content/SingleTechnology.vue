@@ -41,8 +41,11 @@ export default {
         transition: background-color ease-in-out $TIME_fast-max;
         
         .technology-name {
+            min-width: 125px;
+            text-align: end;
             display: flex;
             align-items: center;
+            justify-content: center;
             @include space-h-padding-med;
             border: solid black;
             border-width: 0 1px 0 0;
