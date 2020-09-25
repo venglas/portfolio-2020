@@ -9,13 +9,20 @@
                 <div class="proggress-bar__percentage">{{percentage}}%</div>
             </div>
         </div>
+
+        <Single-technology-description />
     </div>
 </template>
 
 <script>
+import SingleTechnologyDescription from "./SingleTechnologyDescription";
+
 export default {
     props: {
         percentage: { type: Number }
+    },
+    components: {
+        'Single-technology-description': SingleTechnologyDescription
     }
 }
 </script>
