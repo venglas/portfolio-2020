@@ -10,7 +10,9 @@
 
         <div class="technologies">
             <Single-technology :percentage="70"/>
+            <Single-technology :percentage="50"/>
         </div>
+
     </Article>
 </template>
 
@@ -37,6 +39,8 @@ export default {
     display: flex;
     .technologies {
         width: inherit;
+        display: flex;
+        flex-direction: column;
     }
 }
 </style>
