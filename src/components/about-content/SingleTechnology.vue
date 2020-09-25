@@ -2,7 +2,7 @@
     <div class="single-technology">
         <div class="single-technology__proggress">
             <div class="technology-name">
-                <span>javascript</span>
+                <span>{{name}}</span>
             </div>
             <div class="proggress-bar">
                 <div class="proggress" :style="{ width: `${percentage}%` }"></div>
@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <Single-technology-description />
+        <Single-technology-description :description="description"/>
     </div>
 </template>
 
@@ -19,7 +19,9 @@ import SingleTechnologyDescription from "./SingleTechnologyDescription";
 
 export default {
     props: {
-        percentage: { type: Number }
+        name: { type: String },
+        percentage: { type: Number },
+        description: { type: String }
     },
     components: {
         'Single-technology-description': SingleTechnologyDescription
