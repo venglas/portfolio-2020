@@ -12,6 +12,15 @@
             <Single-technology name="JavaScript" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
 
+            <Single-technology name="vue" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque.  "/>
+
+            <Single-technology name="JavaScript" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
+
 
 
             <!-- <Single-technology :percentage="50"/>
