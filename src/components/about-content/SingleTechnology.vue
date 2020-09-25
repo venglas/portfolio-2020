@@ -29,9 +29,10 @@ export default {
 
 <style lang="scss">
 .single-technology {
+    max-height: 35px;
     &__proggress {
         display: flex;
-        min-height: 25px;
+        min-height: 30px;
         background-color: $COLOR_about_proggress_bg-1;
         color: $COLOR_white;
         cursor: pointer;
