@@ -24,6 +24,7 @@ export default {}
 }
 
 .single-technology-description {
+    pointer-events: none; //remove hover
     background-color: $COLOR_about_proggress_bg-3;
     color: $COLOR_white;
     border-top: 5px solid white;
