@@ -5,7 +5,7 @@
                 <Presentation-animation />
             </Octagon-wrapper>
 
-            <About-author />
+            <About-author/>
         </div>
 
         <div class="technologies">
@@ -43,12 +43,13 @@ export default {
 .presentation-article { 
     display: flex;
     @media( max-height: 800px ) {
-        @include space-v-margin-big;
+        @include space-v-margin-med;
     }
     .technologies {
         width: inherit;
         display: flex;
         flex-direction: column;
+        @include space-h-margin-huge;
     }
 }
 </style>

@@ -12,6 +12,14 @@
     margin: 7rem 0;
 }
 
+//margin horizontal
+@mixin space-h-margin-big {
+    margin: 0 2.5rem;
+}
+@mixin space-h-margin-huge {
+    margin: 0 7rem;
+}
+
 //padding horizontal
 @mixin space-h-padding-small {
     padding: 0 .5rem;
