@@ -38,54 +38,64 @@
             "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!",
             "technologies": [
                 {
-                    "name": "vue",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
                     "name": "javascript",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
+                    "percentage": 60,
+                    "description": "Solidne podstawy, znajomość specyfikacji es6 - const i let jak i funkcje strzałkowe nie są dla mnie tajemnicą i tematem taboo. Znajomość javascript jak i doświadczenie ocenia na solidne. KISS i DRY towarzyszą mi w pracy z kodem."
                 },
                 {
-                    "name": "axios",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
-                    "name": "google extension",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
-                    "name": "java 8",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
-                    "name": "spring boot",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
-                    "name": "postgresql",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
-                },
-                {
-                    "name": "sql",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
+                    "name": "type script",
+                    "percentage": 40,
+                    "description": "Nie miałem okazji pracować w tej technologi natomiast znajomość javy daje mi spory pogląd na prace z type script, dzięki czemu podstawy jakimi rządzi się type script nie są dla mnie czarną magią."
                 },
                 {
                     "name": "html",
-                    "percentage": 70,
-                    "description": "jakiś tam opis"
+                    "percentage": 80,
+                    "description": "Znajomość pozwalająca budować aplikacje webowe, wdrazać podstawowe zagadnienia SEO, jak i budować statyczne strony. HTML5 opanowany na wystarczającym poziomie."
                 },
                 {
                     "name": "css",
+                    "percentage": 75,
+                    "description": "Znajomość pozwalająca tworzyć dynamiczne layouty zawierające animacje oraz przejścia. Zazwyczaj korzystam z SCSS dzięki, któremu oszczędzam czas i ilość napisanego kodu zawdzięczam to zmiennym, funkcją, mixinom, oraz pętlą."
+                },
+                {
+                    "name": "vue",
                     "percentage": 70,
-                    "description": "jakiś tam opis"
+                    "description": "Dobra znajomość pozwalająca budować mi dynamiczne aplikacje zarówno od podstaw jak i dołączanie do powstałych juz projektów. Vuex, vue-router, vue-i18n, vuetify, nuxt - nie są mi obce."
+                },
+                {
+                    "name": "react",
+                    "percentage": 25,
+                    "description": "Podstawy, pozwalające mi szybciej wdrozyć się w projekt jak i naukę tego frameworka."
+                },
+                {
+                    "name": "axios",
+                    "percentage": 60,
+                    "description": "Znajomość Axiosa pozwala mi na sprawną asynchroniczną komunikację między warstwą front-endu i backendu. Uzywam go w większości prowadzonych przeze mnie dotychczas projektów."
+                },
+                {
+                    "name": "google extension",
+                    "percentage": 60,
+                    "description": "Potrafię zbudować dodatek do przeglądarki google-chrome. Podstawowe zagadnienia i problemy związanie z developowaniem projektu opartego o chrome extension + vue pozwalają mi szybciej i sprawniej prowadzic projekt."
+                },
+                {
+                    "name": "java 8",
+                    "percentage": 45,
+                    "description": "Podstawowe zaganienia związane z obiektowym programowaniem. Wytwarzanie oprogramowanie - rest API przy pomocy frameworka spring boot. Projekty zazwyczaj opieram o mavena."
+                },
+                {
+                    "name": "spring boot",
+                    "percentage": 40,
+                    "description": "Podstawy dzięki, którym jestem w stanie developować rest API. Przy projektach opartych o spring boot uzywam takze flyway migrations, hibernate, jpa."
+                },
+                {
+                    "name": "postgresql",
+                    "percentage": 40,
+                    "description": "Znajomość na poziomie pozwalającym mi konfigurację bazy, tworzenie migracji oraz podstawowego zarządzania bazą z poziomu termiala bądź pgAdmin."
+                },
+                {
+                    "name": "sql",
+                    "percentage": 35,
+                    "description": "Potrafię pisać proste polecenia sql oraz migracje."
                 }
             ]
         }
