@@ -3,7 +3,6 @@
     <About-header />
     <section class="about">
       <About-presentation />
-      <div class="skill-list"></div>
     </section>
   </Article>
 </template>

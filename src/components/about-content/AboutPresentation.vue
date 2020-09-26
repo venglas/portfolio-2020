@@ -9,34 +9,13 @@
         </div>
 
         <div class="technologies">
-            <Single-technology name="JavaScript" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
-            <Single-technology name="vue" :percentage="90" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque.Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque.  "/>
-
-            <Single-technology name="react" :percentage="45" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
-            <Single-technology name="scss" :percentage="85" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
-            <Single-technology name="java" :percentage="35" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
-            <Single-technology name="spring boot" :percentage="30" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
-            <Single-technology name="i18n" :percentage="45" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. "/>
-
+            <Single-technology 
+                v-for="technology in $t('about.presentation.technologies')"
+                :key="technology.name"
+                :name="technology.name"
+                :percentage="technology.percentage"
+                :description="technology.description"
+            />
         </div>
 
     </Article>

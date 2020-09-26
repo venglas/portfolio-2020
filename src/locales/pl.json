@@ -35,7 +35,59 @@
         },
         "presentation": {
             "title": "Kim jestem?",
-            "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!"
+            "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!",
+            "technologies": [
+                {
+                    "name": "vue",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "javascript",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "axios",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "google extension",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "java 8",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "spring boot",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "postgresql",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "sql",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "html",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                },
+                {
+                    "name": "css",
+                    "percentage": 70,
+                    "description": "jakiś tam opis"
+                }
+            ]
         }
     }
 }
