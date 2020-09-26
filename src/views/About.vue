@@ -25,5 +25,8 @@ export default {
 <style lang="scss">
 .about {
   @include space-v-margin-huge;
+  @media ( max-height: 800px ) { 
+    @include space-v-margin-small;
+  }
 }
 </style>

@@ -63,6 +63,9 @@ export default {
 <style lang="scss">
 .presentation-article { 
     display: flex;
+    @media( max-height: 800px ) {
+        @include space-v-margin-big;
+    }
     .technologies {
         width: inherit;
         display: flex;
