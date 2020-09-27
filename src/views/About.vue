@@ -1,9 +1,7 @@
-<template>
-  <Article :verticalSpace="space"> 
-    <About-header />
-    <section class="about">
-      <About-presentation />
-    </section>
+<template>  
+  <Article :verticalSpace="space">
+    <About-header class="slide-from-top"/>
+    <About-presentation />
   </Article>
 </template>
 
@@ -27,12 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.about {
-  @include space-v-margin-huge;
-  @media ( max-height: 800px ) { 
-    @include space-v-margin-small;
-  }
-}
-</style>

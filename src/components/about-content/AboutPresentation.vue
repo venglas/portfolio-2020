@@ -1,6 +1,6 @@
 <template>
     <Article full-width class="presentation-article">
-        <div class="presentation">
+        <div class="presentation slide-from-left">
             <Octagon-wrapper style="width: 400px; height: 400px; padding: 4rem">
                 <Presentation-animation />
             </Octagon-wrapper>
@@ -8,7 +8,7 @@
             <About-author/>
         </div>
 
-        <div class="technologies">
+        <div class="technologies slide-from-right">
             <Single-technology 
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
@@ -42,6 +42,7 @@ export default {
 <style lang="scss">
 .presentation-article { 
     display: flex;
+    @include space-v-margin-huge;
     @media( max-height: 800px ) {
         @include space-v-margin-med;
     }
