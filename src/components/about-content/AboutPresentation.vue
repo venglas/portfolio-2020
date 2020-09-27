@@ -1,16 +1,23 @@
 <template>
-    <Article full-width>
-        <div class="presentation">
+    <Article full-width class="presentation-article">
+        <div class="presentation slide-from-left">
             <Octagon-wrapper style="width: 400px; height: 400px; padding: 4rem">
                 <Presentation-animation />
             </Octagon-wrapper>
 
-            <About-author />
+            <About-author/>
         </div>
 
-        <div class="technologies">
-
+        <div class="technologies slide-from-right">
+            <Single-technology 
+                v-for="technology in $t('about.presentation.technologies')"
+                :key="technology.name"
+                :name="technology.name"
+                :percentage="technology.percentage"
+                :description="technology.description"
+            />
         </div>
+
     </Article>
 </template>
 
@@ -19,15 +26,31 @@ import Article from "../article/Article";
 import OctagonWrapper from "../about-header/OctagonWrapper";
 import PresentationAnimation from "./PresentationAnimation";
 import AboutAuthor from "./AboutAuthor";
+import SingleTechnology from "./SingleTechnology";
 
 export default {
     components: {
         Article,
         'Octagon-wrapper': OctagonWrapper,
         'Presentation-animation': PresentationAnimation,
-        'About-author': AboutAuthor
+        'About-author': AboutAuthor,
+        'Single-technology': SingleTechnology
     }    
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.presentation-article { 
+    display: flex;
+    @include space-v-margin-huge;
+    @media( max-height: 800px ) {
+        @include space-v-margin-med;
+    }
+    .technologies {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        @include space-h-margin-huge;
+    }
+}
+</style>

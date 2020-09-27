@@ -24,22 +24,23 @@ export default {
     "Language-info-modal": LanguageInfoModal
   },
   computed: {
-    ...mapGetters(['getContactInfo'])
+    // ...mapGetters(['getContactInfo'])
   },
   beforeCreate() {},
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
-  },
-  watch: {
-    '$route'() {},
+    this.getWebsiteHeight()
   },
   methods: {
-    ...mapMutations('app', ['setMobileView', 'unsetMobileView']),
+    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
 
     detectMobileView() {
       if( window.innerWidth < 720) this.setMobileView();
       else this.unsetMobileView();
+    },
+    getWebsiteHeight() {
+      this.setWebsiteHeight(window.innerHeight);
     }
   }
 }

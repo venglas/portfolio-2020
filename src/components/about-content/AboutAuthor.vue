@@ -1,16 +1,21 @@
 <template>
 <div class="about-author">
-    <h2>{{$t('about.presentation.title')}}</h2>
-    <p>{{$t('about.presentation.content')}}</p>
+    <h2 class="about-author__header">{{$t('about.presentation.title')}}</h2>
+    <p class="about-author__content">{{$t('about.presentation.content')}}</p>
 </div>
 </template>
 
-<script>
-
-export default {
-    components: {}    
-}
-</script>
-
 <style lang="scss">
+.about-author {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header {
+        @include space-v-margin-small;
+    }
+    &__content {
+        text-align: justify;
+    }
+}
 </style>

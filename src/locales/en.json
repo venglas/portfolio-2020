@@ -35,7 +35,69 @@
     },
     "presentation": {
       "title": "Who I'm?",
-      "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music and technologies. I'm ready to cooperate with You, We could to build an curious project!"
+      "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music and technologies. I'm ready to cooperate with You, We could to build an curious project!",
+      "technologies": [
+        {
+          "name": "javascript",
+          "percentage": 60,
+          "description": "Solid foundation of knowledge, knowledge of ES6 specyfication - const, let and the array functions they are no secret to me. Knowledge of javascript and the experience in my opinion are solid. KISS and DRY accompany me at work with code."
+        },
+        {
+          "name": "type script",
+          "percentage": 40,
+          "description": "I had no occasion to work with this technology, but knowledge of java gives me big view on type script, it gives me knowledge about the basics of the type script and it isn't black magic to me."
+        },
+        {
+          "name": "html",
+          "percentage": 80,
+          "description": "Knowledge of html lets me build an web applications, implements basics of SEO, and builds static websites also. I have enough knowledge about HTML5."
+        },
+        {
+          "name": "css",
+          "percentage": 75,
+          "description": "This knowledge lets me build dynamic layouts that includes animations and transitions. Usually I use scss it lets me save my time and the quantity of the written code due to variables, functions, mixins and loops."
+        },
+        {
+          "name": "vue",
+          "percentage": 70,
+          "description": "Well knowledge that lets me build a dynamic applications both from basics and join to created already projects. Vuex, vue-router, vue-i18n, vuetify, nuxt - all of them isn't unknown to me."
+        },
+        {
+          "name": "react",
+          "percentage": 25,
+          "description": "The basics, that let me get into the project faster."
+        },
+        {
+          "name": "axios",
+          "percentage": 60,
+          "description": "Knowledge of axios lets me make asynchronous communication between front end layer and backend. I use this in most of the projects that i develop."
+        },
+        {
+          "name": "google extension",
+          "percentage": 60,
+          "description": "I can build an extension for chrome web browser. The basics issues and problems connected with developing the project based on chrome extension and vue lets me faster and more effective developing project."
+        },
+        {
+          "name": "java 8",
+          "percentage": 45,
+          "description": "Basics of the object oriented programming. software development - rest API with spring boot framework. I usually base the projects on maven."
+        },
+        {
+          "name": "spring boot",
+          "percentage": 40,
+          "description": "I know the bacics of spring-boot that lets me developing rest API. At projects based on spring-boot I use also flyway, hibernate and jpa."
+        },
+        {
+          "name": "postgresql",
+          "percentage": 40,
+          "description": "knowledge on level that lets me configure database, making migrations and the basics of management of the database from terminal or pgAdmin."
+        },
+        {
+          "name": "sql",
+          "percentage": 35,
+          "description": "I can write the simple sql commands and migrations."
+        }
+      ]
     }
   }
 }
