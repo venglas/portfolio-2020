@@ -1,37 +1,37 @@
-@mixin slide-from($side) {
-    animation-name: slide-from-#{$side};
-    animation-delay: 200ms;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    opacity: 0;
+$sides: left, top, right, bottom;
 
-    @if $side == left {
-        transform: translateX(-100vw);
+@each $side in $sides {
+    .slide-from-#{$side} {
+        animation-name: slide-from-#{$side};
+        animation-delay: 200ms;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        opacity: 0;
+        @if $side == left {
+            transform: translateX(-100vw);
+        }
+        @if $side == top {
+            transform: translateY(-100vh);
+        }
+        @if $side == right {
+            transform: translateX(100vw);
+        }
+        @if $side == bottom {
+            transform: translateY(100vh);
+        }
     }
-    @if $side == right {
-        transform: translateX(100vw);
-    }
-    @if $side == top {
-        transform: translateY(-100vh);
-    }
 }
-.slide-from-left {
-    @include slide-from("left")
-}
-.slide-from-right {
-    @include slide-from("right")
-}
-.slide-from-top {
-    @include slide-from("top")
-}
+
 @keyframes slide-from-left {
-    to { transform: translateX(0); opacity: 1;}
-}
-@keyframes slide-from-right {
     to { transform: translateX(0); opacity: 1;}
 }
 @keyframes slide-from-top {
     to { transform: translateY(0); opacity: 1;}
 }
-
+@keyframes slide-from-right {
+    to { transform: translateX(0); opacity: 1;}
+}
+@keyframes slide-from-bottom {
+    to { transform: translateY(0); opacity: 1;}
+}
