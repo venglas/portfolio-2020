@@ -2,11 +2,11 @@
     <div class="single-technology">
         <div class="single-technology__proggress">
             <div class="technology-name">
-                <span>{{name}}</span>
+                <span>{{ name }}</span>
             </div>
             <div class="proggress-bar">
-                <div class="proggress" :style="{ width: `${percentage}%` }"></div>
-                <div class="proggress-bar__percentage">{{percentage}}%</div>
+                <div class="proggress" :style="{ width: percentageWithSign }"></div>
+                <div class="proggress-bar__percentage">{{ percentageWithSign }}</div>
             </div>
         </div>
 
@@ -25,6 +25,11 @@ export default {
     },
     components: {
         'Single-technology-description': SingleTechnologyDescription
+    },
+    computed: {
+        percentageWithSign() {
+            return `${this.percentage}%`;
+        }
     }
 }
 </script>
@@ -61,6 +66,13 @@ export default {
             .proggress {
                 height: 100%;
                 background-color: $COLOR_about-proggress_bg-3;
+                animation-name: proggress;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-out;
+                animation-duration: $time_slow-max;
+            }
+            @keyframes proggress {
+                from { width: 0; }
             }
             &__percentage {
                 @include space-h-padding-med;
