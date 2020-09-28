@@ -96,6 +96,16 @@
                     "name": "sql",
                     "percentage": 35,
                     "description": "Potrafię pisać proste polecenia sql oraz migracje."
+                },
+                {
+                    "name": "git",
+                    "percentage": 65,
+                    "description": "Wiem jak pracować z zespołem, tworzenie czystych merge/pull requestów traktuję jako codzienność, nawet przy samodzielnej pracy nad projektem. Potrafię uzywać takich komend jak revert, fetch, pull, merge, stash, reset, rebase."
+                },
+                {
+                    "name": "server",
+                    "percentage": 35,
+                    "description": "Potrafię pisać proste skrypty .sh, wiem jak dodać klucz publiczny do servera i logowac się nim, miałem styczność z deploymentem opartym na dockerze (compose, ps, -it, logs, stop, restart), pracowałem tez z vps."
                 }
             ]
         }

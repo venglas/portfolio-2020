@@ -96,6 +96,16 @@
           "name": "sql",
           "percentage": 35,
           "description": "I can write the simple sql commands and migrations."
+        },
+        {
+          "name": "git",
+          "percentage": 65,
+          "description": "I know how to work with the team, creating pure merge/pull requests and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase."
+        },
+        {
+          "name": "server",
+          "percentage": 35,
+          "description": "I can write a simple sh scripts, I know how to add the public key to the server and login with it, I had contact with the deployment process based on docker (compose, ps, -it, logs, stop, restart). I worked with vps too."
         }
       ]
     }
