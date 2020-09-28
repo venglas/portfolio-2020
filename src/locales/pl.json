@@ -100,7 +100,7 @@
                 {
                     "name": "git",
                     "percentage": 65,
-                    "description": "Wiem jak pracować z zespołem, tworzenie czystych merge/pull requestów traktuję jako codzienność, nawet przy samodzielnej pracy nad projektem. Potrafię uzywać takich komend jak revert, fetch, pull, merge, stash, reset, rebase."
+                    "description": "Wiem jak pracować z zespołem, tworzenie czystych merge/pull requestów traktuję jako codzienność, nawet przy samodzielnej pracy nad projektem. Potrafię uzywać takich komend jak revert, fetch, pull, merge, stash, reset, rebase. Wiem jak korzystać z aliasów zeby zwiekszyć wydajność pracy."
                 },
                 {
                     "name": "server",

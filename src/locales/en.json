@@ -100,7 +100,7 @@
         {
           "name": "git",
           "percentage": 65,
-          "description": "I know how to work with the team, creating pure merge/pull requests and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase."
+          "description": "I know how to work with the team, creating pure merge/pull requests and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase. I know how to use git aliases to increase work performance."
         },
         {
           "name": "server",
