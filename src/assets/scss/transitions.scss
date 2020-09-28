@@ -3,7 +3,7 @@ $sides: left, top, right, bottom;
 @each $side in $sides {
     .slide-from-#{$side} {
         animation-name: slide-from-#{$side};
-        animation-delay: 200ms;
+        animation-delay: $TIME_fast-max;
         animation-duration: .5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;

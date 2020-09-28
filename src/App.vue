@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <Navbar />
-    <router-view class="router-view"/>
+    <router-view :class="`router-view router-view--${$route.name}`"/>
     <Language-info-modal />
     <Language-switcher />
   </div>
@@ -71,10 +71,12 @@ body {
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
-  animation-name: routerEnter;
-  animation-duration: $TIME_fast;
-  animation-timing-function: ease-in;
-  animation-play-state: infinite;
+  &--home {
+    animation-name: routerEnter;
+    animation-duration: $TIME_fast;
+    animation-timing-function: ease-in;
+    animation-play-state: infinite;
+  }
 }
 
 @keyframes routerEnter {
