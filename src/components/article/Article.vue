@@ -25,5 +25,8 @@ export default {
 .article {
     width: 75%;
     margin: 5rem auto;
+    @media (max-width: $BP_first) {
+        width: 90%;
+    }
 }
 </style>

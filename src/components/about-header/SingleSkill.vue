@@ -33,6 +33,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: $BP_second) {
+        @include space-v-margin-small;
+    }
 
     &__img-wrapper {
         .img {

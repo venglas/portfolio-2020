@@ -33,5 +33,8 @@ export default {
 .header {
     display: flex;
     justify-content: space-around;
+    @media (max-width: $BP_second) {
+        flex-wrap: wrap;
+    }
 }
 </style>

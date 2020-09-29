@@ -1,7 +1,7 @@
 <template>
     <Article full-width class="presentation-article">
         <div class="presentation slide-from-left">
-            <Octagon-wrapper style="width: 400px; height: 400px; padding: 4rem">
+            <Octagon-wrapper class="presentation__octagon">
                 <Presentation-animation />
             </Octagon-wrapper>
 
@@ -45,6 +45,13 @@ export default {
     @include space-v-margin-huge;
     @media( max-height: 800px ) {
         @include space-v-margin-med;
+    }
+    .presentation {
+        &__octagon {
+            width: 400px;
+            height: 400px;
+            padding: 4rem;
+        }
     }
     .technologies {
         width: inherit;
