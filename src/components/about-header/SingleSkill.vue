@@ -37,6 +37,13 @@ export default {
         @include space-v-margin-small;
         max-width: 250px;
     }
+    @media (max-width: $MEDIUM_mobile3) {
+        min-width: 200px;
+        max-width: 200px;
+    }
+    @media (max-width: $SMALL_mobile) {
+        max-width: 100%;
+    }
 
     &__img-wrapper {
         .img {
@@ -63,6 +70,7 @@ export default {
         align-items: center;
         font-size: $SIZE_small-font;
         text-align: center;
+        
         .description {
             @include space-h-padding-small;
         }

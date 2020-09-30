@@ -62,6 +62,10 @@ export default {
             width: 400px;
             height: 400px;
             padding: 4rem;
+            @media (max-width: $SMALL_mobile2) {
+                width: 250px;
+                height: 250px;
+            }
         }
     }
     .technologies {
