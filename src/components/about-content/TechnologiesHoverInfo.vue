@@ -1,5 +1,5 @@
 <template>
-    <p class="technologies-hover-info">
+    <p class="technologies-hover-info" v-if="showInfo">
         <img :src="arrow" alt="jumping arrow" class="arrow">
         <span>Hover over bars to get description about skills</span>
         <img :src="arrow" alt="jumping arrow" class="arrow">
@@ -7,12 +7,21 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
     data() {
         return {
             arrow: require("../../assets/img/icons/arrow.png")
         }
     },
+    computed: {
+        ...mapGetters('app', ['getAboutShowedDescriptions']),
+        showInfo() {
+            if (this.getAboutShowedDescriptions > 3) return false;
+            return true;
+        }
+    }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="single-technology">
+    <div class="single-technology" @mouseover="increaseDescriptionShowedCount()">
         <div class="single-technology__proggress">
             <div class="technology-name">
                 <span>{{ name }}</span>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { debounce } from "lodash";
+import { mapMutations } from "vuex";
 import SingleTechnologyDescription from "./SingleTechnologyDescription";
 
 export default {
@@ -30,6 +32,12 @@ export default {
         percentageWithSign() {
             return `${this.percentage}%`;
         }
+    },
+    methods: {
+        ...mapMutations('app', ["increaseShowedDescriptionCount"]),
+        increaseDescriptionShowedCount: debounce(function() {
+            this.increaseShowedDescriptionCount();
+        }, 1000)
     }
 }
 </script>
