@@ -35,6 +35,7 @@ export default {
     align-items: center;
     @media (max-width: $BP_second) {
         @include space-v-margin-small;
+        max-width: 250px;
     }
 
     &__img-wrapper {

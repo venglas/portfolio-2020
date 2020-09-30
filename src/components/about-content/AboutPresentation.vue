@@ -69,6 +69,9 @@ export default {
         display: flex;
         flex-direction: column;
         @include space-h-margin-huge;
+        @media( max-height: $BP_second ) {
+            margin: 0;
+        }
     }
 }
 </style>
