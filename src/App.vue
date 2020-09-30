@@ -65,6 +65,9 @@ body {
 .app {
   height: 100vh;
   overflow-y: hidden;
+  @media (max-width: $BP_second) {
+    overflow-y: scroll;
+  }
 }
 .router-view {
   height: calc(100vh - #{$SIZE_navbar});
