@@ -1,12 +1,6 @@
 <template>
     <section class="single-technology-description">
-        <p>
-            {{description}}
-            <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Necessitatibus adipisci illo fugiat quibusdam cumque. 
-            Accusantium fugiat rem aut culpa modi aperiam asperiores tempora repellendus soluta?
-            Reiciendis at quia hic rem. -->
-        </p>
+        <p>{{description}}</p>
     </section>
 </template>
 

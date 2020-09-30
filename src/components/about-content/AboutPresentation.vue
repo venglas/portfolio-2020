@@ -9,6 +9,7 @@
         </div>
 
         <div class="technologies slide-from-right">
+            <Technologies-hover-info />
             <Single-technology 
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
@@ -27,6 +28,7 @@ import OctagonWrapper from "../about-header/OctagonWrapper";
 import PresentationAnimation from "./PresentationAnimation";
 import AboutAuthor from "./AboutAuthor";
 import SingleTechnology from "./SingleTechnology";
+import TechnologiesHoverInfo from "./TechnologiesHoverInfo";
 
 export default {
     components: {
@@ -34,7 +36,8 @@ export default {
         'Octagon-wrapper': OctagonWrapper,
         'Presentation-animation': PresentationAnimation,
         'About-author': AboutAuthor,
-        'Single-technology': SingleTechnology
+        'Single-technology': SingleTechnology,
+        "Technologies-hover-info": TechnologiesHoverInfo
     }    
 }
 </script>
