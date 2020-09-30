@@ -43,10 +43,21 @@ export default {
 .presentation-article { 
     display: flex;
     @include space-v-margin-huge;
+    @media (max-width: $BP_second) {
+        flex-wrap: wrap;
+        justify-content: center;
+        @include space-v-margin-med;
+    }
     @media( max-height: 800px ) {
         @include space-v-margin-med;
     }
     .presentation {
+        @media (max-width: $BP_second) {
+            @include space-v-margin-big;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &__octagon {
             width: 400px;
             height: 400px;
