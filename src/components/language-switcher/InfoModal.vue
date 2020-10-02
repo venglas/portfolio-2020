@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { getCookieValue, setCookieExpiringTime } from "../helpers/cookies";
+import { getCookieValue, setCookie } from "../helpers/cookies";
 
 export default {
     data() {
@@ -24,7 +24,7 @@ export default {
     },
     methods: {
         closeModal() {
-            document.cookie = `showLanguageInfo = false; expires='${setCookieExpiringTime(10).toGMTString()}'`;
+            setCookie("showLanguageInfo", false, 10);
             this.showInfo = false;
         }
     }

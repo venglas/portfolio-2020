@@ -22,4 +22,8 @@ const setCookieExpiringTime = days => {
     return now;
 };
 
-export { getCookieValue, setCookieExpiringTime };
+const setCookie = (cookieName, cookieValue, expiredInDays) => {
+    document.cookie = `${cookieName} = ${cookieValue}; expires=${setCookieExpiringTime(expiredInDays).toGMTString()}`
+};
+
+export { getCookieValue, setCookieExpiringTime, setCookie };
