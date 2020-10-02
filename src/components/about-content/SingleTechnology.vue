@@ -35,9 +35,9 @@ export default {
     },
     methods: {
         ...mapMutations('app', ["increaseShowedDescriptionCount"]),
-        increaseDescriptionShowedCount: debounce(function() {
+        increaseDescriptionShowedCount: debounce( function() {
             this.increaseShowedDescriptionCount();
-        }, 1000)
+        }, 700)
     }
 }
 </script>

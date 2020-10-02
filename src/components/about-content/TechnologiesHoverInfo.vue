@@ -8,19 +8,28 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { getCookieValue, setCookie } from "../helpers/cookies";
 
 export default {
     data() {
         return {
-            arrow: require("../../assets/img/icons/arrow.png")
+            arrow: require("../../assets/img/icons/arrow.png"),
+            showInfo: true
+        }
+    },
+    created() {
+        this.showInfo = getCookieValue("showTechnologiesInfo");
+    },
+    watch: {
+        getAboutShowedDescriptions() {
+            if (this.getAboutShowedDescriptions > 2) {
+                this.showInfo = false;
+                setCookie("showTechnologiesInfo", false, 10);
+            }
         }
     },
     computed: {
-        ...mapGetters('app', ['getAboutShowedDescriptions']),
-        showInfo() {
-            if (this.getAboutShowedDescriptions > 3) return false;
-            return true;
-        }
+        ...mapGetters('app', ['getAboutShowedDescriptions'])
     }
 }
 </script>
