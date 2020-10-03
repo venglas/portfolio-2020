@@ -5,7 +5,7 @@
                 <Presentation-animation />
             </Octagon-wrapper>
 
-            <About-author/>
+            <About-author />
         </div>
 
         <div class="technologies slide-from-right" >
@@ -82,6 +82,8 @@ export default {
         @include space-v-margin-med;
     }
     .presentation {
+        width: min-content;
+        margin-right: 5rem;
         @media (max-width: $BP_second) {
             @include space-v-margin-big;
             display: flex;
