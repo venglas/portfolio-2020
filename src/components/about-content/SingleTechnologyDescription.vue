@@ -16,7 +16,6 @@ export default {
 .single-technology {
     &:hover {
         .single-technology-description {
-            @include space-padding-med;
             transform: scaleY(1);
         }
     }
@@ -30,5 +29,11 @@ export default {
     text-align: justify;
     transform: scaleY(0);
     transition: transform ease-in-out $TIME_fast-max;
+    @include space-padding-med;
+
+    @media (max-width: 720px) {
+        transform: scaleY(1);
+        border-bottom: 5px solid white;
+    }
 }
 </style>

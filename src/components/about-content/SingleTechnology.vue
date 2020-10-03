@@ -45,6 +45,9 @@ export default {
 <style lang="scss">
 .single-technology {
     max-height: 35px;
+    @media (max-width: 720px) {
+        max-height: max-content;
+    }
     &__proggress {
         display: flex;
         min-height: 30px;

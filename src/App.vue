@@ -23,9 +23,6 @@ export default {
     "Language-switcher": LanguageSwitcher,
     "Language-info-modal": LanguageInfoModal
   },
-  computed: {
-    // ...mapGetters(['getContactInfo'])
-  },
   beforeCreate() {},
   created() {
     window.addEventListener('resize', this.detectMobileView);

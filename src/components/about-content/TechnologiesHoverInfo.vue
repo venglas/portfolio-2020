@@ -1,5 +1,5 @@
 <template>
-    <p class="technologies-hover-info" v-if="showInfo">
+    <p class="technologies-hover-info" v-if="!getMobileView && showInfo">
         <img :src="arrow" alt="jumping arrow" class="arrow">
         <span>Hover over bars to get description about skills</span>
         <img :src="arrow" alt="jumping arrow" class="arrow">
@@ -29,7 +29,7 @@ export default {
         }
     },
     computed: {
-        ...mapGetters('app', ['getAboutShowedDescriptions'])
+        ...mapGetters('app', ['getAboutShowedDescriptions', 'getMobileView'])
     }
 }
 </script>
