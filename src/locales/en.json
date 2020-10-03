@@ -19,12 +19,12 @@
         {
           "img": "dynamic",
           "title": "Dynamic",
-          "description": "Websites haven't to be static. Reactive web application - this is what i love!"
+          "description": "Websites haven't to be static. Reactive web application - this is what I love!"
         },
         {
           "img": "clear",
           "title": "Purity",
-          "description": "Code that I write is pure and friendly with other developers."
+          "description": "The code that I write is pure and friendly with other developers."
         },
         {
           "img": "precise",
@@ -35,33 +35,33 @@
     },
     "presentation": {
       "title": "Who I'm?",
-      "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music and technologies. I'm ready to cooperate with You, We could to build an curious project!",
+      "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music, and technologies. I'm ready to cooperate with You, We could build a curious project!",
       "infoAboutHover": "Hover over technologies below to get skills description",
       "technologies": [
         {
           "name": "javascript",
           "percentage": 60,
-          "description": "Solid foundation of knowledge, knowledge of ES6 specyfication - const, let and the array functions they are no secret to me. Knowledge of javascript and the experience in my opinion are solid. KISS and DRY accompany me at work with code."
+          "description": "The solid foundation of knowledge, knowledge of ES6 specification - const, let, and the array functions they are no secret to me. Knowledge of javascript and the experience in my opinion is solid. KISS and DRY accompany me at work with code."
         },
         {
           "name": "type script",
           "percentage": 40,
-          "description": "I had no occasion to work with this technology, but knowledge of java gives me big view on type script, it gives me knowledge about the basics of the type script and it isn't black magic to me."
+          "description": "I had no occasion to work with this technology, but knowledge of java gives me a big view on typescript, it gives me knowledge about the basics of the typescript and it isn't black magic to me."
         },
         {
           "name": "html",
           "percentage": 80,
-          "description": "Knowledge of html lets me build an web applications, implements basics of SEO, and builds static websites also. I have enough knowledge about HTML5."
+          "description": "Knowledge of HTML lets me build web applications, implements basics of SEO, and builds static websites also. I have enough knowledge of HTML5."
         },
         {
           "name": "css",
           "percentage": 75,
-          "description": "This knowledge lets me build dynamic layouts that includes animations and transitions. Usually I use scss it lets me save my time and the quantity of the written code due to variables, functions, mixins and loops."
+          "description": "This knowledge lets me build dynamic layouts that include animations and transitions. Usually, I use scss it lets me save my time and the quantity of the written code due to variables, functions, mixins, and loops."
         },
         {
           "name": "vue",
           "percentage": 70,
-          "description": "Well knowledge that lets me build a dynamic applications both from basics and join to created already projects. Vuex, vue-router, vue-i18n, vuetify, nuxt - all of them isn't unknown to me."
+          "description": "Well knowledge that lets me build dynamic applications both from basics and join to created already projects. Vuex, vue-router, vue-i18n, vuetify, nuxt - all of them aren't unknown to me."
         },
         {
           "name": "react",
@@ -71,12 +71,12 @@
         {
           "name": "axios",
           "percentage": 60,
-          "description": "Knowledge of axios lets me make asynchronous communication between front end layer and backend. I use this in most of the projects that i develop."
+          "description": "Knowledge of Axios lets me make asynchronous communication between the front-end layer and backend. I use this in most of the projects that I develop."
         },
         {
           "name": "google extension",
           "percentage": 60,
-          "description": "I can build an extension for chrome web browser. The basics issues and problems connected with developing the project based on chrome extension and vue lets me faster and more effective developing project."
+          "description": "I can build an extension for the Chrome web browser. The basics issues and problems connected with developing the project based on chrome extension and vue lets me faster and more effective developing projects."
         },
         {
           "name": "java 8",
@@ -86,27 +86,27 @@
         {
           "name": "spring boot",
           "percentage": 40,
-          "description": "I know the bacics of spring-boot that lets me developing rest API. At projects based on spring-boot I use also flyway, hibernate and jpa."
+          "description": "I know the basics of spring-boot that lets me developing rest API. At projects based on spring-boot, I use also flyway, hibernate, and jpa."
         },
         {
           "name": "postgresql",
           "percentage": 40,
-          "description": "knowledge on level that lets me configure database, making migrations and the basics of management of the database from terminal or pgAdmin."
+          "description": "knowledge at the level that lets me configure the database, making migrations, and the basics of management of the database from terminal or pgAdmin."
         },
         {
           "name": "sql",
           "percentage": 35,
-          "description": "I can write the simple sql commands and migrations."
+          "description": "I can write simple SQL commands and migrations."
         },
         {
           "name": "git",
           "percentage": 65,
-          "description": "I know how to work with the team, creating pure merge/pull requests and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase. I know how to use git aliases to increase work performance."
+          "description": "I know how to work with the team, creating pure merge/pull requests, and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase. I know how to use git aliases to increase work performance."
         },
         {
           "name": "server",
           "percentage": 35,
-          "description": "I can write a simple sh scripts, I know how to add the public key to the server and login with it, I had contact with the deployment process based on docker (compose, ps, -it, logs, stop, restart). I worked with vps too."
+          "description": "I can write a simple sh scripts, I know how to add the public key to the server and login with it, I had contact with the deployment process based on docker (compose, ps, -it, logs, stop, restart). I worked with VPS too."
         }
       ]
     }
