@@ -36,6 +36,7 @@
     "presentation": {
       "title": "Who I'm?",
       "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music and technologies. I'm ready to cooperate with You, We could to build an curious project!",
+      "infoAboutHover": "Hover over technologies below to get skills description",
       "technologies": [
         {
           "name": "javascript",

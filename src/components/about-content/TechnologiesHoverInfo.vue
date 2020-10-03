@@ -1,7 +1,7 @@
 <template>
     <p class="technologies-hover-info" v-if="!getMobileView && showInfo">
         <img :src="arrow" alt="jumping arrow" class="arrow">
-        <span>Hover over bars to get description about skills</span>
+        <span>{{$t('about.presentation.infoAboutHover')}}</span>
         <img :src="arrow" alt="jumping arrow" class="arrow">
     </p>
 </template>

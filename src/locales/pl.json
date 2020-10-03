@@ -36,6 +36,7 @@
         "presentation": {
             "title": "Kim jestem?",
             "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!",
+            "infoAboutHover": "Najedź na ponizsze techologie aby otrzymać opis umiejętności",
             "technologies": [
                 {
                     "name": "javascript",
