@@ -1,12 +1,11 @@
 {
-    "message": "siema i18n !!",
     "home": {
         "hello": [
             "<h1>Cześć, Mam na imię Bartek</h1>",
             "<h2>Znajdziesz tutaj projekty zrealizowane przeze mnie</h2>",
             "<h3>Oraz ktrótkie przedstawienie moich umijętności</h3>"
         ],
-        "languageModalInfo": "Tutaj mozesz wybrać język strony"
+        "languageModalInfo": "Tutaj możesz wybrać język strony"
     },
     "about": {
         "header": {
@@ -19,7 +18,7 @@
                 {
                     "img": "dynamic",
                     "title": "Dynamiczność",
-                    "description": "Strony nie muszą być statyczne! Reaktywne aplikacje webowe to jest to co lubię."
+                    "description": "Strony nie muszą być statyczne! Dynamiczne aplikacje webowe to jest to co lubię."
                 },
                 {
                     "img": "clear",
@@ -29,84 +28,84 @@
                 {
                     "img": "precise",
                     "title": "Precyzyjność",
-                    "description": "Kazde stosowane przeze mnie rozwiązanie wdrazam z pieczołowitością i precyzją."
+                    "description": "Każde stosowane przeze mnie rozwiązanie wdrażam z pieczołowitością i precyzją."
                 }
             ]
         },
         "presentation": {
             "title": "Kim jestem?",
-            "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, mozemy zbudować ciekawy projekt!",
-            "infoAboutHover": "Najedź na ponizsze techologie aby otrzymać opis umiejętności",
+            "content": "Jestem Front-End developerem z Krakowa. Moją pasją jest JavaScript, sport, muzyka i technologie. Z chęcią podejmę z Tobą współpracę, możemy zbudować ciekawy projekt!",
+            "infoAboutHover": "Najedź na poniższe techologie aby zobaczyć opis umiejętności",
             "technologies": [
                 {
-                    "name": "javascript",
+                    "name": "JavaScript",
                     "percentage": 60,
-                    "description": "Solidne podstawy, znajomość specyfikacji es6 - const i let jak i funkcje strzałkowe nie są dla mnie tajemnicą i tematem taboo. Znajomość javascript jak i doświadczenie ocenia na solidne. KISS i DRY towarzyszą mi w pracy z kodem."
+                    "description": "Solidne podstawy, znajomość specyfikacji es6 - const i let jak i funkcje strzałkowe nie są dla mnie tajemnicą. Znajomość javascript jak i doświadczenie oceniam na solidne. KISS i DRY towarzyszą mi w pracy z kodem."
                 },
                 {
-                    "name": "type script",
+                    "name": "TypeScript",
                     "percentage": 40,
-                    "description": "Nie miałem okazji pracować w tej technologi natomiast znajomość javy daje mi spory pogląd na prace z type script, dzięki czemu podstawy jakimi rządzi się type script nie są dla mnie czarną magią."
+                    "description": "Nie miałem okazji pracować w tej technologi natomiast znajomość javy daje mi spory pogląd na prace z TypeScript, dzięki czemu podstawy jakimi rządzi się TypeScript nie są dla mnie czarną magią."
                 },
                 {
-                    "name": "html",
+                    "name": "HTML",
                     "percentage": 80,
-                    "description": "Znajomość pozwalająca budować aplikacje webowe, wdrazać podstawowe zagadnienia SEO, jak i budować statyczne strony. HTML5 opanowany na wystarczającym poziomie."
+                    "description": "Znajomość pozwalająca budować aplikacje webowe, wdrażać podstawowe zagadnienia SEO, jak i budować statyczne strony. HTML5 opanowany na wystarczająco dobrym poziomie."
                 },
                 {
-                    "name": "css",
+                    "name": "CSS",
                     "percentage": 75,
-                    "description": "Znajomość pozwalająca tworzyć dynamiczne layouty zawierające animacje oraz przejścia. Zazwyczaj korzystam z SCSS dzięki, któremu oszczędzam czas i ilość napisanego kodu zawdzięczam to zmiennym, funkcją, mixinom, oraz pętlą."
+                    "description": "Znajomość pozwalająca tworzyć dynamiczne layouty zawierające animacje oraz przejścia. Zazwyczaj korzystam z SCSS dzięki, któremu oszczędzam czas i ilość napisanego kodu, zawdzięczam to zmiennym, funkcją, mixinom, oraz pętlą."
                 },
                 {
-                    "name": "vue",
+                    "name": "Vue",
                     "percentage": 70,
-                    "description": "Dobra znajomość pozwalająca budować mi dynamiczne aplikacje zarówno od podstaw jak i dołączanie do powstałych juz projektów. Vuex, vue-router, vue-i18n, vuetify, nuxt - nie są mi obce."
+                    "description": "Dobra znajomość pozwalająca budować mi dynamiczne aplikacje zarówno od podstaw jak i dołączanie do powstałych już projektów. Vuex, vue-router, vue-i18n, vuetify, nuxt - nie są mi obce."
                 },
                 {
-                    "name": "react",
+                    "name": "React",
                     "percentage": 25,
-                    "description": "Podstawy, pozwalające mi szybciej wdrozyć się w projekt jak i naukę tego frameworka."
+                    "description": "Podstawy, pozwalające mi szybciej wdrożyć się w projekt jak i naukę tego frameworka."
                 },
                 {
-                    "name": "axios",
+                    "name": "Axios",
                     "percentage": 60,
-                    "description": "Znajomość Axiosa pozwala mi na sprawną asynchroniczną komunikację między warstwą front-endu i backendu. Uzywam go w większości prowadzonych przeze mnie dotychczas projektów."
+                    "description": "Znajomość Axiosa pozwala mi na sprawną asynchroniczną komunikację między warstwą front-endu i backendu. Używałem go w większości prowadzonych przeze mnie dotychczas projektów."
                 },
                 {
-                    "name": "google extension",
+                    "name": "Google Extension",
                     "percentage": 60,
                     "description": "Potrafię zbudować dodatek do przeglądarki google-chrome. Podstawowe zagadnienia i problemy związanie z developowaniem projektu opartego o chrome extension + vue pozwalają mi szybciej i sprawniej prowadzic projekt."
                 },
                 {
-                    "name": "java 8",
+                    "name": "Java 8",
                     "percentage": 45,
-                    "description": "Podstawowe zaganienia związane z obiektowym programowaniem. Wytwarzanie oprogramowanie - rest API przy pomocy frameworka spring boot. Projekty zazwyczaj opieram o mavena."
+                    "description": "Podstawowe zaganienia związane z obiektowym programowaniem. Wytwarzanie oprogramowania - rest API przy pomocy frameworka spring boot. Projekty zazwyczaj opieram o mavena."
                 },
                 {
-                    "name": "spring boot",
+                    "name": "Spring Boot",
                     "percentage": 40,
-                    "description": "Podstawy dzięki, którym jestem w stanie developować rest API. Przy projektach opartych o spring boot uzywam takze flyway migrations, hibernate, jpa."
+                    "description": "Podstawy dzięki, którym jestem w stanie developować rest API. Przy projektach opartych o spring boot używam takze flyway migrations, hibernate, jpa."
                 },
                 {
-                    "name": "postgresql",
+                    "name": "PostgreSQL",
                     "percentage": 40,
                     "description": "Znajomość na poziomie pozwalającym mi konfigurację bazy, tworzenie migracji oraz podstawowego zarządzania bazą z poziomu termiala bądź pgAdmin."
                 },
                 {
-                    "name": "sql",
+                    "name": "SQL",
                     "percentage": 35,
                     "description": "Potrafię pisać proste polecenia sql oraz migracje."
                 },
                 {
-                    "name": "git",
+                    "name": "Git",
                     "percentage": 65,
-                    "description": "Wiem jak pracować z zespołem, tworzenie czystych merge/pull requestów traktuję jako codzienność, nawet przy samodzielnej pracy nad projektem. Potrafię uzywać takich komend jak revert, fetch, pull, merge, stash, reset, rebase. Wiem jak korzystać z aliasów zeby zwiekszyć wydajność pracy."
+                    "description": "Wiem jak pracować z zespołem, tworzenie czystych merge/pull requestów traktuję jako codzienność, nawet przy samodzielnej pracy nad projektem. Potrafię używać takich komend jak revert, fetch, pull, merge, stash, reset, rebase. Wiem jak korzystać z aliasów żeby zwiekszyć wydajność pracy."
                 },
                 {
-                    "name": "server",
+                    "name": "Server",
                     "percentage": 35,
-                    "description": "Potrafię pisać proste skrypty .sh, wiem jak dodać klucz publiczny do servera i logowac się nim, miałem styczność z deploymentem opartym na dockerze (compose, ps, -it, logs, stop, restart), pracowałem tez z vps."
+                    "description": "Potrafię pisać proste skrypty .sh, wiem jak dodać klucz publiczny do servera i logowac się nim, miałem styczność z deploymentem opartym na dockerze (compose, ps, -it, logs, stop, restart), pracowałem tez z serverami vps."
                 }
             ]
         }
