@@ -1,5 +1,5 @@
 <template>
-    <p class="technologies-hover-info" v-if="!getMobileView && showInfo">
+    <p class="technologies-hover-info" v-if="!getMobileView && getInfoAboutDescriptionOnHover">
         <img :src="arrow" alt="jumping arrow" class="arrow">
         <span>{{$t('about.presentation.infoAboutHover')}}</span>
         <img :src="arrow" alt="jumping arrow" class="arrow">
@@ -7,29 +7,31 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import { getCookieValue, setCookie } from "../helpers/cookies";
 
 export default {
     data() {
         return {
-            arrow: require("../../assets/img/icons/arrow.png"),
-            showInfo: true
+            arrow: require("../../assets/img/icons/arrow.png")
         }
     },
     created() {
-        this.showInfo = getCookieValue("showTechnologiesInfo");
+        if(getCookieValue("showTechnologiesInfo") === false) this.turnOffInfoAboutDescriptionOnHover();
     },
     watch: {
         getAboutShowedDescriptions() {
             if (this.getAboutShowedDescriptions > 2) {
-                this.showInfo = false;
+                this.turnOffInfoAboutDescriptionOnHover();
                 setCookie("showTechnologiesInfo", false, 10);
             }
         }
     },
+    methods: {
+        ...mapMutations('app', ['turnOffInfoAboutDescriptionOnHover'])
+    },
     computed: {
-        ...mapGetters('app', ['getAboutShowedDescriptions', 'getMobileView'])
+        ...mapGetters('app', ['getAboutShowedDescriptions', 'getMobileView', 'getInfoAboutDescriptionOnHover'])
     }
 }
 </script>
