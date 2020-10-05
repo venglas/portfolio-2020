@@ -8,7 +8,7 @@
             <About-author />
         </div>
 
-        <div class="technologies slide-from-right" >
+        <div class="technologies slide-from-right" ref="technologies">
             <Technologies-hover-info />
             <Single-technology 
                 v-for="technology in $t('about.presentation.technologies')"
@@ -17,7 +17,6 @@
                 :percentage="technology.percentage"
                 :description="technology.description"
             />
-            <!-- :class="{'show-above': showAboveIfisLastTwo(technology)}" -->
         </div>
 
     </Article>
@@ -44,32 +43,13 @@ export default {
     computed: {
         ...mapGetters('app', ['getInfoAboutDescriptionOnHover']),
         presentationSpaceTop() {
-            if (this.getInfoAboutDescriptionOnHover) {
-                return '30px'
-            }
-            return '20px'
+            if (this.getInfoAboutDescriptionOnHover) return '30px';
         }
-        // technologies(){ return this.$t('about.presentation.technologies') },    
-        // lastTwoTechnologies() { return this.technologies.slice(this.technologies.length - 2, this.technologies.length) }
-    },
-    methods: {
-        // showAboveIfisLastTwo(technology) {
-        //     if (this.lastTwoTechnologies.includes(technology)) return true;
-        // }
     }
 }
 </script>
 
 <style lang="scss">
-//to fix - last 2 elements shoul have description above the bar
-// .show-above {
-//     @media (max-height: 880px) {
-//         margin-bottom: 26px;
-//         .single-technology-description {
-//             margin-top: -110px;
-//         }
-//     } 
-// }
 .presentation-article {
     display: flex;
     @include space-v-margin-huge;
@@ -104,6 +84,11 @@ export default {
         width: inherit;
         display: flex;
         flex-direction: column;
+        @media (max-height: 890px) {
+            overflow-y: scroll;
+            max-height: 450px;
+            padding-bottom: 50px;
+        }
         @include space-h-margin-huge;
         @media( max-height: $BP_second ) {
             margin: 0;
