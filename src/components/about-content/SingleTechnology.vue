@@ -57,7 +57,7 @@ export default {
         transition: background-color ease-in-out $TIME_fast-max;
         
         .technology-name {
-            min-width: 150px;
+            min-width: 155px;
             text-align: end;
             display: flex;
             align-items: center;

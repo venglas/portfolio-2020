@@ -50,7 +50,7 @@ export default {
 }
 body {
   color: $COLOR_font-base;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
