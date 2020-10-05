@@ -45,14 +45,6 @@ export default {
 <style lang="scss">
 .single-technology {
     max-height: 35px;
-    // &:hover {
-    //     &:nth-last-of-type(-n+2){
-    //         .single-technology-description {
-    //             transform: translateY(-100%);
-    //         }
-    //     }
-    // }
-    
     @media (max-width: 720px) {
         max-height: max-content;
     }

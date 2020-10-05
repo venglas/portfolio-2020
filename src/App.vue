@@ -14,10 +14,6 @@ import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 import LanguageInfoModal from "./components/language-switcher/InfoModal";
 
 export default {
-  name: "App",
-  data() {
-    return {}
-  },
   components: {
     Navbar,
     "Language-switcher": LanguageSwitcher,
