@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+  color: #fff;
+  @include med-text-shadow(4);
+}
+</style>
