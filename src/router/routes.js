@@ -1,5 +1,5 @@
-import home from "../views/home.vue"
-import about from "../views/about.vue"
+import home from "../views/Home.vue"
+import about from "../views/About.vue"
 import portfolio from "../views/portfolio.vue"
 import contact from "../views/contact.vue"
 import sociales from "../views/sociales.vue"

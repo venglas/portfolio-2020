@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <Navbar />
-    <router-view class="router-view"/>
+    <router-view :class="`router-view router-view--${$route.name}`"/>
     <Language-info-modal />
     <Language-switcher />
   </div>
@@ -14,32 +14,26 @@ import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 import LanguageInfoModal from "./components/language-switcher/InfoModal";
 
 export default {
-  name: "App",
-  data() {
-    return {}
-  },
   components: {
     Navbar,
     "Language-switcher": LanguageSwitcher,
     "Language-info-modal": LanguageInfoModal
   },
-  computed: {
-    ...mapGetters(['getContactInfo'])
-  },
   beforeCreate() {},
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
-  },
-  watch: {
-    '$route'() {},
+    this.getWebsiteHeight()
   },
   methods: {
-    ...mapMutations('app', ['setMobileView', 'unsetMobileView']),
+    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
 
     detectMobileView() {
       if( window.innerWidth < 720) this.setMobileView();
       else this.unsetMobileView();
+    },
+    getWebsiteHeight() {
+      this.setWebsiteHeight(window.innerHeight);
     }
   }
 }
@@ -64,16 +58,21 @@ body {
 .app {
   height: 100vh;
   overflow-y: hidden;
+  @media (max-width: $BP_second) {
+    overflow-y: scroll;
+  }
 }
 .router-view {
   height: calc(100vh - #{$SIZE_navbar});
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
-  animation-name: routerEnter;
-  animation-duration: $TIME_fast;
-  animation-timing-function: ease-in;
-  animation-play-state: infinite;
+  &--home {
+    animation-name: routerEnter;
+    animation-duration: $TIME_fast;
+    animation-timing-function: ease-in;
+    animation-play-state: infinite;
+  }
 }
 
 @keyframes routerEnter {

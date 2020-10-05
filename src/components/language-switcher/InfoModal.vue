@@ -11,34 +11,23 @@
 </template>
 
 <script>
+import { getCookieValue, setCookie } from "../helpers/cookies";
+
 export default {
-data() {
-    return {
-        showInfo: true
-    }
-},
-created() {
-    this.checkShowInfo();  
-},
-methods: {
-    checkShowInfo() {
-        const cookie = document.cookie.includes("showLanguageInfo=false");
-        if (cookie) this.showInfo = false;
+    data() {
+        return {
+            showInfo: true
+        }
     },
-    createCookieTime(days) {
-        const day = 1000*36000;
-        const now = new Date();
-        const time = now.getTime();
-        const expireTime = time + day * days;
-        now.setTime(expireTime)
-        return now;
+    created() {
+        this.showInfo = getCookieValue("showLanguageInfo");
     },
-    closeModal() {
-        //create cooki expires time for 30 days
-        document.cookie = `showLanguageInfo = false; expires='${this.createCookieTime(30).toGMTString()}'`;
-        this.showInfo = false;
+    methods: {
+        closeModal() {
+            setCookie("showLanguageInfo", false, 10);
+            this.showInfo = false;
+        }
     }
-}
 }
 </script>
 

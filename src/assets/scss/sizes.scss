@@ -1,6 +1,8 @@
-$SIZE_navbar: 65px;
+//fonts
+$SIZE_small-font: 12px;
 $SIZE_base-font: 14px;
-$SIZE_language-selector-width: 90px;
+$SIZE_big-font: 18px;
+
 
 //z-index
 $SIZE_header-index: 10;
@@ -8,3 +10,7 @@ $SIZE_router-view-index: 9;
 $SIZE_z-min: 1;
 $size_z-med: 5;
 $size_z-max: 15;
+
+//other
+$SIZE_navbar: 65px;
+$SIZE_language-selector-width: 90px;
