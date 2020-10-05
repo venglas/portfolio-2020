@@ -1,50 +1,40 @@
 <template>
   <div id="app" class="app">
     <Navbar />
-    <router-view class="router-view"/>
+    <router-view :class="`router-view router-view--${$route.name}`"/>
+    <Language-info-modal />
+    <Language-switcher />
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/navbar/Navbar";
+import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
+import LanguageInfoModal from "./components/language-switcher/InfoModal";
 
 export default {
-  name: "App",
-  data() {
-    return {
-      visitedRoutes: [],
-      showInfoRequiredRoutes: {
-        PORTFOLIO: "portfolio",
-        CONTACT: "contact",
-        ABOUT: "about",
-        portfolio: 0,
-        contact: 0,
-        about: 0
-      }
-    }
-  },
   components: {
-    Navbar
-  },
-  computed: {
-    ...mapGetters(['getContactInfo'])
+    Navbar,
+    "Language-switcher": LanguageSwitcher,
+    "Language-info-modal": LanguageInfoModal
   },
   beforeCreate() {},
-  watch: {
-    '$route'() {
-      if (this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO || this.$route.name === this.showInfoRequiredRoutes.CONTACT)
-      this.visitedRoutes.push(this.$route.name);
-      if( this.$route.name === this.showInfoRequiredRoutes.PORTFOLIO ) this.showInfoRequiredRoutes.portfolio++;
-      if( this.$route.name === this.showInfoRequiredRoutes.CONTACT ) this.showInfoRequiredRoutes.contact++;
-      if( this.$route.name === this.showInfoRequiredRoutes.ABOUT ) this.showInfoRequiredRoutes.about++;
-      if( this.showInfoRequiredRoutes.portfolio > 0 && this.showInfoRequiredRoutes.contact > 0 && this.showInfoRequiredRoutes.about > 0 && !this.getContactInfo ) {
-        this.showContactInfo();
-      };
-    }
+  created() {
+    window.addEventListener('resize', this.detectMobileView);
+    this.detectMobileView();
+    this.getWebsiteHeight()
   },
   methods: {
-    ...mapMutations(['showContactInfo'])
+    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
+
+    detectMobileView() {
+      if( window.innerWidth < 720) this.setMobileView();
+      else this.unsetMobileView();
+    },
+    getWebsiteHeight() {
+      this.setWebsiteHeight(window.innerHeight);
+    }
   }
 }
 </script>
@@ -60,7 +50,7 @@ export default {
 }
 body {
   color: $COLOR_font-base;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
@@ -68,20 +58,24 @@ body {
 .app {
   height: 100vh;
   overflow-y: hidden;
+  @media (max-width: $BP_second) {
+    overflow-y: scroll;
+  }
 }
 .router-view {
-  background-color: red;
   height: calc(100vh - #{$SIZE_navbar});
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
-  animation-name: routerEnter;
-  animation-duration: $TIME_fast;
-  animation-timing-function: ease-in-out;
-  animation-play-state: infinite;
+  &--home {
+    animation-name: router-enter;
+    animation-duration: $TIME_fast;
+    animation-timing-function: ease-in;
+    animation-play-state: infinite;
+  }
 }
 
-@keyframes routerEnter {
+@keyframes router-enter {
   from {transform: translateY(100%);}
   to {transform: translateY(0%);}
 }

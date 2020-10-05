@@ -1,27 +1,26 @@
 <template>
-    <nav class="navbar">
-        <Logo />
-        <ul class="navbar__menu">
-            <router-link v-for="item in $router.options.routes" :key="item.name" :to="item.path" tag="li" class="item">{{item.name}}</router-link>
-        </ul>
-    </nav>
+  <component :is="getMobileView ? 'Navbar-mobile' : 'Navbar-web'"/>
 </template>
 
 <script>
-import Logo from "./Logo";
+import { mapGetters } from "vuex";
+
+import NavbarWeb from "./NavbarWeb";
+import NavbarMobile from "./NavbarMobile";
 
 export default {
-    data(){
-        return {}
-    },
     components: {
-        Logo
+        "Navbar-web": NavbarWeb,
+        "Navbar-mobile": NavbarMobile
     },
-    created(){}
+    
+    computed: {
+        ...mapGetters('app', ['getMobileView'])
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navbar {
     width: 100%;
     height: $SIZE_navbar;
@@ -37,6 +36,14 @@ export default {
         height: 100%;
         list-style-type: none;
         margin: 0 1rem;
+        @media (max-width: $MAX_mobile) {
+            font-size: 1.7rem;
+        }
+        @media (max-width: $MEDIUM_mobile) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .item {
             padding: 0 2rem;
             line-height: $SIZE_navbar;
@@ -64,18 +71,14 @@ export default {
         height: 2.5px;
         background: #000;
         transition: width .3s;
-        animation-name: activeLink;
+        animation-name: active-link;
         animation-duration: $TIME_fast-max;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
-    @keyframes activeLink {
-        from {
-            width: 0%;
-        }
-        to {
-            width: calc(100% + 2rem);
-        }
+    @keyframes active-link {
+        from { width: 0%; }
+        to { width: calc(100% + 2rem); }
     }
 }
 </style>

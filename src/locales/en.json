@@ -1,0 +1,113 @@
+{
+  "home": {
+    "hello": [
+      "<h1>Hello, I'm Bartek</h1>",
+      "<h2>You can find here my projects</h2>",
+      "<h3>And short presentation of my skills</h3>"
+    ],
+    "languageModalInfo": "Here you can choose site language"
+  },
+  "about": {
+    "header": {
+      "skills": [
+        {
+          "img": "responsive",
+          "title": "Responsive",
+          "description": "Websites and apps are compatible with any device size."
+        },
+        {
+          "img": "dynamic",
+          "title": "Dynamic",
+          "description": "Websites haven't to be static. Reactive web application - this is what I love!"
+        },
+        {
+          "img": "clear",
+          "title": "Purity",
+          "description": "The code that I write is pure and friendly with other developers."
+        },
+        {
+          "img": "precise",
+          "title": "Precise",
+          "description": "I implement each solution with care and precision."
+        }
+      ]
+    },
+    "presentation": {
+      "title": "Who I'm?",
+      "content": "I'm the front-end developer from Krakow. My passion is javascript, sports, music, and technologies. I'm ready to cooperate with You, We could build a curious project!",
+      "infoAboutHover": "Hover over technologies below to see skills description",
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "percentage": 60,
+          "description": "The solid foundation of knowledge, knowledge of ES6 specification - const, let, and the array functions they are no secret to me. Knowledge of JavaScript and the experience in my opinion is solid. KISS and DRY accompany me at work with code."
+        },
+        {
+          "name": "TypeScript",
+          "percentage": 40,
+          "description": "I had no occasion to work with this technology, but knowledge of java gives me a big view on TypeScript, it gives me knowledge about the basics of the TypeScript and it isn't black magic to me."
+        },
+        {
+          "name": "HTML",
+          "percentage": 80,
+          "description": "Knowledge of HTML lets me build web applications, implements basics of SEO, and builds static websites also. I have enough knowledge of HTML5."
+        },
+        {
+          "name": "CSS",
+          "percentage": 75,
+          "description": "This knowledge lets me build dynamic layouts that include animations and transitions. Usually, I use scss it lets me save my time and the quantity of the written code due to variables, functions, mixins, and loops."
+        },
+        {
+          "name": "Vue",
+          "percentage": 70,
+          "description": "Well knowledge that lets me build dynamic applications both from basics and join to created already projects. Vuex, Vue-router, Vue-i18n, Vuetify, Nuxt - all of them aren't unknown to me."
+        },
+        {
+          "name": "React",
+          "percentage": 25,
+          "description": "The basics, that let me get into the project faster."
+        },
+        {
+          "name": "Axios",
+          "percentage": 60,
+          "description": "Knowledge of Axios lets me make asynchronous communication between the front-end layer and backend. I use this in most of the projects that I develop."
+        },
+        {
+          "name": "Google Extension",
+          "percentage": 60,
+          "description": "I can build an extension for the Chrome web browser. The basics issues and problems connected with developing the project based on chrome extension and vue lets me faster and more effective developing projects."
+        },
+        {
+          "name": "Java 8",
+          "percentage": 45,
+          "description": "Basics of the object oriented programming. software development - rest API with spring boot framework. I usually base the projects on Maven."
+        },
+        {
+          "name": "Spring Boot",
+          "percentage": 40,
+          "description": "I know the basics of Spring Boot that lets me developing rest API. At projects based on Spring Boot, I use also flyway, hibernate, and jpa."
+        },
+        {
+          "name": "PostgreSQL",
+          "percentage": 40,
+          "description": "knowledge at the level that lets me configure the database, making migrations, and the basics of management of the database from terminal or pgAdmin."
+        },
+        {
+          "name": "SQL",
+          "percentage": 35,
+          "description": "I can write simple SQL commands and migrations."
+        },
+        {
+          "name": "Git",
+          "percentage": 65,
+          "description": "I know how to work with the team, creating pure merge/pull requests, and I treat it like a daily task, even if I work alone. I know how to use commands like revert, fetch, pull, merge, stash, reset, rebase. I know how to use git aliases to increase work performance."
+        },
+        {
+          "name": "Server",
+          "percentage": 35,
+          "description": "I can write a simple sh scripts, I know how to add the public key to the server and login with it, I had contact with the deployment process based on docker (compose, ps, -it, logs, stop, restart). I worked with VPS too."
+        }
+      ]
+    }
+  }
+}

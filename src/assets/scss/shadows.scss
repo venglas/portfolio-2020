@@ -5,3 +5,7 @@
 @mixin light-text-shadow ($power: 1) {
     text-shadow: 3px 2px 3px rgba(0, 0, 0, .25 * $power);
 }
+
+@mixin med-text-shadow ($power: 1) {
+    text-shadow: 3px 3px 20px rgba(0, 0, 0, .25 * $power);
+}
