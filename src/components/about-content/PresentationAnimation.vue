@@ -99,40 +99,40 @@
 
 <style lang="scss">
 @function calcAnimationDelay($elementsCount, $animationCountDelay) {
-    @return #{$elementsCount * $animationCountDelay}ms;
+  @return #{$elementsCount * $animationCountDelay}ms;
 }
 $animationCountDelay: 110;
 
 @for $i from 1 through 13 {
-    .table-text#{$i} {
-        animation-name: tableText#{$i};
-        animation-delay: calcAnimationDelay($i, $animationCountDelay);
-        animation-duration: $TIME_slow-min;
-    }
-    @keyframes tableText#{$i} {
-        from { width: 0; }
-    }
+  .table-text#{$i} {
+    animation-name: table-text#{$i};
+    animation-delay: calcAnimationDelay($i, $animationCountDelay);
+    animation-duration: $TIME_slow-min;
+  }
+  @keyframes table-text#{$i} {
+    from { width: 0; }
+  }
 }
 .Chart {
-    opacity: 0;
-    animation-name: chart;
-    animation-duration: 1s;
-    animation-delay: calcAnimationDelay(15, $animationCountDelay);
-    animation-fill-mode: forwards;
+  opacity: 0;
+  animation-name: chart;
+  animation-duration: 1s;
+  animation-delay: calcAnimationDelay(15, $animationCountDelay);
+  animation-fill-mode: forwards;
 }
 @keyframes chart {
-    to { opacity: 1; }
+  to { opacity: 1; }
 }
 @for $i from 1 through 4 {
-    .chart-text#{$i} {
-        opacity: 0;
-        animation-name: chartText#{$i};
-        animation-delay: calcAnimationDelay($i + 17, $animationCountDelay);
-        animation-duration: $TIME_slow-min;
-        animation-fill-mode: forwards;
-    }
-    @keyframes chartText#{$i} {
-        to { opacity: 1; }
-    }
+  .chart-text#{$i} {
+    opacity: 0;
+    animation-name: chart-text#{$i};
+    animation-delay: calcAnimationDelay($i + 17, $animationCountDelay);
+    animation-duration: $TIME_slow-min;
+    animation-fill-mode: forwards;
+  }
+  @keyframes chart-text#{$i} {
+    to { opacity: 1; }
+  }
 }
 </style>

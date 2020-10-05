@@ -71,18 +71,14 @@ export default {
         height: 2.5px;
         background: #000;
         transition: width .3s;
-        animation-name: activeLink;
+        animation-name: active-link;
         animation-duration: $TIME_fast-max;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
-    @keyframes activeLink {
-        from {
-            width: 0%;
-        }
-        to {
-            width: calc(100% + 2rem);
-        }
+    @keyframes active-link {
+        from { width: 0%; }
+        to { width: calc(100% + 2rem); }
     }
 }
 </style>

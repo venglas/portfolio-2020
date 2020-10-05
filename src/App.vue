@@ -68,14 +68,14 @@ body {
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
   &--home {
-    animation-name: routerEnter;
+    animation-name: router-enter;
     animation-duration: $TIME_fast;
     animation-timing-function: ease-in;
     animation-play-state: infinite;
   }
 }
 
-@keyframes routerEnter {
+@keyframes router-enter {
   from {transform: translateY(100%);}
   to {transform: translateY(0%);}
 }
