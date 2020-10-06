@@ -1,7 +1,7 @@
 <template>
     <div 
         class="slide-img"
-        :style="{ 'background-image': `url(${image})`, 'transform': `translateX(${getSliderPosition}00%)` }"
+        :style="styles"
         alt="project image"
     ></div>
 </template>
@@ -13,7 +13,10 @@ export default {
         image: { type: String }
     },
     computed: {
-        ...mapGetters('app', ['getSliderPosition'])
+        ...mapGetters('app', ['getSliderPosition']),
+        styles() {
+            return { 'background-image': `url(${this.image})`, 'transform': `translateX(${this.getSliderPosition}00%)` }
+        }
     }
 }
 </script>

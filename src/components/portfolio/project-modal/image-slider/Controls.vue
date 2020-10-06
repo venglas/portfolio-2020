@@ -25,11 +25,13 @@ export default {
     methods: {
         ...mapMutations('app', ['setSliderPosition']),
         nextSlide() {
-            if (this.getSliderPosition > this.negativeSlidesCount) this.setSliderPosition(this.getSliderPosition -= 1);
+            let position = this.getSliderPosition;
+            if (this.getSliderPosition > this.negativeSlidesCount) this.setSliderPosition(position -= 1);
             else this.setSliderPosition(0);
         },
         prevSlide() {
-            if (this.getSliderPosition < 0) this.setSliderPosition(this.getSliderPosition += 1);
+            let position = this.getSliderPosition;
+            if (this.getSliderPosition < 0) this.setSliderPosition(position += 1);
             else this.setSliderPosition(this.negativeSlidesCount);
         }
     }
