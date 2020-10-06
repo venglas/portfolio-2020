@@ -46,3 +46,11 @@
 @mixin space-padding-med {
     padding: 1rem;
 }
+@mixin space-padding-big {
+    padding: 2rem;
+}
+
+//margin around
+@mixin space-margin-small {
+    margin: .5rem;
+}

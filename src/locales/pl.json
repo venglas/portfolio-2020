@@ -113,16 +113,13 @@
     "portfolio": {
         "projects": [
             {
-                "name": "Test 1",
+                "name": "Test ",
                 "technologies": ["Nuxt", "Express"],
                 "image": "https://picsum.photos/400",
                 "fullInfo": {
-                    
+
                 }
             },
-            {"name": "Test 1", "technologies": ["Nuxt", "Express"], "image": "https://picsum.photos/400"},
-            {"name": "Test 1", "technologies": ["Nuxt", "Express"], "image": "https://picsum.photos/400"},
-            {"name": "Test 1", "technologies": ["Nuxt", "Express"], "image": "https://picsum.photos/400"},
             {"name": "Test 1", "technologies": ["Nuxt", "Express"], "image": "https://picsum.photos/400"}
         ]
     }
