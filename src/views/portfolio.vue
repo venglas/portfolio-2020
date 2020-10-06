@@ -2,9 +2,12 @@
     <Article>
         <div class="projects">
             <Single-project 
-                image="https://picsum.photos/400/400"
-                projectName="Test project"
-                projectTechnologies="Nuxt/node"
+                v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
+                :key="name"
+                :image="image"
+                :projectName="name"
+                :projectTechnologies="technologies"
+                :fullInfo="fullInfo"
             />
         </div>
     </Article>
@@ -23,5 +26,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 </style>

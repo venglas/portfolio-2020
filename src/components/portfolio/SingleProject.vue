@@ -4,7 +4,9 @@
         <div class="project__inner">
             <header class="header">
                 <h3 class="header__title">{{projectName}}</h3>
-                <h4 class="header__technologies">{{projectTechnologies}}</h4>
+                <h4 class="header__technologies">
+                    <span v-for="technology in projectTechnologies" :key="technology">{{technology}}</span>
+                </h4>
             </header>
             <Base-button 
                 text="pokaz projekt"
@@ -24,7 +26,8 @@ export default {
     props: {
         image: { type: String },
         projectName: { type: String },
-        projectTechnologies: { type: String }
+        projectTechnologies: { type: Array },
+        fullInfo: { type: Object }
     }
 }
 </script>
@@ -46,9 +49,10 @@ export default {
         height: 100%;
         background-size: cover;
         background-position: center;
-        transition: all ease-in-out 400ms;
+        transition: opacity ease-in-out 700ms;
     }
     &:hover {
+        border: 1px solid rgba(0, 0, 0, .1);
         .project__background {
             opacity: 0;
         }
@@ -86,6 +90,16 @@ export default {
                 font-weight: 300;
                 font-size: 1.8rem;
                 color: $COLOR_base_button_border;
+                span {
+                    &:after {
+                        content: " / ";
+                    }
+                    &:last-child{
+                        &:after {
+                            content: "";
+                        }
+                    }
+                }
             }
         }
         .button {
