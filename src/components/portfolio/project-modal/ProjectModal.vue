@@ -39,7 +39,7 @@ export default {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: gray;
+    background-color: #fff;
     z-index: $SIZE_z-max;
     &__button-close {
         position: absolute;

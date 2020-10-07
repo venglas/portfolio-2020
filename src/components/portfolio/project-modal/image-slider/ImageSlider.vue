@@ -41,5 +41,6 @@ export default {
     overflow: hidden;
     width: 100%;
     height: 70%;
+    border-bottom: solid 2px $COLOR_slider_bottom_border;
 }
 </style>
