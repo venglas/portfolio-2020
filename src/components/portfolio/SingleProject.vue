@@ -105,7 +105,7 @@ export default {
                 text-align: center;
                 font-weight: 300;
                 font-size: 1.8rem;
-                color: $COLOR_base_button_border;
+                color: $COLOR_project_technologies;
                 span {
                     &:after {
                         content: " / ";

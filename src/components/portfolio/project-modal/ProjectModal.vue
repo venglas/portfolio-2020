@@ -6,16 +6,37 @@
         <Image-slider 
             :images="getModalFullInfo.images"
         />
+        <section class="project-modal__content">
+            <header class="header">
+                <h3>{{getModalFullInfo.name}}</h3>
+                <p class="header__technologies">
+                    <span 
+                        v-for="technology in getModalFullInfo.technologies"
+                        :key="technology"
+                    >
+                        {{technology}}
+                    </span>
+                </p>
+            </header>
+           
+            <p class="description">
+                {{getModalFullInfo.description}}
+            </p>
+
+            <Base-button text="Zobacz stronę" />
+        </section>
     </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
 import ImageSlider from "./image-slider/ImageSlider";
+import BaseButton from "../../buttons/BaseButton";
 
 export default {
     components: {
-        'Image-slider': ImageSlider
+        'Image-slider': ImageSlider,
+        'Base-button': BaseButton
     },
     computed: {
         ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])
@@ -66,6 +87,26 @@ export default {
         }
         &:active {
             background-color: rgba(0, 0, 0, 1);
+        }
+    }
+    &__content {
+        @include space-padding-big;
+        .header {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba($COLOR_project_technologies, .4);
+            h3 {
+                font-size: 3rem;
+                font-weight: 400;
+            }
+            &__technologies {
+                font-size: 1.5rem;
+                color: $COLOR_project_technologies;
+            }
+        }
+        
+        .description {
+            @include space-v-padding-big;
+            color: $COLOR_project_description;
         }
     }
 }    
