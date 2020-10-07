@@ -11,12 +11,14 @@
             <Base-button 
                 text="pokaz projekt"
                 class="button"
+                @click.native="showProjectModal()"
             />
         </div>
     </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import BaseButton from "../buttons/BaseButton";
 
 export default {
@@ -28,6 +30,9 @@ export default {
         projectName: { type: String },
         projectTechnologies: { type: Array },
         fullInfo: { type: Object }
+    },
+    methods: {
+        ...mapMutations('app', ['showProjectModal'])
     }
 }
 </script>

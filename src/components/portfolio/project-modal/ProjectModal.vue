@@ -1,6 +1,6 @@
 <template>
-    <div class="project-modal">
-        <button class="project-modal__button-close">
+    <div class="project-modal" v-if="getModalShowStae">
+        <button class="project-modal__button-close" @click="hideProjectModal()">
             <span>X</span>
         </button>
         <Image-slider 
@@ -10,12 +10,19 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 import ImageSlider from "./image-slider/ImageSlider";
 
 export default {
     components: {
         'Image-slider': ImageSlider
-    }    
+    },
+    computed: {
+        ...mapGetters('app', ['getModalShowStae'])
+    },
+    methods: {
+        ...mapMutations('app', ['hideProjectModal'])
+    }
 }
 </script>
 
