@@ -8,6 +8,7 @@
                 :projectName="name"
                 :projectTechnologies="technologies"
                 :fullInfo="{ name, technologies, ...fullInfo }"
+                :class="getRandomStartAnimation()"
             />
         </div>
         <Project-modal />
@@ -24,6 +25,23 @@ export default {
         Article,
         'Single-project': SingleProject,
         'Project-modal': ProjectModal
+    },
+    data() {
+        return {
+            animationNames: [
+                "slide-from-left", "slide-from-top", "slide-from-right", "slide-from-bottom", "slide-from-leftTop",
+                "slide-from-rightTop", "slide-from-leftBottom", "slide-from-rightBottom" 
+            ] // transitions.scss
+        }
+    },
+    methods: {
+        randomNumberFromRange(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        },
+        getRandomStartAnimation() {
+            const animationName = this.animationNames[this.randomNumberFromRange(0, this.animationNames.length-1)];
+            return animationName;
+        }
     }
 }
 </script>

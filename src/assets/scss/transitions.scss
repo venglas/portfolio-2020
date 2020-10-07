@@ -1,4 +1,4 @@
-$sides: left, top, right, bottom;
+$sides: left, top, right, bottom, leftTop, rightTop, leftBottom, rightBottom;
 
 @each $side in $sides {
     .slide-from-#{$side} {
@@ -20,6 +20,19 @@ $sides: left, top, right, bottom;
         @if $side == bottom {
             transform: translateY(100vh);
         }
+
+        @if $side == leftTop {
+            transform: translate(-100vw, -100vh);
+        }
+        @if $side == rightTop {
+            transform: translate(100vw, 100vh);
+        }
+        @if $side == leftBottom {
+            transform: translate(-100vw, 100vh);
+        }
+        @if $side == rightBottom {
+            transform: translate(100vw, 100vh);
+        }
     }
 }
 
@@ -34,4 +47,16 @@ $sides: left, top, right, bottom;
 }
 @keyframes slide-from-bottom {
     to { transform: translateY(0); opacity: 1;}
+}
+@keyframes slide-from-leftTop {
+    to { transform: translate(0, 0); opacity: 1;}
+}
+@keyframes slide-from-rightTop {
+    to { transform: translate(0, 0); opacity: 1;}
+}
+@keyframes slide-from-leftBottom {
+    to { transform: translate(0, 0); opacity: 1;}
+}
+@keyframes slide-from-rightBottom {
+    to { transform: translate(0, 0); opacity: 1;}
 }
