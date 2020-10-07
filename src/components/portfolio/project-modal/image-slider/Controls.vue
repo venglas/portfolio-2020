@@ -56,12 +56,17 @@ export default {
         border: none;
         outline: none;
         @include space-padding-big;
+        cursor: pointer;
         transition: all ease-in-out $TIME_fast-max;
+        
         &:hover {
-            background-color: rgba(0, 0, 0, .50);
+            background-color: rgba(0, 0, 0, .5);
             img {
                 filter: invert(1);
             }
+        }
+        &:active {
+            background-color: rgba(0, 0, 0, 1);
         }
         img {
             width: 24px;
