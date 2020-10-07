@@ -23,7 +23,7 @@
                 {{getModalFullInfo.description}}
             </p>
 
-            <Base-button text="Zobacz stronę" />
+            <Base-button >Zobacz stronę</Base-button>
         </section>
     </div>
 </template>

@@ -8,11 +8,11 @@
                     <span v-for="technology in projectTechnologies" :key="technology">{{technology}}</span>
                 </h4>
             </header>
-            <Base-button 
-                text="pokaz projekt"
+            <Base-button
                 class="button"
                 @click.native="openModal()"
-            />
+            > Pokaz projekt 
+            </Base-button>
         </div>
     </div>
 </template>

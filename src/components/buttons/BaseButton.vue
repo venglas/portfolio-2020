@@ -2,16 +2,12 @@
     <button 
         class="base-button"
     >
-        {{text}}
+        <slot />
     </button>
 </template>
 
 <script>
-export default {
-    props: {
-        text: { type: String }
-    }
-}
+export default {}
 </script>
 
 <style lang="scss">
