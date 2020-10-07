@@ -11,6 +11,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
+import { debounce } from "lodash";
 
 export default {
     props: {
@@ -24,14 +25,14 @@ export default {
     },
     methods: {
         ...mapMutations('app', ['setSliderPosition']),
-        nextSlide() {
+        nextSlide: debounce( function() {
             if (this.getSliderPosition > this.negativeSlidesCount) this.setSliderPosition(this.getSliderPosition - 1);
             else this.setSliderPosition(0);
-        },
-        prevSlide() {
+        }, 200),
+        prevSlide: debounce( function() {
             if (this.getSliderPosition < 0) this.setSliderPosition(this.getSliderPosition + 1);
             else this.setSliderPosition(this.negativeSlidesCount);
-        }
+        }, 200)
     }
 }
 </script>
