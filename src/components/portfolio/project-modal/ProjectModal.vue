@@ -1,10 +1,10 @@
 <template>
-    <div class="project-modal" v-if="getModalShowStae">
-        <button class="project-modal__button-close" @click="hideProjectModal()">
+    <div class="project-modal" v-if="getModalShowState">
+        <button class="project-modal__button-close" @click="closeModal()">
             <span>X</span>
         </button>
         <Image-slider 
-            :images="['https://homepages.cae.wisc.edu/~ece533/images/airplane.png', 'https://homepages.cae.wisc.edu/~ece533/images/arctichare.png', 'https://homepages.cae.wisc.edu/~ece533/images/boat.png']"
+            :images="getModalFullInfo.images"
         />
     </div>
 </template>
@@ -18,10 +18,14 @@ export default {
         'Image-slider': ImageSlider
     },
     computed: {
-        ...mapGetters('app', ['getModalShowStae'])
+        ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])
     },
     methods: {
-        ...mapMutations('app', ['hideProjectModal'])
+        ...mapMutations('app', ['hideProjectModal', 'hideOverlay']),
+        closeModal() {
+            this.hideProjectModal();
+            this.hideOverlay();
+        }
     }
 }
 </script>
@@ -36,11 +40,12 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: gray;
+    z-index: $SIZE_z-max;
     &__button-close {
         position: absolute;
         right: 0;
         top: 0;
-        z-index: $size_z-max;
+        z-index: $SIZE_z-max;
         display: flex;
         justify-content: center;
         align-items: center;

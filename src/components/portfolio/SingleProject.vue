@@ -1,6 +1,6 @@
 <template>
     <div class="project">
-        <div class="project__background" :style="{ 'background-image': `url(${image})` }"></div>
+        <div class="project__background" :style="backgroundImage"></div>
         <div class="project__inner">
             <header class="header">
                 <h3 class="header__title">{{projectName}}</h3>
@@ -11,7 +11,7 @@
             <Base-button 
                 text="pokaz projekt"
                 class="button"
-                @click.native="showProjectModal()"
+                @click.native="openModal()"
             />
         </div>
     </div>
@@ -31,8 +31,18 @@ export default {
         projectTechnologies: { type: Array },
         fullInfo: { type: Object }
     },
+    computed: {
+        backgroundImage() {
+            return { 'background-image': `url(${this.image})` };
+        }
+    },
     methods: {
-        ...mapMutations('app', ['showProjectModal'])
+        ...mapMutations('app', ['showProjectModal', 'setProjectModalInfo', 'showOverlay']),
+        openModal() {
+            this.showProjectModal();
+            this.showOverlay();
+            this.setProjectModalInfo(this.fullInfo);
+        }
     }
 }
 </script>
@@ -47,8 +57,9 @@ export default {
     height: 300px;
     color: #000;
     overflow: hidden;
+    z-index: $SIZE_z-min;
     &__background {
-        z-index: -1;
+        z-index: $SIZE_z-min-max;
         position: absolute;
         width: 100%;
         height: 100%;

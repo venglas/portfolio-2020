@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 .language-info-modal {
     position: absolute;
-    z-index: $size_z-max;
+    z-index: $SIZE_z-max;
     right: 0;
     max-width: $SIZE_language-selector-width;
     font-size: 1.1rem;

@@ -4,6 +4,7 @@
     <router-view :class="`router-view router-view--${$route.name}`"/>
     <Language-info-modal />
     <Language-switcher />
+    <Overlay />
   </div>
 </template>
 
@@ -12,12 +13,14 @@ import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/navbar/Navbar";
 import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 import LanguageInfoModal from "./components/language-switcher/InfoModal";
+import Overlay from "./components/helpers/Overlay";
 
 export default {
   components: {
     Navbar,
     "Language-switcher": LanguageSwitcher,
-    "Language-info-modal": LanguageInfoModal
+    "Language-info-modal": LanguageInfoModal,
+    Overlay
   },
   beforeCreate() {},
   created() {

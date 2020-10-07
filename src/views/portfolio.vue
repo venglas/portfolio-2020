@@ -7,7 +7,7 @@
                 :image="image"
                 :projectName="name"
                 :projectTechnologies="technologies"
-                :fullInfo="fullInfo"
+                :fullInfo="{ name, technologies, ...fullInfo }"
             />
         </div>
         <Project-modal />
