@@ -42,10 +42,11 @@ export default {
         ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])
     },
     methods: {
-        ...mapMutations('app', ['hideProjectModal', 'hideOverlay']),
+        ...mapMutations('app', ['hideProjectModal', 'hideOverlay', 'setSliderPosition']),
         closeModal() {
             this.hideProjectModal();
             this.hideOverlay();
+            this.setSliderPosition(0);
         }
     }
 }
