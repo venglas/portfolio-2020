@@ -3,9 +3,7 @@
         <button class="project-modal__button-close" @click="closeModal()">
             <span>X</span>
         </button>
-        <Image-slider 
-            :images="getModalFullInfo.images"
-        />
+        <Image-slider :images="getModalFullInfo.images" />
         <section class="project-modal__content">
             <header class="header">
                 <h3>{{getModalFullInfo.name}}</h3>
@@ -23,7 +21,7 @@
                 {{getModalFullInfo.description}}
             </p>
 
-            <Base-button >Zobacz stronę</Base-button>
+            <Base-button>Zobacz stronę</Base-button>
         </section>
     </div>
 </template>
