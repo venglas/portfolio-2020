@@ -11,20 +11,17 @@
                 :class="getRandomStartAnimation()"
             />
         </div>
-        <Project-modal />
     </Article>
 </template>
 
 <script>
 import Article from "../components/article/Article";
 import SingleProject from "../components/portfolio/SingleProject";
-import ProjectModal from "../components/portfolio/project-modal/ProjectModal";
 
 export default {
     components: {
         Article,
-        'Single-project': SingleProject,
-        'Project-modal': ProjectModal
+        'Single-project': SingleProject
     },
     data() {
         return {
