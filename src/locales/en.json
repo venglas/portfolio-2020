@@ -116,51 +116,15 @@
       "modalButtonText": "Visit website"
     },
     "projects": [
-        {
-            "name": "Test 1",
-            "technologies": ["Nuxt", "Express"],
-            "image": "https://picsum.photos/400",
-            "fullInfo": {
-                "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-            }
-        },
-        {
-            "name": "Test 2",
-            "technologies": ["Vue", "Express"],
-            "image": "https://picsum.photos/400",
-            "fullInfo": {
-                "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-            }
-        },
-        {
-            "name": "Test 3",
-            "technologies": ["Vue", "Express"],
-            "image": "https://picsum.photos/400",
-            "fullInfo": {
-                "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-            }
-        },
-        {
-            "name": "Test 4",
-            "technologies": ["Vue", "Express"],
-            "image": "https://picsum.photos/400",
-            "fullInfo": {
-                "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-            }
-        },
-        {
-            "name": "Test 5",
-            "technologies": ["Vue", "Express"],
-            "image": "https://picsum.photos/400",
-            "fullInfo": {
-                "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-            }
+      {
+        "name": "Test 1",
+        "technologies": ["Nuxt", "Express"],
+        "image": "https://picsum.photos/400",
+        "fullInfo": {
+          "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
+          "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil."
         }
+      }
     ]
 }
 }
