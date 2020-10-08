@@ -11,7 +11,7 @@
             <Base-button
                 class="button"
                 @click.native="openModal()"
-            > Pokaz projekt 
+            > {{$t('portfolio.project.buttonText')}}
             </Base-button>
         </div>
     </div>

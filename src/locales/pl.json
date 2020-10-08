@@ -111,6 +111,10 @@
         }
     },
     "portfolio": {
+        "project": {
+            "buttonText": "Pokaz projekt",
+            "modalButtonText": "Zobacz stronę"
+        },
         "projects": [
             {
                 "name": "Test 1",
