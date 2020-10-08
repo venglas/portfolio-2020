@@ -1,29 +1,31 @@
 <template>
-    <div class="project-modal" v-if="getModalShowState">
-        <button class="project-modal__button-close" @click="closeModal()">
-            <span>X</span>
-        </button>
-        <Image-slider :images="getModalFullInfo.images" />
-        <section class="project-modal__content">
-            <header class="header">
-                <h3>{{getModalFullInfo.name}}</h3>
-                <p class="header__technologies">
-                    <span 
-                        v-for="technology in getModalFullInfo.technologies"
-                        :key="technology"
-                    >
-                        {{technology}}
-                    </span>
+    <transition name="bottom-slide">
+        <div class="project-modal" v-if="getModalShowState">
+            <button class="project-modal__button-close" @click="closeModal()">
+                <span>X</span>
+            </button>
+            <Image-slider :images="getModalFullInfo.images" />
+            <section class="project-modal__content">
+                <header class="header">
+                    <h3>{{getModalFullInfo.name}}</h3>
+                    <p class="header__technologies">
+                        <span 
+                            v-for="technology in getModalFullInfo.technologies"
+                            :key="technology"
+                        >
+                            {{technology}}
+                        </span>
+                    </p>
+                </header>
+            
+                <p class="description">
+                    {{getModalFullInfo.description}}
                 </p>
-            </header>
-           
-            <p class="description">
-                {{getModalFullInfo.description}}
-            </p>
 
-            <Base-button>Zobacz stronę</Base-button>
-        </section>
-    </div>
+                <Base-button>Zobacz stronę</Base-button>
+            </section>
+        </div>
+    </transition>
 </template>
 
 <script>

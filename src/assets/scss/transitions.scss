@@ -60,3 +60,10 @@ $sides: left, top, right, bottom, leftTop, rightTop, leftBottom, rightBottom;
 @keyframes slide-from-rightBottom {
     to { transform: translate(0, 0); opacity: 1;}
 }
+
+.bottom-slide-enter-active, .bottom-slide-leave-active {
+    transition: transform $TIME_fast;
+}
+.bottom-slide-enter, .bottom-slide-leave-to {
+    transform: translate(-50%, 100vh);
+}
