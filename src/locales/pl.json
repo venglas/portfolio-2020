@@ -117,14 +117,58 @@
         },
         "projects": [
             {
-              "name": "Test 1",
-              "technologies": ["Nuxt", "Express"],
-              "image": "ig-helper-tool/slide1.jpg",
-              "fullInfo": {
-                "images": ["ig-helper-tool/slide1.jpg", "ig-helper-tool/slide2.jpg", "ig-helper-tool/slide3.jpg", "ig-helper-tool/slide4.jpg", "ig-helper-tool/slide5.jpg"],
-                "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil."
-              }
+                "name": "IG Helper Tool",
+                "technologies": ["Vue", "Chrome extension", "ES6"],
+                "image": "ig-helper-tool/slide1.jpg",
+                "fullInfo": {
+                    "images": ["ig-helper-tool/slide1.jpg", "ig-helper-tool/slide2.jpg", "ig-helper-tool/slide3.jpg", "ig-helper-tool/slide4.jpg", "ig-helper-tool/slide5.jpg"],
+                    "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil.",
+                    "descriptionLink": {
+                        "link": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "name": "Property Map Searcher",
+                "technologies": ["Nuxt", "Vuetify", "MapBox", "PWA"],
+                "image": "property-map-searcher/slide2.jpg",
+                "fullInfo": {
+                    "images": ["property-map-searcher/slide1.jpg", "property-map-searcher/slide2.jpg", "property-map-searcher/slide3.jpg", "property-map-searcher/slide4.jpg"],
+                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Słuzy do szukania mieszkan umiejscowionych na mapie, oraz filtry do szukania.",
+                    "descriptionLink": {
+                        "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
+                        "name": "Film prezentacyjny"
+                    }
+                }
+            },
+            {
+                "name": "Margonem Multi Bot",
+                "technologies": ["Chrome extension", "ES6"],
+                "image": "margonem-multi-bot/slide1.jpg",
+                "fullInfo": {
+                    "images": ["margonem-multi-bot/slide1.jpg", "margonem-multi-bot/slide2.jpg", "margonem-multi-bot/slide3.jpg", "margonem-multi-bot/slide4.jpg"],
+                    "description": "Margonem Multi Bot jest botem wykonującym czynności za gracza w celu uzyskania punktów doświadczenia, kolejnych poziomów oraz przedmiotów. Bot posiada również kilka ulepszeń do gry takich jak zmienione okno walki, czy dodanie lepszego wyglądu czatu obsługa emotikon, powiadomienia dźwiękowe o prywatnych wiadomościach, oraz ulepszenie minimapy.",
+                    "descriptionLink": {
+                        "link": "https://margonembot.wordpress.com/",
+                        "name": "Oficialna strona"
+                    }
+                }
+            },
+            {
+                "name": "NBA Hall Of Hate",
+                "technologies": ["Vue", "Java 8", "SpringBoot", "Hibernate"],
+                "image": "nba-hall-of-hate/slide1.jpg",
+                "fullInfo": {
+                    "images": ["nba-hall-of-hate/slide1.jpg", "nba-hall-of-hate/slide2.jpg", "nba-hall-of-hate/slide3.jpg", "nba-hall-of-hate/slide4.jpg", "nba-hall-of-hate/slide5.jpg"],
+                    "description": "NBA Hall Of Hate jest aplikacją webową. W przyszłości te mobilną. Uytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie. Jest to pewnego rodziaju gra, która ma na celu wyłonie najbardziej hejtowanego jak i najbardziej respektowanego zawodnika NBA danego sezonu.",
+                    "descriptionLink": {
+                        "link": "https://lucid-wright-54f76e.netlify.app/",
+                        "name": "link do buttona"
+                    }
+                }
             }
+            
         ]
     }
 }

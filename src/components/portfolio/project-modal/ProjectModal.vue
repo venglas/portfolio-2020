@@ -20,6 +20,7 @@
             
                 <p class="description">
                     {{getModalFullInfo.description}}
+                    <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
                 </p>
 
                 <Base-button>{{$t('portfolio.project.modalButtonText')}}</Base-button>
@@ -122,6 +123,9 @@ export default {
         .description {
             @include space-v-padding-big;
             color: $COLOR_project_description;
+            a {
+                display: block;
+            }
         }
     }
 }    
