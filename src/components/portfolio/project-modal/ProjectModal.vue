@@ -22,7 +22,7 @@
                     {{getModalFullInfo.description}}
                 </p>
 
-                <Base-button>Zobacz stronę</Base-button>
+                <Base-button>{{$t('portfolio.project.modalButtonText')}}</Base-button>
             </section>
         </div>
     </transition>
