@@ -33,7 +33,8 @@ export default {
     },
     computed: {
         backgroundImage() {
-            return { 'background-image': `url(${this.image})` };
+            const img = require(`../../assets/img/projects/${this.image}`);
+            return { 'background-image': `url(${img})` };
         }
     },
     methods: {

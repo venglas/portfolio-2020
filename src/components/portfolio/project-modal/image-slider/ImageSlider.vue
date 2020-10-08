@@ -22,13 +22,11 @@ export default {
     props: {
         images: { type: Array }
     },
-    mounted() {},
     computed: {
         slidesCount() {
             return this.images.length
         }
-    },
-    methods: {}
+    }
 }
 </script>
 
