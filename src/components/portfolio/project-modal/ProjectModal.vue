@@ -52,7 +52,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 .project-modal {
     position: absolute;
