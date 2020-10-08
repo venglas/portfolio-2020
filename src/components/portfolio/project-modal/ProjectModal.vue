@@ -55,13 +55,28 @@ export default {
 <style lang="scss">
 .project-modal {
     position: absolute;
-    width: 50%;
-    height: 80%;
-    top: 0;
+    width: 40%;
+    height: fit-content;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: #fff;
     z-index: $SIZE_z-max;
+    @media(max-width: 1500px) {
+        width: 50%;
+    }
+    @media (max-width: $BP_first) {
+        width: 60%;
+    }
+    @media (max-width: $BP_second) {
+        width: 70%;
+    }
+    @media (max-width: 800px) {
+        width: 80%;
+    }
+    @media (max-width: 425px) {
+        width: 100%;
+    }
     &__button-close {
         position: absolute;
         right: 0;

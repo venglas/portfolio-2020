@@ -5,6 +5,7 @@
     <Language-info-modal />
     <Language-switcher />
     <Overlay />
+    <Project-modal />
   </div>
 </template>
 
@@ -14,13 +15,15 @@ import Navbar from "./components/navbar/Navbar";
 import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 import LanguageInfoModal from "./components/language-switcher/InfoModal";
 import Overlay from "./components/helpers/Overlay";
+import ProjectModal from "./components/portfolio/project-modal/ProjectModal";
 
 export default {
   components: {
     Navbar,
     "Language-switcher": LanguageSwitcher,
     "Language-info-modal": LanguageInfoModal,
-    Overlay
+    Overlay,
+    "Project-modal": ProjectModal
   },
   beforeCreate() {},
   created() {

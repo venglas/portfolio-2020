@@ -40,7 +40,16 @@ export default {
     flex-direction: column;
     overflow: hidden;
     width: 100%;
-    height: 70%;
+    height: 500px;
     border-bottom: solid 2px $COLOR_slider_bottom_border;
+    @media (max-height: 825px) {
+        height: 400px;
+    }
+    @media (max-height: 750px) {
+        height: 300px;
+    }
+    @media (max-width: 600px) {
+        height: 40vh;
+    }
 }
 </style>
