@@ -29,7 +29,7 @@ export default {
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
-    this.getWebsiteHeight()
+    this.getWebsiteHeight();
   },
   methods: {
     ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
@@ -60,6 +60,7 @@ body {
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .app {
   height: 100vh;
