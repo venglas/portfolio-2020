@@ -23,7 +23,9 @@
                     <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
                 </p>
 
-                <Base-button class="base-button">{{$t('portfolio.project.modalButtonText')}}</Base-button>
+                <Base-button class="base-button" :href="getModalFullInfo.buttonLink">
+                    {{$t('portfolio.project.modalButtonText')}}
+                </Base-button>
             </section>
         </div>
     </transition>
