@@ -120,6 +120,15 @@ export default {
             &__technologies {
                 font-size: 1.5rem;
                 color: $COLOR_project_technologies;
+                span {
+                    &:after { 
+                        content: ',';
+                        margin-left: -3px;
+                    }
+                    &:last-child {
+                        &:after { content: none; }
+                    }
+                }
             }
         }
         
