@@ -23,7 +23,7 @@
                     <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
                 </p>
 
-                <Base-button>{{$t('portfolio.project.modalButtonText')}}</Base-button>
+                <Base-button class="base-button">{{$t('portfolio.project.modalButtonText')}}</Base-button>
             </section>
         </div>
     </transition>
@@ -128,6 +128,9 @@ export default {
                 display: block;
             }
         }
+        .base-button {
+            transition: all ease-in-out $TIME_fast;
+        }
     }
-}    
+}
 </style>
