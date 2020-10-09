@@ -86,23 +86,24 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, .15);
+        font-size: 1.5rem;
+        background-color: $COLOR_portfolio_modal_controls_bg;
         border: none;
         outline: none;
-        @include space-padding-med;
+        @include space-padding-big;
         cursor: pointer;
         transition: all ease-in-out $TIME_fast-max;
         span {
             transition: all ease-in-out $TIME_fast-max;
         }
         &:hover {
-            background-color: rgba(0, 0, 0, .5);
+            background-color: $COLOR_portfolio_modal_controls_bg_hover;
             span {
                 filter: invert(1);
             }
         }
         &:active {
-            background-color: rgba(0, 0, 0, 1);
+            background-color: $COLOR_portfolio_modal_controls_bg_hover;
         }
     }
     &__content {
