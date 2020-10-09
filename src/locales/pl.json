@@ -124,10 +124,10 @@
                     "images": ["ig-helper-tool/slide1.jpg", "ig-helper-tool/slide2.jpg", "ig-helper-tool/slide3.jpg", "ig-helper-tool/slide4.jpg", "ig-helper-tool/slide5.jpg"],
                     "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil.",
                     "descriptionLink": {
-                        "link": "",
-                        "name": ""
+                        "link": "https://www.youtube.com/watch?v=AYSHRQAsCcU&t=&ab_channel=Pa%C5%82za",
+                        "name": "Film prezentacyjny"
                     },
-                    "buttonLink": "https://example.com"
+                    "buttonLink": "https://github.com/venglas/ig-helper"
                 }
             },
             {
@@ -141,7 +141,7 @@
                         "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
                         "name": "Film prezentacyjny"
                     },
-                    "buttonLink": ""
+                    "buttonLink": "https://barlomiej-bober-rekrutacja.netlify.app/"
                 }
             },
             {
@@ -152,10 +152,10 @@
                     "images": ["margonem-multi-bot/slide1.jpg", "margonem-multi-bot/slide2.jpg", "margonem-multi-bot/slide3.jpg", "margonem-multi-bot/slide4.jpg"],
                     "description": "Margonem Multi Bot jest botem wykonującym czynności za gracza w celu uzyskania punktów doświadczenia, kolejnych poziomów oraz przedmiotów. Bot posiada również kilka ulepszeń do gry takich jak zmienione okno walki, czy dodanie lepszego wyglądu czatu obsługa emotikon, powiadomienia dźwiękowe o prywatnych wiadomościach, oraz ulepszenie minimapy.",
                     "descriptionLink": {
-                        "link": "https://margonembot.wordpress.com/",
-                        "name": "Oficialna strona"
+                        "link": "https://www.youtube.com/watch?v=qiHix06F5wc&ab_channel=Pa%C5%82za",
+                        "name": "Film prezentacyjny"
                     },
-                    "buttonLink": ""
+                    "buttonLink": "https://margonembot.wordpress.com/"
                 }
             },
             {
@@ -166,10 +166,10 @@
                     "images": ["nba-hall-of-hate/slide1.jpg", "nba-hall-of-hate/slide2.jpg", "nba-hall-of-hate/slide3.jpg", "nba-hall-of-hate/slide4.jpg", "nba-hall-of-hate/slide5.jpg"],
                     "description": "NBA Hall Of Hate jest aplikacją webową. W przyszłości te mobilną. Uytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie. Jest to pewnego rodziaju gra, która ma na celu wyłonie najbardziej hejtowanego jak i najbardziej respektowanego zawodnika NBA danego sezonu.",
                     "descriptionLink": {
-                        "link": "https://lucid-wright-54f76e.netlify.app/",
-                        "name": "link do buttona"
+                        "link": "https://github.com/venglas/nba-hall-of-hate",
+                        "name": "link do kodu"
                     },
-                    "buttonLink": ""
+                    "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
                 }
             }
             
