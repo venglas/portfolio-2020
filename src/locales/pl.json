@@ -136,7 +136,7 @@
                 "image": "property-map-searcher/slide2.jpg",
                 "fullInfo": {
                     "images": ["property-map-searcher/slide1.jpg", "property-map-searcher/slide2.jpg", "property-map-searcher/slide3.jpg", "property-map-searcher/slide4.jpg"],
-                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Słuzy do szukania mieszkan umiejscowionych na mapie, oraz filtry do szukania.",
+                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Słuzy do szukania mieszkań umiejscowionych na mapie, oraz filtry do szukania.",
                     "descriptionLink": {
                         "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
                         "name": "Film prezentacyjny"
@@ -164,7 +164,7 @@
                 "image": "nba-hall-of-hate/slide1.jpg",
                 "fullInfo": {
                     "images": ["nba-hall-of-hate/slide1.jpg", "nba-hall-of-hate/slide2.jpg", "nba-hall-of-hate/slide3.jpg", "nba-hall-of-hate/slide4.jpg", "nba-hall-of-hate/slide5.jpg"],
-                    "description": "NBA Hall Of Hate jest aplikacją webową. W przyszłości te mobilną. Uytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie. Jest to pewnego rodziaju gra, która ma na celu wyłonie najbardziej hejtowanego jak i najbardziej respektowanego zawodnika NBA danego sezonu.",
+                    "description": "NBA Hall Of Hate jest aplikacją webową. Użytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie w formie komenatrzy jak i punktów.",
                     "descriptionLink": {
                         "link": "https://github.com/venglas/nba-hall-of-hate",
                         "name": "link do kodu"
@@ -172,7 +172,6 @@
                     "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
                 }
             }
-            
         ]
     }
 }
