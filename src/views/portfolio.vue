@@ -50,6 +50,12 @@ export default {
 .article--projects {
     position: relative;
     margin: 1.5rem auto;
+    @media (max-width: 1500px) {
+        width: 80%;
+    }
+    @media (max-width: 1400px) {
+        width: 90%;
+    }
 }
 .projects {
     display: flex;

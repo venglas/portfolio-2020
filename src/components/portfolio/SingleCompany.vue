@@ -1,10 +1,10 @@
 <template>
     <div class="company">
         <header class="company__header">
-            Life In Mobile
+            {{companyName}}
         </header>
         <Octagon-wrapper class="company__octagon">
-            <a href="https://lifeinmobile.com/" target="_blank" title="life in mobile">
+            <a :href="companyLink" target="_blank" >
                 <img :src="img" class="company__img" alt="">
             </a>
         </Octagon-wrapper>
@@ -19,7 +19,9 @@ export default {
         "Octagon-wrapper": OctagonWrapper
     },
     props: {
-        image: { type: String }
+        image: { type: String },
+        companyName: { type: String },
+        companyLink: { type: String }
     },
     computed: {
         img() {
@@ -36,6 +38,7 @@ export default {
 .company {
     width: 125px;
     height: 125px;
+    @include space-h-margin-small;
     &__header {
         text-align: center;
         font-weight: 500;

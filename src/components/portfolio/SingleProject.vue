@@ -59,6 +59,18 @@ export default {
     color: #000;
     overflow: hidden;
     z-index: $SIZE_z-min;
+    @media (max-width: 830px) {
+        width: 65%;
+    }
+    @media (max-width: 750px) {
+        width: 75%;
+    }
+    @media (max-width: 650px) {
+        width: 85%;
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+    }
     &__background {
         z-index: $SIZE_z-min-max;
         position: absolute;
