@@ -20,9 +20,12 @@
             
                 <p class="description">
                     {{getModalFullInfo.description}}
+                    <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
                 </p>
 
-                <Base-button>{{$t('portfolio.project.modalButtonText')}}</Base-button>
+                <Base-button class="base-button" :href="getModalFullInfo.buttonLink">
+                    {{$t('portfolio.project.modalButtonText')}}
+                </Base-button>
             </section>
         </div>
     </transition>
@@ -85,23 +88,24 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, .15);
+        font-size: 1.5rem;
+        background-color: $COLOR_portfolio_modal_controls_bg;
         border: none;
         outline: none;
-        @include space-padding-med;
+        @include space-padding-big;
         cursor: pointer;
         transition: all ease-in-out $TIME_fast-max;
         span {
             transition: all ease-in-out $TIME_fast-max;
         }
         &:hover {
-            background-color: rgba(0, 0, 0, .5);
+            background-color: $COLOR_portfolio_modal_controls_bg_hover;
             span {
                 filter: invert(1);
             }
         }
         &:active {
-            background-color: rgba(0, 0, 0, 1);
+            background-color: $COLOR_portfolio_modal_controls_bg_hover;
         }
     }
     &__content {
@@ -116,13 +120,28 @@ export default {
             &__technologies {
                 font-size: 1.5rem;
                 color: $COLOR_project_technologies;
+                span {
+                    &:after { 
+                        content: ',';
+                        margin-left: -3px;
+                    }
+                    &:last-child {
+                        &:after { content: none; }
+                    }
+                }
             }
         }
         
         .description {
             @include space-v-padding-big;
             color: $COLOR_project_description;
+            a {
+                display: block;
+            }
+        }
+        .base-button {
+            transition: all ease-in-out $TIME_fast;
         }
     }
-}    
+}
 </style>

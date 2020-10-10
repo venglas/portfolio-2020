@@ -117,14 +117,61 @@
     },
     "projects": [
       {
-        "name": "Test 1",
-        "technologies": ["Nuxt", "Express"],
-        "image": "https://picsum.photos/400",
+        "name": "IG Helper Tool",
+        "technologies": ["Vue", "Chrome extension", "ES6"],
+        "image": "ig-helper-tool/slide1.jpg",
         "fullInfo": {
-          "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-          "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil."
+          "images": ["ig-helper-tool/slide1.jpg", "ig-helper-tool/slide2.jpg", "ig-helper-tool/slide3.jpg", "ig-helper-tool/slide4.jpg", "ig-helper-tool/slide5.jpg"],
+          "description": "IG Helper tool is a tool that let you easier manage a profile on Instagram and get more count of people that follows your profile.",
+          "descriptionLink": {
+            "link": "https://www.youtube.com/watch?v=AYSHRQAsCcU&t=&ab_channel=Pa%C5%82za",
+            "name": "Presentation video"
+          },
+          "buttonLink": "https://github.com/venglas/ig-helper"
+        }
+      },
+      {
+        "name": "Property Map Searcher",
+        "technologies": ["Nuxt", "Vuetify", "MapBox", "PWA"],
+        "image": "property-map-searcher/slide2.jpg",
+        "fullInfo": {
+          "images": ["property-map-searcher/slide1.jpg", "property-map-searcher/slide2.jpg", "property-map-searcher/slide3.jpg", "property-map-searcher/slide4.jpg"],
+          "description": "Property Map Searcher is a PWA application that was based on Nuxt, Vuetyfy, and MapBoxGl. You can look for and filter apartment from the map.",
+          "descriptionLink": {
+            "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
+            "name": "Presentation video"
+          },
+          "buttonLink": "https://barlomiej-bober-rekrutacja.netlify.app/"
+        }
+      },
+      {
+        "name": "Margonem Multi Bot",
+        "technologies": ["Chrome extension", "ES6"],
+        "image": "margonem-multi-bot/slide1.jpg",
+        "fullInfo": {
+          "images": ["margonem-multi-bot/slide1.jpg", "margonem-multi-bot/slide2.jpg", "margonem-multi-bot/slide3.jpg", "margonem-multi-bot/slide4.jpg"],
+          "description": "Margonem Multi Bot is a bot that doing stuff to get points of experience, next levels, and items. The bot has a few improvements like the better window of the fight, better chat appearance with emojis, sound alerts about the private message, and improvements of minimap.",
+          "descriptionLink": {
+            "link": "https://www.youtube.com/watch?v=qiHix06F5wc&ab_channel=Pa%C5%82za",
+            "name": "Presentation video"
+          },
+          "buttonLink": "https://margonembot.wordpress.com/"
+        }
+      },
+      {
+        "name": "NBA Hall Of Hate",
+        "technologies": ["Vue", "Java 8", "SpringBoot", "Hibernate"],
+        "image": "nba-hall-of-hate/slide1.jpg",
+        "fullInfo": {
+          "images": ["nba-hall-of-hate/slide1.jpg", "nba-hall-of-hate/slide2.jpg", "nba-hall-of-hate/slide3.jpg", "nba-hall-of-hate/slide4.jpg", "nba-hall-of-hate/slide5.jpg"],
+          "description": "The NBA Hall Of Hate is a web application. Users can rate players positive and negative in comments or just in adding points.",
+          "descriptionLink": {
+            "link": "https://github.com/venglas/nba-hall-of-hate",
+            "name": "link to the code"
+          },
+          "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
         }
       }
     ]
-}
+  }
 }

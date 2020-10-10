@@ -117,48 +117,59 @@
         },
         "projects": [
             {
-                "name": "Test 1",
-                "technologies": ["Nuxt", "Express"],
-                "image": "https://picsum.photos/400",
+                "name": "IG Helper Tool",
+                "technologies": ["Vue", "Chrome extension", "ES6"],
+                "image": "ig-helper-tool/slide1.jpg",
                 "fullInfo": {
-                    "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                    "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
+                    "images": ["ig-helper-tool/slide1.jpg", "ig-helper-tool/slide2.jpg", "ig-helper-tool/slide3.jpg", "ig-helper-tool/slide4.jpg", "ig-helper-tool/slide5.jpg"],
+                    "description": "IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil.",
+                    "descriptionLink": {
+                        "link": "https://www.youtube.com/watch?v=AYSHRQAsCcU&t=&ab_channel=Pa%C5%82za",
+                        "name": "Film prezentacyjny"
+                    },
+                    "buttonLink": "https://github.com/venglas/ig-helper"
                 }
             },
             {
-                "name": "Test 2",
-                "technologies": ["Vue", "Express"],
-                "image": "https://picsum.photos/400",
+                "name": "Property Map Searcher",
+                "technologies": ["Nuxt", "Vuetify", "MapBox", "PWA"],
+                "image": "property-map-searcher/slide2.jpg",
                 "fullInfo": {
-                    "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                    "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
+                    "images": ["property-map-searcher/slide1.jpg", "property-map-searcher/slide2.jpg", "property-map-searcher/slide3.jpg", "property-map-searcher/slide4.jpg"],
+                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Słuzy do szukania mieszkań umiejscowionych na mapie, oraz filtry do szukania.",
+                    "descriptionLink": {
+                        "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
+                        "name": "Film prezentacyjny"
+                    },
+                    "buttonLink": "https://barlomiej-bober-rekrutacja.netlify.app/"
                 }
             },
             {
-                "name": "Test 3",
-                "technologies": ["Vue", "Express"],
-                "image": "https://picsum.photos/400",
+                "name": "Margonem Multi Bot",
+                "technologies": ["Chrome extension", "ES6"],
+                "image": "margonem-multi-bot/slide1.jpg",
                 "fullInfo": {
-                    "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                    "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
+                    "images": ["margonem-multi-bot/slide1.jpg", "margonem-multi-bot/slide2.jpg", "margonem-multi-bot/slide3.jpg", "margonem-multi-bot/slide4.jpg"],
+                    "description": "Margonem Multi Bot jest botem wykonującym czynności za gracza w celu uzyskania punktów doświadczenia, kolejnych poziomów oraz przedmiotów. Bot posiada również kilka ulepszeń do gry takich jak zmienione okno walki, czy dodanie lepszego wyglądu czatu obsługa emotikon, powiadomienia dźwiękowe o prywatnych wiadomościach, oraz ulepszenie minimapy.",
+                    "descriptionLink": {
+                        "link": "https://www.youtube.com/watch?v=qiHix06F5wc&ab_channel=Pa%C5%82za",
+                        "name": "Film prezentacyjny"
+                    },
+                    "buttonLink": "https://margonembot.wordpress.com/"
                 }
             },
             {
-                "name": "Test 4",
-                "technologies": ["Vue", "Express"],
-                "image": "https://picsum.photos/400",
+                "name": "NBA Hall Of Hate",
+                "technologies": ["Vue", "Java 8", "SpringBoot", "Hibernate"],
+                "image": "nba-hall-of-hate/slide1.jpg",
                 "fullInfo": {
-                    "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                    "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
-                }
-            },
-            {
-                "name": "Test 5",
-                "technologies": ["Vue", "Express"],
-                "image": "https://picsum.photos/400",
-                "fullInfo": {
-                    "images": ["https://homepages.cae.wisc.edu/~ece533/images/airplane.png", "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png", "https://homepages.cae.wisc.edu/~ece533/images/boat.png"],
-                    "description": "Projekt testowy. Projekt testowy. v vProjekt testowy. Projekt testowy. Projekt testowy."
+                    "images": ["nba-hall-of-hate/slide1.jpg", "nba-hall-of-hate/slide2.jpg", "nba-hall-of-hate/slide3.jpg", "nba-hall-of-hate/slide4.jpg", "nba-hall-of-hate/slide5.jpg"],
+                    "description": "NBA Hall Of Hate jest aplikacją webową. Użytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie w formie komenatrzy jak i punktów.",
+                    "descriptionLink": {
+                        "link": "https://github.com/venglas/nba-hall-of-hate",
+                        "name": "link do kodu"
+                    },
+                    "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
                 }
             }
         ]

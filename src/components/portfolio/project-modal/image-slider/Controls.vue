@@ -51,7 +51,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, .15);
+        background-color: $COLOR_portfolio_modal_controls_bg;
         border: none;
         outline: none;
         @include space-padding-big;
@@ -59,7 +59,7 @@ export default {
         transition: all ease-in-out $TIME_fast-max;
         
         &:hover {
-            background-color: rgba(0, 0, 0, .5);
+            background-color:$COLOR_portfolio_modal_controls_bg_hover;
             img {
                 filter: invert(1);
             }

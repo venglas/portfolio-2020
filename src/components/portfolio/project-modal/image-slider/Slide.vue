@@ -16,7 +16,8 @@ export default {
     computed: {
         ...mapGetters('app', ['getSliderPosition']),
         styles() {
-            return { 'background-image': `url(${this.image})`, 'transform': `translateX(${this.getSliderPosition}00%)` }
+            const img = require(`../../../../assets/img/projects/${this.image}`)
+            return { 'background-image': `url(${img})`, 'transform': `translateX(${this.getSliderPosition}00%)` }
         }
     }
 }

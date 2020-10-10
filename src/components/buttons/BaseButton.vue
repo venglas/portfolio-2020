@@ -1,13 +1,23 @@
 <template>
     <button 
         class="base-button"
+        @click="openLink()"
     >
         <slot />
     </button>
 </template>
 
 <script>
-export default {}
+export default {
+    props: {
+        href: { type: String }
+    },
+    methods: {
+        openLink() {
+            if (this.href) window.open(this.href, "_blank"); 
+        }
+    }
+}
 </script>
 
 <style lang="scss">
