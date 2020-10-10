@@ -11,17 +11,20 @@
                 :class="getRandomStartAnimation()"
             />
         </div>
+        <Companies-section />
     </Article>
 </template>
 
 <script>
 import Article from "../components/article/Article";
 import SingleProject from "../components/portfolio/SingleProject";
+import CompaniesSection from "../components/portfolio/CompaniesSection";
 
 export default {
     components: {
         Article,
-        'Single-project': SingleProject
+        'Single-project': SingleProject,
+        'Companies-section': CompaniesSection
     },
     data() {
         return {
@@ -46,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 .article--projects {
     position: relative;
+    margin: 1.5rem auto;
 }
 .projects {
     display: flex;
