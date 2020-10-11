@@ -4,7 +4,7 @@
             <button class="project-modal__button-close" @click="closeModal()">
                 <span>X</span>
             </button>
-            <Image-slider :images="getModalFullInfo.images" />
+            <image-slider :images="getModalFullInfo.images" />
             <section class="project-modal__content">
                 <header class="header">
                     <h3>{{getModalFullInfo.name}}</h3>
@@ -23,9 +23,9 @@
                     <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
                 </p>
 
-                <Base-button class="base-button" :href="getModalFullInfo.buttonLink">
+                <base-button class="base-button" :href="getModalFullInfo.buttonLink">
                     {{$t('portfolio.project.modalButtonText')}}
-                </Base-button>
+                </base-button>
             </section>
         </div>
     </transition>
@@ -33,13 +33,13 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import ImageSlider from "./image-slider/ImageSlider";
-import BaseButton from "../../buttons/BaseButton";
+import imageSlider from "./image-slider/image-slider";
+import baseButton from "../../buttons/base-button";
 
 export default {
     components: {
-        'Image-slider': ImageSlider,
-        'Base-button': BaseButton
+        'image-slider': imageSlider,
+        'base-button': baseButton
     },
     computed: {
         ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])

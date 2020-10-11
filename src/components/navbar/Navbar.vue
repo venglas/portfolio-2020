@@ -1,19 +1,18 @@
 <template>
-  <component :is="getMobileView ? 'Navbar-mobile' : 'Navbar-web'"/>
+  <component :is="getMobileView ? 'navbar-mobile' : 'navbar-web'"/>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
-import NavbarWeb from "./NavbarWeb";
-import NavbarMobile from "./NavbarMobile";
+import navbarWeb from "./navbar-web";
+import navbarMobile from "./navbar-mobile";
 
 export default {
     components: {
-        "Navbar-web": NavbarWeb,
-        "Navbar-mobile": NavbarMobile
+        "navbar-web": navbarWeb,
+        "navbar-mobile": navbarMobile
     },
-    
     computed: {
         ...mapGetters('app', ['getMobileView'])
     }

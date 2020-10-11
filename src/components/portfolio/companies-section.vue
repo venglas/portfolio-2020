@@ -2,13 +2,13 @@
     <section class="companies-section">
         <h2 class="slide-from-right">{{$t('portfolio.companiesHeader')}}</h2>
         <div class="companies">
-            <Single-company
+            <single-company
                 image="lim-logo.png"
                 companyName="Life In Mobile"
                 companyLink="https://lifeinmobile.com/"
                 class="slide-from-top"
             />
-            <Single-company
+            <single-company
                 image="discover-krakow-logo.png"
                 companyName="Discover Kraków"
                 companyLink="https://discovercracow.com/"
@@ -19,20 +19,11 @@
 </template>
 
 <script>
-import SingleCompany from "./SingleCompany";
+import singleCompany from "./single-company";
 
 export default {
     components: {
-        'Single-company': SingleCompany
-    },
-    props: {
-
-    },
-    computed: {
-
-    },
-    methods: {
-
+        'single-company': singleCompany
     }
 }
 </script>

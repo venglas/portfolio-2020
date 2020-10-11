@@ -1,21 +1,21 @@
 <template>  
-  <Article :verticalSpace="space">
-    <About-header class="slide-from-top"/>
-    <About-presentation />
-  </Article>
+  <base-article :verticalSpace="space">
+    <about-header class="slide-from-top"/>
+    <about-presentation />
+  </base-article>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import Article from "../components/article/Article";
-import AboutHeader from "../components/about-header/AboutHeader";
-import AboutPresentation from "../components/about-content/AboutPresentation";
+import baseArticle from "../components/article/base-article";
+import aboutHeader from "../components/about-header/about-header";
+import aboutPresentation from "../components/about-content/about-presentation";
 
 export default {
   components: {
-    Article,
-    'About-header': AboutHeader,
-    'About-presentation': AboutPresentation
+    'base-article': baseArticle,
+    'about-header': aboutHeader,
+    'about-presentation': aboutPresentation
   },
   computed: {
     ...mapGetters('app', ["getWebsiteHeight"]),

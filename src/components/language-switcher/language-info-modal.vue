@@ -4,22 +4,22 @@
         {{$t('home.languageModalInfo')}}
     </p>
     <img src="../../assets/img/icons/arrow.png" alt="jumping arrow" class="img img--arrow">
-    <Base-button 
+    <base-button 
         class="language-info-modal__button"
         @click.native="closeModal()"
     >
         OK
-    </Base-button>
+    </base-button>
   </div>
 </template>
 
 <script>
 import { getCookieValue, setCookie } from "../helpers/cookies";
-import BaseButton from "../buttons/BaseButton";
+import baseButton from "../buttons/base-button";
 
 export default {
     components: {
-        "Base-button": BaseButton
+        "base-button": baseButton
     },
     data() {
         return {

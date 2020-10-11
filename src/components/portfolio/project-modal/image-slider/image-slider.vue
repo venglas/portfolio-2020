@@ -1,23 +1,23 @@
 <template>
     <div class="image-slider">
-        <Slide 
+        <slide 
             v-for="(image, i) in images"
             :key="`${image}${i}`" 
             :image="image"
             :ref="`slide_${i}`"
         />
-        <Controls :slidesCount="slidesCount"/>
+        <controls :slidesCount="slidesCount"/>
     </div>
 </template>
 
 <script>
-import Slide from "./Slide";
-import Controls from "./Controls";
+import slide from "./slide";
+import controls from "./controls";
 
 export default {
     components: {
-        Slide,
-        Controls
+        slide,
+        controls
     },
     props: {
         images: { type: Array }

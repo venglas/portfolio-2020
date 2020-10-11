@@ -8,22 +8,22 @@
                     <span v-for="technology in projectTechnologies" :key="technology">{{technology}}</span>
                 </h4>
             </header>
-            <Base-button
+            <base-button
                 class="button"
                 @click.native="openModal()"
             > {{$t('portfolio.project.buttonText')}}
-            </Base-button>
+            </base-button>
         </div>
     </div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
-import BaseButton from "../buttons/BaseButton";
+import baseButton from "../buttons/base-button";
 
 export default {
     components: {
-        'Base-button': BaseButton
+        'base-button': baseButton
     },
     props: {
         image: { type: String },

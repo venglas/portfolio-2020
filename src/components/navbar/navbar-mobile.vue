@@ -1,23 +1,23 @@
 <template>
     <nav class="navbar" :class="{ 'navbar--mobile': getIsMobileMenuOpen }">
-        <Logo />
-        <Navbar-links v-if="getIsMobileMenuOpen"/>
-        <Hamburger-menu />
+        <logo />
+        <navbar-links v-if="getIsMobileMenuOpen"/>
+        <hamburger-mobile-menu />
     </nav>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
-import HamburgerMenu from "./HamburgerMobile";
-import Logo from "./Logo";
-import NavbarLinks from "./NavbarLinks";
+import hamburgerMobileMenu from "./hamburger-mobile-menu";
+import logo from "./logo";
+import navbarLinks from "./navbar-links";
 
 export default {
     components: {
-        "Hamburger-menu": HamburgerMenu,
-        Logo,
-        "Navbar-links": NavbarLinks
+        "hamburger-mobile-menu": hamburgerMobileMenu,
+        logo,
+        "navbar-links": navbarLinks
     },
 
     computed: {

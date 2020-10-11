@@ -10,14 +10,14 @@
             </div>
         </div>
 
-        <Single-technology-description :description="description"/>
+        <single-technology-description :description="description"/>
     </div>
 </template>
 
 <script>
 import { debounce } from "lodash";
 import { mapMutations } from "vuex";
-import SingleTechnologyDescription from "./SingleTechnologyDescription";
+import singleTechnologyDescription from "./single-technology-description";
 
 export default {
     props: {
@@ -26,7 +26,7 @@ export default {
         description: { type: String }
     },
     components: {
-        'Single-technology-description': SingleTechnologyDescription
+        'single-technology-description': singleTechnologyDescription
     },
     computed: {
         percentageWithSign() {
