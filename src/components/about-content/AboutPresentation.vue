@@ -1,16 +1,16 @@
 <template>
-    <Article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
+    <article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
         <div class="presentation slide-from-left">
-            <Octagon-wrapper class="presentation__octagon">
-                <Presentation-animation />
-            </Octagon-wrapper>
+            <octagon-wrapper class="presentation__octagon">
+                <presentation-animation />
+            </octagon-wrapper>
 
-            <About-author />
+            <about-author />
         </div>
 
         <div class="technologies slide-from-right" ref="technologies">
-            <Technologies-hover-info />
-            <Single-technology 
+            <technologies-hover-info />
+            <single-technology 
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
                 :name="technology.name"
@@ -19,11 +19,11 @@
             />
         </div>
 
-    </Article>
+    </article>
 </template>
 
 <script>
-import Article from "../article/Article";
+import article from "../article/Article";
 import OctagonWrapper from "../about-header/OctagonWrapper";
 import PresentationAnimation from "./PresentationAnimation";
 import AboutAuthor from "./AboutAuthor";
@@ -33,12 +33,12 @@ import { mapGetters } from 'vuex';
 
 export default {
     components: {
-        Article,
-        'Octagon-wrapper': OctagonWrapper,
-        'Presentation-animation': PresentationAnimation,
-        'About-author': AboutAuthor,
-        'Single-technology': SingleTechnology,
-        "Technologies-hover-info": TechnologiesHoverInfo
+        article,
+        'octagon-wrapper': OctagonWrapper,
+        'presentation-animation': PresentationAnimation,
+        'about-author': AboutAuthor,
+        'single-technology': SingleTechnology,
+        "technologies-hover-info": TechnologiesHoverInfo
     },
     computed: {
         ...mapGetters('app', ['getInfoAboutDescriptionOnHover']),

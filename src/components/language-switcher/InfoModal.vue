@@ -4,12 +4,12 @@
         {{$t('home.languageModalInfo')}}
     </p>
     <img src="../../assets/img/icons/arrow.png" alt="jumping arrow" class="img img--arrow">
-    <Base-button 
+    <base-button 
         class="language-info-modal__button"
         @click.native="closeModal()"
     >
         OK
-    </Base-button>
+    </base-button>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ import BaseButton from "../buttons/BaseButton";
 
 export default {
     components: {
-        "Base-button": BaseButton
+        "base-button": BaseButton
     },
     data() {
         return {

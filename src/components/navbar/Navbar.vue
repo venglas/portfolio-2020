@@ -1,5 +1,5 @@
 <template>
-  <component :is="getMobileView ? 'Navbar-mobile' : 'Navbar-web'"/>
+  <component :is="getMobileView ? 'navbar-mobile' : 'navbar-web'"/>
 </template>
 
 <script>
@@ -10,10 +10,9 @@ import NavbarMobile from "./NavbarMobile";
 
 export default {
     components: {
-        "Navbar-web": NavbarWeb,
-        "Navbar-mobile": NavbarMobile
+        "navbar-web": NavbarWeb,
+        "navbar-mobile": NavbarMobile
     },
-    
     computed: {
         ...mapGetters('app', ['getMobileView'])
     }

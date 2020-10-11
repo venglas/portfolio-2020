@@ -1,18 +1,18 @@
 <template>
     <nav class="navbar">
-        <Logo />
-        <Navbar-links />
+        <logo />
+        <navbar-links />
     </nav>
 </template>
 
 <script>
-import Logo from "./Logo";
-import NavbarLinks from "./NavbarLinks";
+import logo from "./Logo";
+import navbarLinks from "./NavbarLinks";
 
 export default {
     components: {
-        Logo,
-        "Navbar-links": NavbarLinks
+        logo,
+        "navbar-links": navbarLinks
     },
 }
 </script>

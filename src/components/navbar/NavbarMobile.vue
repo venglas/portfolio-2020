@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar" :class="{ 'navbar--mobile': getIsMobileMenuOpen }">
-        <Logo />
-        <Navbar-links v-if="getIsMobileMenuOpen"/>
-        <Hamburger-menu />
+        <logo />
+        <navbar-links v-if="getIsMobileMenuOpen"/>
+        <hamburger-menu />
     </nav>
 </template>
 
@@ -10,14 +10,14 @@
 import { mapGetters } from "vuex";
 
 import HamburgerMenu from "./HamburgerMobile";
-import Logo from "./Logo";
+import logo from "./Logo";
 import NavbarLinks from "./NavbarLinks";
 
 export default {
     components: {
-        "Hamburger-menu": HamburgerMenu,
-        Logo,
-        "Navbar-links": NavbarLinks
+        "hamburger-menu": HamburgerMenu,
+        logo,
+        "navbar-links": NavbarLinks
     },
 
     computed: {

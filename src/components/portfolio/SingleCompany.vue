@@ -3,20 +3,20 @@
         <header class="company__header">
             {{companyName}}
         </header>
-        <Octagon-wrapper class="company__octagon">
+        <octagon-wrapper class="company__octagon">
             <a :href="companyLink" target="_blank" >
                 <img :src="img" class="company__img" alt="">
             </a>
-        </Octagon-wrapper>
+        </octagon-wrapper>
     </div>
 </template>
 
 <script>
-import OctagonWrapper from "../about-header/OctagonWrapper";
+import octagonWrapper from "../about-header/OctagonWrapper";
 
 export default {
     components: {
-        "Octagon-wrapper": OctagonWrapper
+        "octagon-wrapper": octagonWrapper
     },
     props: {
         image: { type: String },
@@ -27,9 +27,6 @@ export default {
         img() {
             return require(`../../assets/img/companies/${this.image}`);
         }
-    },
-    methods: {
-
     }
 }
 </script>

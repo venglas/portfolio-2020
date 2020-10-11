@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <Single-technology-description :description="description"/>
+        <single-technology-description :description="description"/>
     </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
         description: { type: String }
     },
     components: {
-        'Single-technology-description': SingleTechnologyDescription
+        'single-technology-description': SingleTechnologyDescription
     },
     computed: {
         percentageWithSign() {
