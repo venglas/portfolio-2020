@@ -1,16 +1,18 @@
 <template>
     <section class="companies-section">
-        <h2>{{$t('portfolio.companiesHeader')}}</h2>
+        <h2 class="slide-from-right">{{$t('portfolio.companiesHeader')}}</h2>
         <div class="companies">
             <Single-company
                 image="lim-logo.png"
                 companyName="Life In Mobile"
                 companyLink="https://lifeinmobile.com/"
+                class="slide-from-top"
             />
             <Single-company
                 image="discover-krakow-logo.png"
                 companyName="Discover Kraków"
                 companyLink="https://discovercracow.com/"
+                class="slide-from-top"
             />
         </div>
     </section>
