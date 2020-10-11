@@ -4,6 +4,8 @@
     <router-view :class="`router-view router-view--${$route.name}`"/>
     <Language-info-modal />
     <Language-switcher />
+    <Overlay />
+    <Project-modal />
   </div>
 </template>
 
@@ -12,18 +14,22 @@ import { mapMutations, mapGetters } from "vuex";
 import Navbar from "./components/navbar/Navbar";
 import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
 import LanguageInfoModal from "./components/language-switcher/InfoModal";
+import Overlay from "./components/helpers/Overlay";
+import ProjectModal from "./components/portfolio/project-modal/ProjectModal";
 
 export default {
   components: {
     Navbar,
     "Language-switcher": LanguageSwitcher,
-    "Language-info-modal": LanguageInfoModal
+    "Language-info-modal": LanguageInfoModal,
+    Overlay,
+    "Project-modal": ProjectModal
   },
   beforeCreate() {},
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
-    this.getWebsiteHeight()
+    this.getWebsiteHeight();
   },
   methods: {
     ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
@@ -54,6 +60,7 @@ body {
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .app {
   height: 100vh;

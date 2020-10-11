@@ -26,7 +26,7 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: $size_z-max;
+  z-index: $SIZE_z-max;
   width: $SIZE_language-selector-width;
 }
 </style>

@@ -31,10 +31,26 @@
     padding: 0 1rem;
 }
 
+//padding vertical
+@mixin space-v-padding-small {
+    padding: .5rem 0;
+}
+@mixin space-v-padding-big {
+    padding: 2.5rem 0;
+}
+
 //padding around
 @mixin space-padding-small {
     padding: .5rem;
 }
 @mixin space-padding-med {
     padding: 1rem;
+}
+@mixin space-padding-big {
+    padding: 2rem;
+}
+
+//margin around
+@mixin space-margin-small {
+    margin: .5rem;
 }
