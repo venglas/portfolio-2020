@@ -1,29 +1,29 @@
 <template>
   <div id="app" class="app">
-    <Navbar />
+    <navbar />
     <router-view :class="`router-view router-view--${$route.name}`"/>
-    <Language-info-modal />
-    <Language-switcher />
-    <Overlay />
-    <Project-modal />
+    <language-info-modal />
+    <language-switcher />
+    <overlay />
+    <project-modal />
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
-import Navbar from "./components/navbar/Navbar";
-import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
-import LanguageInfoModal from "./components/language-switcher/InfoModal";
-import Overlay from "./components/helpers/Overlay";
-import ProjectModal from "./components/portfolio/project-modal/ProjectModal";
+import navbar from "./components/navbar/navbar";
+import languageSwitcher from "./components/language-switcher/language-switcher";
+import languageInfoModal from "./components/language-switcher/language-info-modal";
+import overlay from "./components/helpers/overlay";
+import projectModal from "./components/portfolio/project-modal/project-modal";
 
 export default {
   components: {
-    Navbar,
-    "Language-switcher": LanguageSwitcher,
-    "Language-info-modal": LanguageInfoModal,
-    Overlay,
-    "Project-modal": ProjectModal
+    navbar,
+    "language-switcher": languageSwitcher,
+    "language-info-modal": languageInfoModal,
+    overlay,
+    "project-modal": projectModal
   },
   beforeCreate() {},
   created() {

@@ -1,7 +1,7 @@
 <template>
-    <Article class="article--projects">
+    <base-article class="article--projects">
         <div class="projects">
-            <Single-project 
+            <single-project 
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
                 :key="name"
                 :image="image"
@@ -11,20 +11,20 @@
                 :class="getRandomStartAnimation()"
             />
         </div>
-        <Companies-section />
-    </Article>
+        <companies-section />
+    </base-article>
 </template>
 
 <script>
-import Article from "../components/article/Article";
-import SingleProject from "../components/portfolio/SingleProject";
-import CompaniesSection from "../components/portfolio/CompaniesSection";
+import baseArticle from "../components/article/base-article";
+import singleProject from "../components/portfolio/single-project";
+import companiesSection from "../components/portfolio/companies-section";
 
 export default {
     components: {
-        Article,
-        'Single-project': SingleProject,
-        'Companies-section': CompaniesSection
+        'base-article': baseArticle,
+        'single-project': singleProject,
+        'companies-section': companiesSection
     },
     data() {
         return {

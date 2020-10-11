@@ -1,5 +1,5 @@
 <template>
-    <article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
+    <base-article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
         <div class="presentation slide-from-left">
             <octagon-wrapper class="presentation__octagon">
                 <presentation-animation />
@@ -19,26 +19,26 @@
             />
         </div>
 
-    </article>
+    </base-article>
 </template>
 
 <script>
-import article from "../article/Article";
-import OctagonWrapper from "../about-header/OctagonWrapper";
-import PresentationAnimation from "./PresentationAnimation";
-import AboutAuthor from "./AboutAuthor";
-import SingleTechnology from "./SingleTechnology";
-import TechnologiesHoverInfo from "./TechnologiesHoverInfo";
+import baseArticle from "../article/base-article";
+import octagonWrapper from "../about-header/octagon-wrapper";
+import presentationAnimation from "./presentation-animation";
+import aboutAuthor from "./about-author";
+import singleTechnology from "./single-technology";
+import technologiesHoverInfo from "./technologies-hover-info";
 import { mapGetters } from 'vuex';
 
 export default {
     components: {
-        article,
-        'octagon-wrapper': OctagonWrapper,
-        'presentation-animation': PresentationAnimation,
-        'about-author': AboutAuthor,
-        'single-technology': SingleTechnology,
-        "technologies-hover-info": TechnologiesHoverInfo
+        'base-article': baseArticle,
+        'octagon-wrapper': octagonWrapper,
+        'presentation-animation': presentationAnimation,
+        'about-author': aboutAuthor,
+        'single-technology': singleTechnology,
+        "technologies-hover-info": technologiesHoverInfo
     },
     computed: {
         ...mapGetters('app', ['getInfoAboutDescriptionOnHover']),

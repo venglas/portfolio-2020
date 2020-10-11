@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import SingleSkill from "./SingleSkill";
+import singleSkill from "./single-skill";
 
 export default {
     components: {
-        'single-skill': SingleSkill
+        'single-skill': singleSkill
     },
     methods: {
         img: (name) => require(`../../assets/img/icons/${name}.png`)

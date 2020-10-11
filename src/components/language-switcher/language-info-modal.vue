@@ -15,11 +15,11 @@
 
 <script>
 import { getCookieValue, setCookie } from "../helpers/cookies";
-import BaseButton from "../buttons/BaseButton";
+import baseButton from "../buttons/base-button";
 
 export default {
     components: {
-        "base-button": BaseButton
+        "base-button": baseButton
     },
     data() {
         return {

@@ -5,13 +5,13 @@
 <script>
 import { mapGetters } from "vuex";
 
-import NavbarWeb from "./NavbarWeb";
-import NavbarMobile from "./NavbarMobile";
+import navbarWeb from "./navbar-web";
+import navbarMobile from "./navbar-mobile";
 
 export default {
     components: {
-        "navbar-web": NavbarWeb,
-        "navbar-mobile": NavbarMobile
+        "navbar-web": navbarWeb,
+        "navbar-mobile": navbarMobile
     },
     computed: {
         ...mapGetters('app', ['getMobileView'])

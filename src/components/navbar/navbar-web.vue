@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import logo from "./Logo";
-import navbarLinks from "./NavbarLinks";
+import logo from "./logo";
+import navbarLinks from "./navbar-links";
 
 export default {
     components: {

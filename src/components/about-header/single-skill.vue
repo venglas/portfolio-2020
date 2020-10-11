@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import OctagonWrapper from "./OctagonWrapper";
+import octagonWrapper from "./octagon-wrapper";
 
 export default {
     components: {
-        "octagon-wrapper": OctagonWrapper
+        "octagon-wrapper": octagonWrapper
     }
 }
 </script>

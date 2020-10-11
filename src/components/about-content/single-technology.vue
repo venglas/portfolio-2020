@@ -17,7 +17,7 @@
 <script>
 import { debounce } from "lodash";
 import { mapMutations } from "vuex";
-import SingleTechnologyDescription from "./SingleTechnologyDescription";
+import singleTechnologyDescription from "./single-technology-description";
 
 export default {
     props: {
@@ -26,7 +26,7 @@ export default {
         description: { type: String }
     },
     components: {
-        'single-technology-description': SingleTechnologyDescription
+        'single-technology-description': singleTechnologyDescription
     },
     computed: {
         percentageWithSign() {

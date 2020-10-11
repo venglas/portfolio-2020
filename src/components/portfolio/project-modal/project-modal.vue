@@ -33,8 +33,8 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import imageSlider from "./image-slider/ImageSlider";
-import baseButton from "../../buttons/BaseButton";
+import imageSlider from "./image-slider/image-slider";
+import baseButton from "../../buttons/base-button";
 
 export default {
     components: {

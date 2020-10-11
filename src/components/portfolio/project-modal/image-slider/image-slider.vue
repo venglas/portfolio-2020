@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import slide from "./Slide";
-import controls from "./Controls";
+import slide from "./slide";
+import controls from "./controls";
 
 export default {
     components: {

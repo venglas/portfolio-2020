@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import octagonWrapper from "../about-header/OctagonWrapper";
+import octagonWrapper from "../about-header/octagon-wrapper";
 
 export default {
     components: {

@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <Animated-background> 
+    <animated-background> 
       <div v-for="(text, i) in $t('home.hello')" v-html="text" :key="i"/>
-    </Animated-background>
+    </animated-background>
   </div>
 </template>
 
 <script>
-import AnimatedBackground from "../components/animated-background/AnimatedBackground";
+import animatedBackground from "../components/animated-background/animated-background";
 
 export default {
   name: 'Home',
   components: {
-    "Animated-background": AnimatedBackground
+    "animated-background": animatedBackground
   }
 }
 </script>

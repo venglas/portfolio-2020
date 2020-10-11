@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import singleCompany from "./SingleCompany";
+import singleCompany from "./single-company";
 
 export default {
     components: {
