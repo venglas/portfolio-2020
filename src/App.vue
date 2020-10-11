@@ -56,6 +56,7 @@ export default {
 }
 body {
   color: $COLOR_font-base;
+  background-color: $COLOR_bg_base;
   font-family: 'Raleway', sans-serif;
   font-size: $SIZE_base-font;
   padding: 0;

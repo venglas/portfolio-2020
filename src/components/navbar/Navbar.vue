@@ -23,6 +23,7 @@ export default {
 .navbar {
     width: 100%;
     height: $SIZE_navbar;
+    background-color: $COLOR_bg_navbar;
     display: flex;
     justify-content: space-between;
     align-items: center;
