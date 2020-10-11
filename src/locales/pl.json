@@ -112,7 +112,7 @@
     },
     "portfolio": {
         "project": {
-            "buttonText": "Pokaz projekt",
+            "buttonText": "Pokaż projekt",
             "modalButtonText": "Zobacz stronę"
         },
         "projects": [
@@ -136,7 +136,7 @@
                 "image": "property-map-searcher/slide2.jpg",
                 "fullInfo": {
                     "images": ["property-map-searcher/slide1.jpg", "property-map-searcher/slide2.jpg", "property-map-searcher/slide3.jpg", "property-map-searcher/slide4.jpg"],
-                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Słuzy do szukania mieszkań umiejscowionych na mapie, oraz filtry do szukania.",
+                    "description": "Property Map Searcher to aplikacja PWA powstała na bazie Nuxt, Vuetify oraz MapBoxGl. Służy do szukania mieszkań umiejscowionych na mapie, oraz filtry do szukania.",
                     "descriptionLink": {
                         "link": "https://www.youtube.com/watch?v=lqgx3PNEpJM&ab_channel=Bart%C5%82omiejBober",
                         "name": "Film prezentacyjny"
@@ -150,7 +150,7 @@
                 "image": "margonem-multi-bot/slide1.jpg",
                 "fullInfo": {
                     "images": ["margonem-multi-bot/slide1.jpg", "margonem-multi-bot/slide2.jpg", "margonem-multi-bot/slide3.jpg", "margonem-multi-bot/slide4.jpg"],
-                    "description": "Margonem Multi Bot jest botem wykonującym czynności za gracza w celu uzyskania punktów doświadczenia, kolejnych poziomów oraz przedmiotów. Bot posiada również kilka ulepszeń do gry takich jak zmienione okno walki, czy dodanie lepszego wyglądu czatu obsługa emotikon, powiadomienia dźwiękowe o prywatnych wiadomościach, oraz ulepszenie minimapy.",
+                    "description": "Margonem Multi Bot jest botem wykonującym czynności za gracza w celu uzyskania punktów doświadczenia, kolejnych poziomów oraz przedmiotów. Bot posiada również kilka ulepszeń do gry takich jak zmienione okno walki, czy dodanie lepszego wyglądu czatu - obsługa emotikon, powiadomienia dźwiękowe o prywatnych wiadomościach, oraz ulepszenie minimapy.",
                     "descriptionLink": {
                         "link": "https://www.youtube.com/watch?v=qiHix06F5wc&ab_channel=Pa%C5%82za",
                         "name": "Film prezentacyjny"
@@ -173,6 +173,6 @@
                 }
             }
         ],
-        "companiesHeader": "Pracowałem równiez dla"
+        "companiesHeader": "Pracowałem również dla"
     }
 }
