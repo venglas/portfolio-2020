@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import logo from "./logo";
+import logo from "./p-logo";
 import navbarLinks from "./navbar-links";
 
 export default {
