@@ -12,7 +12,7 @@
 
 <script>
 import slide from "./p-slide";
-import controls from "./controls";
+import controls from "./p-controls";
 
 export default {
     components: {

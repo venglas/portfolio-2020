@@ -11,7 +11,7 @@
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
-import navbar from "./components/navbar/navbar";
+import navbar from "./components/navbar/p-navbar";
 import languageSwitcher from "./components/language-switcher/language-switcher";
 import languageInfoModal from "./components/language-switcher/language-info-modal";
 import overlay from "./components/helpers/app-overlay";
