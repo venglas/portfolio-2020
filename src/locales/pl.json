@@ -1,9 +1,9 @@
 {
     "home": {
         "hello": [
-            "<h1>Cześć, Mam na imię Bartek</h1>",
-            "<h2>Znajdziesz tutaj projekty zrealizowane przeze mnie</h2>",
-            "<h3>Oraz ktrótkie przedstawienie moich umijętności</h3>"
+            "Cześć, Mam na imię Bartek",
+            "Znajdziesz tutaj projekty zrealizowane przeze mnie",
+            "Oraz ktrótkie przedstawienie moich umijętności"
         ],
         "languageModalInfo": "Tutaj możesz wybrać język strony",
         "button": "Zobacz projekty"
