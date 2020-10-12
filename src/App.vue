@@ -4,7 +4,7 @@
     <router-view :class="`router-view router-view--${$route.name}`"/>
     <language-info-modal />
     <language-switcher />
-    <overlay />
+    <app-overlay />
     <project-modal />
   </div>
 </template>
@@ -14,7 +14,7 @@ import { mapMutations, mapGetters } from "vuex";
 import navbar from "./components/navbar/navbar";
 import languageSwitcher from "./components/language-switcher/language-switcher";
 import languageInfoModal from "./components/language-switcher/language-info-modal";
-import overlay from "./components/helpers/overlay";
+import overlay from "./components/helpers/app-overlay";
 import projectModal from "./components/portfolio/project-modal/project-modal";
 
 export default {
@@ -22,7 +22,7 @@ export default {
     navbar,
     "language-switcher": languageSwitcher,
     "language-info-modal": languageInfoModal,
-    overlay,
+    "app-overlay": appOverlay,
     "project-modal": projectModal
   },
   beforeCreate() {},

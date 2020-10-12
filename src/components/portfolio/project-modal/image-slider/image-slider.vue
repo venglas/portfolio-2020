@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import slide from "./slide";
+import slide from "./p-slide";
 import controls from "./controls";
 
 export default {
