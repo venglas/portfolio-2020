@@ -1,16 +1,16 @@
 <template>
-    <Article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
+    <base-article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
         <div class="presentation slide-from-left">
-            <Octagon-wrapper class="presentation__octagon">
-                <Presentation-animation />
-            </Octagon-wrapper>
+            <octagon-wrapper class="presentation__octagon">
+                <presentation-animation />
+            </octagon-wrapper>
 
-            <About-author />
+            <about-author />
         </div>
 
         <div class="technologies slide-from-right" ref="technologies">
-            <Technologies-hover-info />
-            <Single-technology 
+            <technologies-hover-info />
+            <single-technology 
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
                 :name="technology.name"
@@ -19,26 +19,26 @@
             />
         </div>
 
-    </Article>
+    </base-article>
 </template>
 
 <script>
-import Article from "../article/Article";
-import OctagonWrapper from "../about-header/OctagonWrapper";
-import PresentationAnimation from "./PresentationAnimation";
-import AboutAuthor from "./AboutAuthor";
-import SingleTechnology from "./SingleTechnology";
-import TechnologiesHoverInfo from "./TechnologiesHoverInfo";
+import baseArticle from "../article/base-article";
+import octagonWrapper from "../about-header/octagon-wrapper";
+import presentationAnimation from "./presentation-animation";
+import aboutAuthor from "./about-author";
+import singleTechnology from "./single-technology";
+import technologiesHoverInfo from "./technologies-hover-info";
 import { mapGetters } from 'vuex';
 
 export default {
     components: {
-        Article,
-        'Octagon-wrapper': OctagonWrapper,
-        'Presentation-animation': PresentationAnimation,
-        'About-author': AboutAuthor,
-        'Single-technology': SingleTechnology,
-        "Technologies-hover-info": TechnologiesHoverInfo
+        'base-article': baseArticle,
+        'octagon-wrapper': octagonWrapper,
+        'presentation-animation': presentationAnimation,
+        'about-author': aboutAuthor,
+        'single-technology': singleTechnology,
+        "technologies-hover-info": technologiesHoverInfo
     },
     computed: {
         ...mapGetters('app', ['getInfoAboutDescriptionOnHover']),

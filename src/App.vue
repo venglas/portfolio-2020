@@ -1,29 +1,35 @@
 <template>
   <div id="app" class="app">
-    <Navbar />
+    <navbar />
     <router-view :class="`router-view router-view--${$route.name}`"/>
-    <Language-info-modal />
-    <Language-switcher />
+    <language-info-modal />
+    <language-switcher />
+    <app-overlay />
+    <project-modal />
   </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from "vuex";
-import Navbar from "./components/navbar/Navbar";
-import LanguageSwitcher from "./components/language-switcher/LanguageSwitcher";
-import LanguageInfoModal from "./components/language-switcher/InfoModal";
+import navbar from "./components/navbar/navbar";
+import languageSwitcher from "./components/language-switcher/language-switcher";
+import languageInfoModal from "./components/language-switcher/language-info-modal";
+import appOverlay from "./components/helpers/app-overlay";
+import projectModal from "./components/portfolio/project-modal/project-modal";
 
 export default {
   components: {
-    Navbar,
-    "Language-switcher": LanguageSwitcher,
-    "Language-info-modal": LanguageInfoModal
+    navbar,
+    "language-switcher": languageSwitcher,
+    "language-info-modal": languageInfoModal,
+    "app-overlay": appOverlay,
+    "project-modal": projectModal
   },
   beforeCreate() {},
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
-    this.getWebsiteHeight()
+    this.getWebsiteHeight();
   },
   methods: {
     ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
@@ -50,10 +56,12 @@ export default {
 }
 body {
   color: $COLOR_font-base;
+  background-color: $COLOR_bg_base;
   font-family: 'Raleway', sans-serif;
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .app {
   height: 100vh;

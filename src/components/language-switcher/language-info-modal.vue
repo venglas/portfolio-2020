@@ -4,16 +4,23 @@
         {{$t('home.languageModalInfo')}}
     </p>
     <img src="../../assets/img/icons/arrow.png" alt="jumping arrow" class="img img--arrow">
-    <button class="button language-info-modal__button" @click="closeModal()">
+    <base-button 
+        class="language-info-modal__button"
+        @click.native="closeModal()"
+    >
         OK
-    </button>
+    </base-button>
   </div>
 </template>
 
 <script>
 import { getCookieValue, setCookie } from "../helpers/cookies";
+import baseButton from "../buttons/base-button";
 
 export default {
+    components: {
+        "base-button": baseButton
+    },
     data() {
         return {
             showInfo: true
@@ -34,7 +41,7 @@ export default {
 <style lang="scss">
 .language-info-modal {
     position: absolute;
-    z-index: $size_z-max;
+    z-index: $SIZE_z-max;
     right: 0;
     max-width: $SIZE_language-selector-width;
     font-size: 1.1rem;
@@ -48,35 +55,25 @@ export default {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
-
+    transition: opacity ease-in-out $TIME_fast-max;
     &:hover {
         .language-info-modal__button {
-            display: block;
+            opacity: 1;
         }
     }
-
     &__info-text {
         text-align: center;
     }
-
     &__button {
-        display: none;
-        padding: 3px 5px;
-        color: $COLOR_button-blue-light;
-        border-color: $COLOR_button-blue-light;
+        transition: all ease-in-out $TIME_fast;
+        opacity: 0;
+        padding: .7rem 2.2rem;
         @include center(-50%, -65%);
-
-        &:hover {
-            color: $COLOR_white;
-            background-color: $COLOR_button-blue-light;
-        }
     }
-
     .img {
         height: 15px;
         width: auto;
         display: block;
-
         &--arrow {
             transform: rotate(90deg);
             margin: .5rem auto 0 auto;
