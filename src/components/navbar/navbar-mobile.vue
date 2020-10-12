@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" :class="{ 'navbar--mobile': getIsMobileMenuOpen }">
+    <nav class="navbar navbar--mobile" :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }">
         <logo />
         <navbar-links v-if="getIsMobileMenuOpen"/>
         <hamburger-mobile-menu />
@@ -34,10 +34,13 @@ export default {
         transition: all ease-in-out $TIME_fast;
         z-index: 999;
         position: relative;
-
         &--mobile {
+            position: sticky;
+            top: 0;
+        }
+
+        &--mobile-open {
             flex-direction: column;
-            height: $SIZE_navbar_mobile;
         }
     }
 </style>
