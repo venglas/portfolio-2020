@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 .background-gradient {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #9393b9, #373755, #007bff, #9c9494e6, red);
 	background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     display: flex;
