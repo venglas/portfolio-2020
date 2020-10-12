@@ -10,7 +10,7 @@
 import { mapGetters } from "vuex";
 
 import hamburgerMobileMenu from "./hamburger-mobile-menu";
-import logo from "./logo";
+import logo from "./p-logo";
 import navbarLinks from "./navbar-links";
 
 export default {
