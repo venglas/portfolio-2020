@@ -4,7 +4,7 @@
       <div class="text slide-from-left" v-html="$t('home.hello[0]')"></div>
       <div class="text slide-from-right" v-html="$t('home.hello[1]')"></div>
       <div class="text slide-from-left" v-html="$t('home.hello[2]')"></div>
-      <base-button class="home__button slide-from-bottom" @click.native="$router.push('portfolio')">Zobacz projekty</base-button>
+      <base-button class="home__button slide-from-bottom" @click.native="$router.push('portfolio')">{{$t('home.button')}}</base-button>
     </animated-background-stars>
   </div>
 </template>

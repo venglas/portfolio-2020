@@ -5,7 +5,8 @@
       "<h2>You can find here my projects</h2>",
       "<h3>And short presentation of my skills</h3>"
     ],
-    "languageModalInfo": "Here you can choose site language"
+    "languageModalInfo": "Here you can choose site language",
+    "button": "See projects"
   },
   "about": {
     "header": {
