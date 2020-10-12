@@ -1,6 +1,6 @@
 <template>
     <div class="project">
-        <div class="project__background" :style="backgroundImage"></div>
+        <div class="project__background" :style="backgroundImage" onclick=""></div>
         <div class="project__inner">
             <header class="header">
                 <h3 class="header__title">{{projectName}}</h3>
