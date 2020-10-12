@@ -1,5 +1,5 @@
 <template>
-    <div class="background-gradient">
+    <div class="background-stars">
         <div id="stars"></div>
         <div id="starts2"></div>
         <div id="stars3"></div>
@@ -84,12 +84,13 @@ $shadows-big:    multiple-box-shadow(100);
   to { transform: translateY(-2000px) }
 }
 
-.background-gradient {
+.background-stars {
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
     width: 100%;
     height: 100%;
     .wrapper__slot {
-        z-index: 999;
+        width: 95%;
+        z-index: 0;
         @include center;
         text-align: center;
         font-size: 2rem;

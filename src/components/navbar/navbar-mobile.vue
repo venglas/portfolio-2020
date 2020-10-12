@@ -32,6 +32,8 @@ export default {
         height: auto;
         max-height: 442.5px;
         transition: all ease-in-out $TIME_fast;
+        z-index: 999;
+        position: relative;
 
         &--mobile {
             flex-direction: column;
