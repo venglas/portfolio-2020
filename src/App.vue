@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <navbar />
-    <router-view :class="`router-view router-view--${$route.name}`"/>
+    <router-view :class="[{'router-view--mobile': getMobileView }, `router-view router-view--${$route.name}`]"/>
     <language-info-modal />
     <language-switcher />
     <app-overlay />
@@ -25,7 +25,9 @@ export default {
     "app-overlay": appOverlay,
     "project-modal": projectModal
   },
-  beforeCreate() {},
+  computed: {
+    ...mapGetters('app', ['getMobileView'])
+  },
   created() {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
@@ -54,6 +56,9 @@ export default {
 :root {
   font-size: 10px;
 }
+html {
+  overflow: hidden;
+}
 body {
   color: $COLOR_font-base;
   background-color: $COLOR_bg_base;
@@ -80,6 +85,9 @@ body {
     animation-duration: $TIME_fast;
     animation-timing-function: ease-in;
     animation-play-state: infinite;
+  }
+  &--mobile {
+    height: calc(100vh - #{$SIZE_navbar_mobile});
   }
 }
 

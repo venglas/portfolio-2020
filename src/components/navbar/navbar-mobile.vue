@@ -37,6 +37,7 @@ export default {
 
         &--mobile {
             flex-direction: column;
+            height: $SIZE_navbar_mobile;
         }
     }
 </style>
