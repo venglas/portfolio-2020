@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import slide from "./p-slide";
-import controls from "./p-controls";
+import slide from "./slide";
+import controls from "./controls";
 
 export default {
     components: {
