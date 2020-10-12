@@ -1,9 +1,11 @@
 <template>
-    <nav class="navbar navbar--mobile" :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }">
-        <logo />
-        <navbar-links v-if="getIsMobileMenuOpen"/>
-        <hamburger-mobile-menu />
-    </nav>
+    <transition name="left-slide">
+        <nav class="navbar navbar--mobile" :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }" v-if="!getModalShowState">
+            <logo />
+            <navbar-links v-if="getIsMobileMenuOpen"/>
+            <hamburger-mobile-menu />
+        </nav>
+    </transition>
 </template>
 
 <script>
@@ -21,7 +23,7 @@ export default {
     },
 
     computed: {
-        ...mapGetters('app', ['getIsMobileMenuOpen'])
+        ...mapGetters('app', ['getIsMobileMenuOpen', 'getModalShowState'])
     }
 }
 </script>
@@ -38,7 +40,6 @@ export default {
             position: sticky;
             top: 0;
         }
-
         &--mobile-open {
             flex-direction: column;
         }
