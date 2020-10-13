@@ -5,6 +5,7 @@ export default  {
         isMobileMenuOpen: false,
         websiteHeight: null,
         showOverlay: false,
+        iphoneClient: false,
         about: {
             showedDescriptions: 0,
             infoAboutDescriptionOnHover: true
@@ -32,7 +33,8 @@ export default  {
         hideProjectModal: state => state.projects.modal.show = false,
         setProjectModalInfo: (state, payload) => state.projects.modal.fullInfo = payload,
         showOverlay: state => state.showOverlay = true,
-        hideOverlay: state => state.showOverlay = false
+        hideOverlay: state => state.showOverlay = false,
+        setIphoneClient: state => state.iphoneClient = true
     },
 
     getters: {
@@ -44,6 +46,7 @@ export default  {
         getSliderPosition: state => state.projects.modal.slider.position,
         getModalShowState: state => state.projects.modal.show,
         getModalFullInfo: state => state.projects.modal.fullInfo,
-        getOverlayState: state => state.showOverlay
+        getOverlayState: state => state.showOverlay,
+        isIphoneClient: state => state.iphoneClient
     }
 };

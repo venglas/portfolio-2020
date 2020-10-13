@@ -32,18 +32,10 @@ export default {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
     this.getWebsiteHeight();
-    //test:
-    const userAgent = window.navigator.userAgent;
-
-    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-      alert("iphone")
-    }
-    else {
-      alert("web")
-    }
+    this.detectIphone();
   },
   methods: {
-    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
+    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight', 'setIphoneClient']),
 
     detectMobileView() {
       if( window.innerWidth < 720) this.setMobileView();
@@ -51,6 +43,11 @@ export default {
     },
     getWebsiteHeight() {
       this.setWebsiteHeight(window.innerHeight);
+    },
+    detectIphone() {
+      if(window.navigator.userAgent.match(/iPhone/i)) {
+        this.setIphoneClient();
+      }
     }
   }
 }
