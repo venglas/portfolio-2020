@@ -92,8 +92,11 @@ body {
     animation-timing-function: ease-in;
     animation-play-state: infinite;
   }
+  &--portfolio {
+    height: auto !important;
+  }
   &--mobile {
-    // height: calc(100vh - #{$SIZE_navbar_mobile});
+    height: calc(100vh - #{$SIZE_navbar_mobile});
   }
 }
 
