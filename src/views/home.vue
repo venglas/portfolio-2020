@@ -26,6 +26,18 @@ export default {
 .home {
   color: #fff;
   @include med-text-shadow(4);
+  &__button {
+    background-color: $COLOR_base_button_border;
+    color: #fff;
+    transition: all ease-in-out $TIME_fast-max;
+    @include space-v-margin-big;
+
+    &:hover {
+      color: $COLOR_base_button_border;
+      border: 2px solid $COLOR_base_button_border;
+      background-color: #fff;
+    }
+  }
   .text {
     animation-delay: 400ms;
     @include space-v-margin-small;
@@ -92,18 +104,6 @@ export default {
       &--3 {
         font-size: 1.8rem;
       }
-    }
-  }
-  &__button {
-    background-color: $COLOR_base_button_border;
-    color: #fff;
-    transition: all ease-in-out $TIME_fast-max;
-    @include space-v-margin-big;
-
-    &:hover {
-      color: $COLOR_base_button_border;
-      border: 2px solid $COLOR_base_button_border;
-      background-color: #fff;
     }
   }
 }
