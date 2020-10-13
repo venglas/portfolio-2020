@@ -65,8 +65,8 @@ export default {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .iphone-projects {
-        padding-bottom: 5rem;
-    }
+}
+.iphone-projects {
+    padding-bottom: 5rem;
 }
 </style>
