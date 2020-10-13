@@ -32,6 +32,15 @@ export default {
     window.addEventListener('resize', this.detectMobileView);
     this.detectMobileView();
     this.getWebsiteHeight();
+    //test:
+    const userAgent = window.navigator.userAgent;
+
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+      alert("iphone")
+    }
+    else {
+      alert("web")
+    }
   },
   methods: {
     ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight']),
