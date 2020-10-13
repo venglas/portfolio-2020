@@ -84,10 +84,13 @@ export default {
         width: inherit;
         display: flex;
         flex-direction: column;
-        @media (max-height: 890px) {
+        @media (max-height: 890px) and (min-width: 1024px) {
             overflow-y: scroll;
             max-height: 450px;
             padding-bottom: 50px;
+        }
+        @media (max-width: 1024px) and (min-width: 720px) {
+            padding-bottom: 4.5rem;
         }
         @include space-h-margin-huge;
         @media( max-height: $BP_second ) {
