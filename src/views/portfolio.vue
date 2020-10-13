@@ -1,5 +1,5 @@
 <template>
-    <base-article class="article--projects" :class="{ 'iphone-projects': true }">
+    <base-article class="article--projects" :class="{ 'iphone-projects': isIphoneClient }">
         <div class="projects">
             <single-project 
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
@@ -67,6 +67,6 @@ export default {
     }
 }
 .iphone-projects {
-    padding-bottom: 7rem;
+    padding-bottom: 10rem;
 }
 </style>
