@@ -67,6 +67,6 @@ export default {
     }
 }
 .iphone-projects {
-    padding-bottom: 10rem;
+    padding-bottom: 12.5rem;
 }
 </style>
