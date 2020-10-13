@@ -1,6 +1,9 @@
 <template>
     <transition name="left-slide">
-        <nav class="navbar navbar--mobile" :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }" v-if="!getModalShowState">
+        <nav 
+            class="navbar navbar--mobile"
+            :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }" v-if="!getModalShowState"
+        >
             <logo />
             <navbar-links v-if="getIsMobileMenuOpen"/>
             <hamburger-mobile-menu />
@@ -31,7 +34,7 @@ export default {
 <style lang="scss" scoped>
     .navbar {
         display: flex;
-        height: auto;
+        height: $SIZE_navbar_mobile;
         max-height: 442.5px;
         transition: all ease-in-out $TIME_fast;
         z-index: 999;
@@ -42,6 +45,7 @@ export default {
         }
         &--mobile-open {
             flex-direction: column;
+            height: auto;
         }
     }
 </style>
