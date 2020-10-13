@@ -1,5 +1,5 @@
 <template>
-    <base-article class="article--projects" :class="{ 'iphone-projects': isIphoneClient }">
+    <base-article class="article--projects" :class="{ 'iphone-projects': false }">
         <div class="projects">
             <single-project 
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"

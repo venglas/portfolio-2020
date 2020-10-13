@@ -93,7 +93,7 @@ body {
     animation-play-state: infinite;
   }
   &--mobile {
-    height: calc(100vh - #{$SIZE_navbar_mobile});
+    // height: calc(100vh - #{$SIZE_navbar_mobile});
   }
 }
 
