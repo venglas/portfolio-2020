@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 import hamburgerMobileMenu from "./hamburger-mobile-menu";
 import logo from "./logo";
@@ -27,6 +27,14 @@ export default {
 
     computed: {
         ...mapGetters('app', ['getIsMobileMenuOpen', 'getModalShowState'])
+    },
+    methods: {
+        ...mapMutations('app', ['toggleMobileMenu'])
+    },
+    watch: {
+        '$route'() {
+            this.toggleMobileMenu();
+        }
     }
 }
 </script>
