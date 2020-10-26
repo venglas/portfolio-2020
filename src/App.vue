@@ -100,6 +100,9 @@ body {
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
+  @media (max-width: 720px) {
+    padding-top: 0;
+  }
   &--home {
     animation-name: router-enter;
     animation-duration: $TIME_fast;
