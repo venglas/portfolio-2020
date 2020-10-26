@@ -53,7 +53,8 @@ export default {
 <style lang="scss" scoped>
 .article--projects {
     position: relative;
-    margin: 1.5rem auto;
+    margin: 0 auto;
+    
     @media (max-width: 1500px) {
         width: 80%;
     }

@@ -1,7 +1,12 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app" :class="`app--${$route.name}`">
     <navbar />
-    <router-view :class="[{'router-view--mobile': getMobileView }, `router-view router-view--${$route.name}`]"/>
+    <router-view
+      :class="[
+        { 'router-view--mobile': getMobileView },
+        `router-view router-view--${$route.name}`,
+      ]"
+    />
     <language-info-modal />
     <language-switcher />
     <app-overlay />
@@ -23,34 +28,39 @@ export default {
     "language-switcher": languageSwitcher,
     "language-info-modal": languageInfoModal,
     "app-overlay": appOverlay,
-    "project-modal": projectModal
+    "project-modal": projectModal,
   },
   computed: {
-    ...mapGetters('app', ['getMobileView'])
+    ...mapGetters("app", ["getMobileView"]),
   },
   created() {
-    window.addEventListener('resize', this.detectMobileView);
+    window.addEventListener("resize", this.detectMobileView);
     this.detectMobileView();
     this.getWebsiteHeight();
     this.detectIphone();
   },
   methods: {
-    ...mapMutations('app', ['setMobileView', 'unsetMobileView', 'setWebsiteHeight', 'setIphoneClient']),
+    ...mapMutations("app", [
+      "setMobileView",
+      "unsetMobileView",
+      "setWebsiteHeight",
+      "setIphoneClient",
+    ]),
 
     detectMobileView() {
-      if( window.innerWidth < 720) this.setMobileView();
+      if (window.innerWidth < 720) this.setMobileView();
       else this.unsetMobileView();
     },
     getWebsiteHeight() {
       this.setWebsiteHeight(window.innerHeight);
     },
     detectIphone() {
-      if(window.navigator.userAgent.match(/iPhone/i)) {
+      if (window.navigator.userAgent.match(/iPhone/i)) {
         this.setIphoneClient();
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -68,7 +78,7 @@ html {
 body {
   color: $COLOR_font-base;
   background-color: $COLOR_bg_base;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: $SIZE_base-font;
   padding: 0;
   margin: 0;
@@ -80,9 +90,13 @@ body {
   @media (max-width: $BP_second) {
     overflow-y: scroll;
   }
+  &--portfolio {
+    overflow-y: scroll;
+  }
 }
 .router-view {
   height: calc(100vh - #{$SIZE_navbar});
+  padding-top: $SIZE_navbar;
   width: 100%;
   z-index: $SIZE_router-view-index;
   top: $SIZE_navbar;
@@ -94,6 +108,9 @@ body {
   }
   &--portfolio {
     height: auto !important;
+    @media (max-width: 720px) {
+      top: 0;
+    }
   }
   &--mobile {
     height: calc(100vh - #{$SIZE_navbar_mobile});
@@ -101,7 +118,11 @@ body {
 }
 
 @keyframes router-enter {
-  from {transform: translateY(100%);}
-  to {transform: translateY(0%);}
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 </style>
