@@ -2,7 +2,7 @@
     <div class="logo">
         <svg viewBox="0 0 960 300" :class="{ 'mobile-menu-open': getIsMobileMenuOpen }">
             <symbol id="s-text">
-                <text text-anchor="middle" x="50%" y="50%">Space Code</text>
+                <text text-anchor="middle" x="50%" y="50%">{{text}}</text>
             </symbol>
 
             <g class = "g-ants">
@@ -20,9 +20,19 @@
 import { mapGetters } from "vuex";
 
 export default {
+    data() {
+        return {
+            text: "Bartek dev"
+        }
+    },
     computed: {
         ...mapGetters('app', ['getIsMobileMenuOpen'])
-    }    
+    },
+    watch: {
+        '$route'() {
+            this.text = this.$route.name
+        }
+    }
 }
 </script>
 
