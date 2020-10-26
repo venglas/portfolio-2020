@@ -13,17 +13,17 @@
                 <slot name="skillDescription" />
             </p>
         </div>
-        
+
     </div>
 </template>
 
 <script>
-import octagonWrapper from "./octagon-wrapper";
+import octagonWrapper from './octagon-wrapper'
 
 export default {
-    components: {
-        "octagon-wrapper": octagonWrapper
-    }
+  components: {
+    'octagon-wrapper': octagonWrapper
+  }
 }
 </script>
 
@@ -70,11 +70,11 @@ export default {
         align-items: center;
         font-size: $SIZE_small-font;
         text-align: center;
-        
+
         .description {
             @include space-h-padding-small;
         }
     }
-    
+
 }
 </style>

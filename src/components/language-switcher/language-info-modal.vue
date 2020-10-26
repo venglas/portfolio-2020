@@ -4,7 +4,7 @@
         {{$t('home.languageModalInfo')}}
     </p>
     <img src="../../assets/img/icons/arrow.png" alt="jumping arrow" class="img img--arrow">
-    <base-button 
+    <base-button
         class="language-info-modal__button"
         @click.native="closeModal()"
     >
@@ -14,27 +14,27 @@
 </template>
 
 <script>
-import { getCookieValue, setCookie } from "../helpers/cookies";
-import baseButton from "../buttons/base-button";
+import { getCookieValue, setCookie } from '../helpers/cookies'
+import baseButton from '../buttons/base-button'
 
 export default {
-    components: {
-        "base-button": baseButton
-    },
-    data() {
-        return {
-            showInfo: true
-        }
-    },
-    created() {
-        this.showInfo = getCookieValue("showLanguageInfo");
-    },
-    methods: {
-        closeModal() {
-            setCookie("showLanguageInfo", false, 10);
-            this.showInfo = false;
-        }
+  components: {
+    'base-button': baseButton
+  },
+  data () {
+    return {
+      showInfo: true
     }
+  },
+  created () {
+    this.showInfo = getCookieValue('showLanguageInfo')
+  },
+  methods: {
+    closeModal () {
+      setCookie('showLanguageInfo', false, 10)
+      this.showInfo = false
+    }
+  }
 }
 </script>
 
@@ -50,7 +50,7 @@ export default {
     background: $COLOR_language-info-modal;
     clip-path: polygon(0% 85%, 38% 90%, 50% 100%, 66% 90%, 100% 85%, 100% 0%, 0% 0%);
     color: $COLOR_white;
-    
+
     animation: jump;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;

@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import logo from "./logo";
-import navbarLinks from "./navbar-links";
+import logo from './logo'
+import navbarLinks from './navbar-links'
 
 export default {
-    components: {
-        logo,
-        "navbar-links": navbarLinks
-    },
+  components: {
+    logo,
+    'navbar-links': navbarLinks
+  }
 }
 </script>
 

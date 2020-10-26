@@ -3,19 +3,19 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 
-import navbarWeb from "./navbar-web";
-import navbarMobile from "./navbar-mobile";
+import navbarWeb from './navbar-web'
+import navbarMobile from './navbar-mobile'
 
 export default {
-    components: {
-        "navbar-web": navbarWeb,
-        "navbar-mobile": navbarMobile
-    },
-    computed: {
-        ...mapGetters('app', ['getMobileView'])
-    }
+  components: {
+    'navbar-web': navbarWeb,
+    'navbar-mobile': navbarMobile
+  },
+  computed: {
+    ...mapGetters('app', ['getMobileView'])
+  }
 }
 </script>
 

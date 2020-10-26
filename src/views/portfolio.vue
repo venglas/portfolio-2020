@@ -1,7 +1,7 @@
 <template>
     <base-article class="article--projects" :class="{ 'iphone-client': isIphoneClient }">
         <div class="projects">
-            <single-project 
+            <single-project
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
                 :key="name"
                 :image="image"
@@ -16,37 +16,37 @@
 </template>
 
 <script>
-import baseArticle from "../components/article/base-article";
-import singleProject from "../components/portfolio/single-project";
-import companiesSection from "../components/portfolio/companies-section";
-import { mapGetters } from 'vuex';
+import baseArticle from '../components/article/base-article'
+import singleProject from '../components/portfolio/single-project'
+import companiesSection from '../components/portfolio/companies-section'
+import { mapGetters } from 'vuex'
 
 export default {
-    components: {
-        'base-article': baseArticle,
-        'single-project': singleProject,
-        'companies-section': companiesSection
-    },
-    data() {
-        return {
-            animationNames: [
-                "slide-from-left", "slide-from-top", "slide-from-right", "slide-from-bottom", "slide-from-leftTop",
-                "slide-from-rightTop", "slide-from-leftBottom", "slide-from-rightBottom" 
-            ] // transitions.scss
-        }
-    },
-    computed: {
-        ...mapGetters('app', ['isIphoneClient'])
-    },
-    methods: {
-        randomNumberFromRange(min, max) {
-            return Math.floor(Math.random() * (max - min) + min);
-        },
-        getRandomStartAnimation() {
-            const animationName = this.animationNames[this.randomNumberFromRange(0, this.animationNames.length-1)];
-            return animationName;
-        }
+  components: {
+    'base-article': baseArticle,
+    'single-project': singleProject,
+    'companies-section': companiesSection
+  },
+  data () {
+    return {
+      animationNames: [
+        'slide-from-left', 'slide-from-top', 'slide-from-right', 'slide-from-bottom', 'slide-from-leftTop',
+        'slide-from-rightTop', 'slide-from-leftBottom', 'slide-from-rightBottom'
+      ] // transitions.scss
     }
+  },
+  computed: {
+    ...mapGetters('app', ['isIphoneClient'])
+  },
+  methods: {
+    randomNumberFromRange (min, max) {
+      return Math.floor(Math.random() * (max - min) + min)
+    },
+    getRandomStartAnimation () {
+      const animationName = this.animationNames[this.randomNumberFromRange(0, this.animationNames.length - 1)]
+      return animationName
+    }
+  }
 }
 </script>
 
@@ -54,7 +54,7 @@ export default {
 .article--projects {
     position: relative;
     margin: 0 auto;
-    
+
     @media (max-width: 1500px) {
         width: 80%;
     }

@@ -1,8 +1,8 @@
 <template>
     <div class="image-slider">
-        <slide 
+        <slide
             v-for="(image, i) in images"
-            :key="`${image}${i}`" 
+            :key="`${image}${i}`"
             :image="image"
             :ref="`slide_${i}`"
         />
@@ -11,22 +11,22 @@
 </template>
 
 <script>
-import slide from "./slide";
-import controls from "./controls";
+import slide from './slide'
+import controls from './controls'
 
 export default {
-    components: {
-        slide,
-        controls
-    },
-    props: {
-        images: { type: Array }
-    },
-    computed: {
-        slidesCount() {
-            return this.images.length
-        }
+  components: {
+    slide,
+    controls
+  },
+  props: {
+    images: { type: Array }
+  },
+  computed: {
+    slidesCount () {
+      return this.images.length
     }
+  }
 }
 </script>
 

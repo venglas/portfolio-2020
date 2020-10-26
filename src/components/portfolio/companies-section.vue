@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import singleCompany from "./single-company";
+import singleCompany from './single-company'
 
 export default {
-    components: {
-        'single-company': singleCompany
-    }
+  components: {
+    'single-company': singleCompany
+  }
 }
 </script>
 

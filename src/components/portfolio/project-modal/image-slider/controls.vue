@@ -10,30 +10,30 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
-import { debounce } from "lodash";
+import { mapGetters, mapMutations } from 'vuex'
+import { debounce } from 'lodash'
 
 export default {
-    props: {
-        slidesCount: { type: Number }
-    },
-    computed: {
-        ...mapGetters('app', ['getSliderPosition']),
-        negativeSlidesCount() {
-            return -Math.abs(this.slidesCount - 1);
-        }
-    },
-    methods: {
-        ...mapMutations('app', ['setSliderPosition']),
-        nextSlide: debounce( function() {
-            if (this.getSliderPosition > this.negativeSlidesCount) this.setSliderPosition(this.getSliderPosition - 1);
-            else this.setSliderPosition(0);
-        }, 200),
-        prevSlide: debounce( function() {
-            if (this.getSliderPosition < 0) this.setSliderPosition(this.getSliderPosition + 1);
-            else this.setSliderPosition(this.negativeSlidesCount);
-        }, 200)
+  props: {
+    slidesCount: { type: Number }
+  },
+  computed: {
+    ...mapGetters('app', ['getSliderPosition']),
+    negativeSlidesCount () {
+      return -Math.abs(this.slidesCount - 1)
     }
+  },
+  methods: {
+    ...mapMutations('app', ['setSliderPosition']),
+    nextSlide: debounce(function () {
+      if (this.getSliderPosition > this.negativeSlidesCount) this.setSliderPosition(this.getSliderPosition - 1)
+      else this.setSliderPosition(0)
+    }, 200),
+    prevSlide: debounce(function () {
+      if (this.getSliderPosition < 0) this.setSliderPosition(this.getSliderPosition + 1)
+      else this.setSliderPosition(this.negativeSlidesCount)
+    }, 200)
+  }
 }
 </script>
 
@@ -57,7 +57,7 @@ export default {
         @include space-padding-big;
         cursor: pointer;
         transition: all ease-in-out $TIME_fast-max;
-        
+
         &:hover {
             background-color:$COLOR_portfolio_modal_controls_bg_hover;
             img {

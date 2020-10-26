@@ -1,6 +1,6 @@
 <template>
     <transition name="left-slide">
-        <nav 
+        <nav
             class="navbar navbar--mobile"
             :class="{ 'navbar--mobile-open': getIsMobileMenuOpen }" v-if="!getModalShowState"
         >
@@ -12,30 +12,30 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters, mapMutations } from 'vuex'
 
-import hamburgerMobileMenu from "./hamburger-mobile-menu";
-import logo from "./logo";
-import navbarLinks from "./navbar-links";
+import hamburgerMobileMenu from './hamburger-mobile-menu'
+import logo from './logo'
+import navbarLinks from './navbar-links'
 
 export default {
-    components: {
-        "hamburger-mobile-menu": hamburgerMobileMenu,
-        logo,
-        "navbar-links": navbarLinks
-    },
+  components: {
+    'hamburger-mobile-menu': hamburgerMobileMenu,
+    logo,
+    'navbar-links': navbarLinks
+  },
 
-    computed: {
-        ...mapGetters('app', ['getIsMobileMenuOpen', 'getModalShowState'])
-    },
-    methods: {
-        ...mapMutations('app', ['toggleMobileMenu'])
-    },
-    watch: {
-        '$route'() {
-            this.toggleMobileMenu();
-        }
+  computed: {
+    ...mapGetters('app', ['getIsMobileMenuOpen', 'getModalShowState'])
+  },
+  methods: {
+    ...mapMutations('app', ['toggleMobileMenu'])
+  },
+  watch: {
+    '$route' () {
+      this.toggleMobileMenu()
     }
+  }
 }
 </script>
 
