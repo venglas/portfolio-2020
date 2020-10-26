@@ -21,6 +21,7 @@ export default {
     ...mapGetters('app', ['getWebsiteHeight']),
     space () {
       if (this.getWebsiteHeight < 800) return '2rem'
+      return ''
     }
   }
 }
