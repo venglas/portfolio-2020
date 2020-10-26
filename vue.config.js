@@ -1,11 +1,11 @@
-const path = require("path");
-const vueSrc = "./src";
+const path = require('path')
+const vueSrc = './src'
 
 module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: `@import "@/assets/scss/index.scss";`
+        prependData: '@import "@/assets/scss/index.scss";'
       }
     }
   },
@@ -13,7 +13,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, vueSrc)
+        '@': path.resolve(__dirname, vueSrc)
       },
       extensions: ['.js', '.vue', '.json']
     }
@@ -27,4 +27,4 @@ module.exports = {
       enableInSFC: true
     }
   }
-};
+}

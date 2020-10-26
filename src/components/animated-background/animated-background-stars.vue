@@ -25,8 +25,8 @@ $shadows-big:    multiple-box-shadow(100);
 
 .router-view--mobile {
     .background-stars {
-        height: calc(100vh - #{$SIZE_navbar_mobile});    
-    }    
+        height: calc(100vh - #{$SIZE_navbar_mobile});
+    }
 }
 
 .background-stars {
@@ -54,7 +54,7 @@ $shadows-big:    multiple-box-shadow(100);
         background: transparent;
         box-shadow: $shadows-small;
         animation: animStar 50s linear infinite;
-            
+
         &:after {
             content: " ";
             position: absolute;
@@ -65,14 +65,14 @@ $shadows-big:    multiple-box-shadow(100);
             box-shadow: $shadows-small;
         }
     }
-        
+
     .stars2 {
         width: 2px;
         height: 2px;
         background: transparent;
         box-shadow: $shadows-medium;
         animation: animStar 100s linear infinite;
-            
+
         &:after {
             content: " ";
             position: absolute;
@@ -83,14 +83,14 @@ $shadows-big:    multiple-box-shadow(100);
             box-shadow: $shadows-medium;
         }
     }
-        
+
     .stars3 {
         width: 3px;
         height: 3px;
         background: transparent;
         box-shadow: $shadows-big;
         animation: animStar 150s linear infinite;
-            
+
         &:after {
             content: " ";
             position: absolute;
@@ -101,7 +101,7 @@ $shadows-big:    multiple-box-shadow(100);
             box-shadow: $shadows-big;
         }
     }
-        
+
     @keyframes animStar {
         from { transform: translateY(0px) }
         to { transform: translateY(-2000px) }

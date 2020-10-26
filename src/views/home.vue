@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import animatedBackgroundStars from "../components/animated-background/animated-background-stars";
-import baseButton from "../components/buttons/base-button";
+import animatedBackgroundStars from '../components/animated-background/animated-background-stars'
+import baseButton from '../components/buttons/base-button'
 
 export default {
   name: 'Home',

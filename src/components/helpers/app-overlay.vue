@@ -1,5 +1,5 @@
 <template>
-    <div 
+    <div
         class="overlay"
         @click="closeModals()"
         v-if="getOverlayState"
@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex'
 
 export default {
-    computed: {
-        ...mapGetters('app', ['getOverlayState'])
-    },
-    methods: {
-        ...mapMutations('app', ['hideProjectModal', 'hideOverlay']),
-        closeModals() {
-            this.hideProjectModal();
-            this.hideOverlay();
-        }
+  computed: {
+    ...mapGetters('app', ['getOverlayState'])
+  },
+  methods: {
+    ...mapMutations('app', ['hideProjectModal', 'hideOverlay']),
+    closeModals () {
+      this.hideProjectModal()
+      this.hideOverlay()
     }
+  }
 }
 </script>
 

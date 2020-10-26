@@ -15,52 +15,52 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
-import navbar from "./components/navbar/navbar";
-import languageSwitcher from "./components/language-switcher/language-switcher";
-import languageInfoModal from "./components/language-switcher/language-info-modal";
-import appOverlay from "./components/helpers/app-overlay";
-import projectModal from "./components/portfolio/project-modal/project-modal";
+import { mapMutations, mapGetters } from 'vuex'
+import navbar from './components/navbar/navbar'
+import languageSwitcher from './components/language-switcher/language-switcher'
+import languageInfoModal from './components/language-switcher/language-info-modal'
+import appOverlay from './components/helpers/app-overlay'
+import projectModal from './components/portfolio/project-modal/project-modal'
 
 export default {
   components: {
     navbar,
-    "language-switcher": languageSwitcher,
-    "language-info-modal": languageInfoModal,
-    "app-overlay": appOverlay,
-    "project-modal": projectModal,
+    'language-switcher': languageSwitcher,
+    'language-info-modal': languageInfoModal,
+    'app-overlay': appOverlay,
+    'project-modal': projectModal
   },
   computed: {
-    ...mapGetters("app", ["getMobileView"]),
+    ...mapGetters('app', ['getMobileView'])
   },
-  created() {
-    window.addEventListener("resize", this.detectMobileView);
-    this.detectMobileView();
-    this.getWebsiteHeight();
-    this.detectIphone();
+  created () {
+    window.addEventListener('resize', this.detectMobileView)
+    this.detectMobileView()
+    this.getWebsiteHeight()
+    this.detectIphone()
   },
   methods: {
-    ...mapMutations("app", [
-      "setMobileView",
-      "unsetMobileView",
-      "setWebsiteHeight",
-      "setIphoneClient",
+    ...mapMutations('app', [
+      'setMobileView',
+      'unsetMobileView',
+      'setWebsiteHeight',
+      'setIphoneClient'
     ]),
 
-    detectMobileView() {
-      if (window.innerWidth < 720) this.setMobileView();
-      else this.unsetMobileView();
+    detectMobileView () {
+      if (window.innerWidth < 720) this.setMobileView()
+      else this.unsetMobileView()
     },
-    getWebsiteHeight() {
-      this.setWebsiteHeight(window.innerHeight);
+    getWebsiteHeight () {
+      this.setWebsiteHeight(window.innerHeight)
     },
-    detectIphone() {
+    detectIphone () {
       if (window.navigator.userAgent.match(/iPhone/i)) {
-        this.setIphoneClient();
+        this.setIphoneClient()
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss">

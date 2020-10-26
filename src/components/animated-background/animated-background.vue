@@ -38,7 +38,7 @@
     right: 0;
     bottom: 0;
     top: $SIZE_navbar;
-    margin: auto; 
+    margin: auto;
     &__inner {
       position: absolute;
       width: 100%;

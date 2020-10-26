@@ -1,8 +1,8 @@
 <template>
-  <select 
-    name="language" 
-    id="language-switcher" 
-    class="language-switcher" 
+  <select
+    name="language"
+    id="language-switcher"
+    class="language-switcher"
     v-model="$i18n.locale"
     @change="changeRouterParam()"
   >
@@ -14,8 +14,8 @@
 <script>
 export default {
   methods: {
-    changeRouterParam() {
-      this.$router.push({params: {lang: this.$i18n.locale}})
+    changeRouterParam () {
+      this.$router.push({ params: { lang: this.$i18n.locale } })
     }
   }
 }

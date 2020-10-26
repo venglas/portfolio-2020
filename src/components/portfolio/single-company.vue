@@ -12,22 +12,22 @@
 </template>
 
 <script>
-import octagonWrapper from "../about-header/octagon-wrapper";
+import octagonWrapper from '../about-header/octagon-wrapper'
 
 export default {
-    components: {
-        "octagon-wrapper": octagonWrapper
-    },
-    props: {
-        image: { type: String },
-        companyName: { type: String },
-        companyLink: { type: String }
-    },
-    computed: {
-        img() {
-            return require(`../../assets/img/companies/${this.image}`);
-        }
+  components: {
+    'octagon-wrapper': octagonWrapper
+  },
+  props: {
+    image: { type: String },
+    companyName: { type: String },
+    companyLink: { type: String }
+  },
+  computed: {
+    img () {
+      return require(`../../assets/img/companies/${this.image}`)
     }
+  }
 }
 </script>
 

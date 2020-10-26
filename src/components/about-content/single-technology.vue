@@ -15,30 +15,30 @@
 </template>
 
 <script>
-import { debounce } from "lodash";
-import { mapMutations } from "vuex";
-import singleTechnologyDescription from "./single-technology-description";
+import { debounce } from 'lodash'
+import { mapMutations } from 'vuex'
+import singleTechnologyDescription from './single-technology-description'
 
 export default {
-    props: {
-        name: { type: String },
-        percentage: { type: Number },
-        description: { type: String }
-    },
-    components: {
-        'single-technology-description': singleTechnologyDescription
-    },
-    computed: {
-        percentageWithSign() {
-            return `${this.percentage}%`;
-        }
-    },
-    methods: {
-        ...mapMutations('app', ["increaseShowedDescriptionCount"]),
-        increaseDescriptionShowedCount: debounce( function() {
-            this.increaseShowedDescriptionCount();
-        }, 700)
+  props: {
+    name: { type: String },
+    percentage: { type: Number },
+    description: { type: String }
+  },
+  components: {
+    'single-technology-description': singleTechnologyDescription
+  },
+  computed: {
+    percentageWithSign () {
+      return `${this.percentage}%`
     }
+  },
+  methods: {
+    ...mapMutations('app', ['increaseShowedDescriptionCount']),
+    increaseDescriptionShowedCount: debounce(function () {
+      this.increaseShowedDescriptionCount()
+    }, 700)
+  }
 }
 </script>
 
@@ -55,7 +55,7 @@ export default {
         color: $COLOR_white;
         cursor: pointer;
         transition: background-color ease-in-out $TIME_fast-max;
-        
+
         .technology-name {
             min-width: 155px;
             text-align: end;

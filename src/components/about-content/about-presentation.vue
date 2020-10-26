@@ -1,5 +1,5 @@
 <template>
-    <base-article 
+    <base-article
         full-width
         class="presentation-article"
         :style="{ 'margin-top': presentationSpaceTop }"
@@ -14,7 +14,7 @@
 
         <div class="technologies slide-from-right" ref="technologies">
             <technologies-hover-info />
-            <single-technology 
+            <single-technology
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
                 :name="technology.name"
@@ -27,29 +27,30 @@
 </template>
 
 <script>
-import baseArticle from "../article/base-article";
-import octagonWrapper from "../about-header/octagon-wrapper";
-import presentationAnimation from "./presentation-animation";
-import aboutAuthor from "./about-author";
-import singleTechnology from "./single-technology";
-import technologiesHoverInfo from "./technologies-hover-info";
-import { mapGetters } from 'vuex';
+import baseArticle from '../article/base-article'
+import octagonWrapper from '../about-header/octagon-wrapper'
+import presentationAnimation from './presentation-animation'
+import aboutAuthor from './about-author'
+import singleTechnology from './single-technology'
+import technologiesHoverInfo from './technologies-hover-info'
+import { mapGetters } from 'vuex'
 
 export default {
-    components: {
-        'base-article': baseArticle,
-        'octagon-wrapper': octagonWrapper,
-        'presentation-animation': presentationAnimation,
-        'about-author': aboutAuthor,
-        'single-technology': singleTechnology,
-        "technologies-hover-info": technologiesHoverInfo
-    },
-    computed: {
-        ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient']),
-        presentationSpaceTop() {
-            if (this.getInfoAboutDescriptionOnHover) return '30px';
-        }
+  components: {
+    'base-article': baseArticle,
+    'octagon-wrapper': octagonWrapper,
+    'presentation-animation': presentationAnimation,
+    'about-author': aboutAuthor,
+    'single-technology': singleTechnology,
+    'technologies-hover-info': technologiesHoverInfo
+  },
+  computed: {
+    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient']),
+    presentationSpaceTop () {
+      if (this.getInfoAboutDescriptionOnHover) return '30px'
+      return ''
     }
+  }
 }
 </script>
 

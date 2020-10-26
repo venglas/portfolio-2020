@@ -7,32 +7,32 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
-import { getCookieValue, setCookie } from "../helpers/cookies";
+import { mapGetters, mapMutations } from 'vuex'
+import { getCookieValue, setCookie } from '../helpers/cookies'
 
 export default {
-    data() {
-        return {
-            arrow: require("../../assets/img/icons/arrow.png")
-        }
-    },
-    created() {
-        if(getCookieValue("showTechnologiesInfo") === false) this.turnOffInfoAboutDescriptionOnHover();
-    },
-    watch: {
-        getAboutShowedDescriptions() {
-            if (this.getAboutShowedDescriptions > 2) {
-                this.turnOffInfoAboutDescriptionOnHover();
-                setCookie("showTechnologiesInfo", false, 10);
-            }
-        }
-    },
-    methods: {
-        ...mapMutations('app', ['turnOffInfoAboutDescriptionOnHover'])
-    },
-    computed: {
-        ...mapGetters('app', ['getAboutShowedDescriptions', 'getMobileView', 'getInfoAboutDescriptionOnHover'])
+  data () {
+    return {
+      arrow: require('../../assets/img/icons/arrow.png')
     }
+  },
+  created () {
+    if (getCookieValue('showTechnologiesInfo') === false) this.turnOffInfoAboutDescriptionOnHover()
+  },
+  watch: {
+    getAboutShowedDescriptions () {
+      if (this.getAboutShowedDescriptions > 2) {
+        this.turnOffInfoAboutDescriptionOnHover()
+        setCookie('showTechnologiesInfo', false, 10)
+      }
+    }
+  },
+  methods: {
+    ...mapMutations('app', ['turnOffInfoAboutDescriptionOnHover'])
+  },
+  computed: {
+    ...mapGetters('app', ['getAboutShowedDescriptions', 'getMobileView', 'getInfoAboutDescriptionOnHover'])
+  }
 }
 </script>
 
@@ -43,7 +43,7 @@ export default {
     text-align: center;
     margin-top: -2.5rem;
     font-weight: 600;
-    
+
     .arrow {
         @include space-h-margin-small;
         width: 15px;
