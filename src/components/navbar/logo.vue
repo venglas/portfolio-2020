@@ -30,7 +30,7 @@ export default {
     },
     watch: {
         '$route'() {
-            this.text = this.$route.name
+            this.text = this.$route.name.toUpperCase()
         }
     }
 }

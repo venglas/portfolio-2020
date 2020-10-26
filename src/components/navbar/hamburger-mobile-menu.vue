@@ -66,6 +66,7 @@ export default {
   margin: 2rem 2.5rem;
   align-self: flex-end;
   position: absolute;
+  bottom: 0;
 
   span {
     &:nth-child(1) {
