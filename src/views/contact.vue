@@ -1,9 +1,9 @@
 <template>
   <base-article class="article--contact">
     <header class="header">
-        <h1>Masz jakieś pytanie albo chciałbyś wspólpracować?</h1>
+        <h1>{{$t('contact.header')}}</h1>
     </header>
-    <contact-form></contact-form>
+    <contact-form />
     <successful-send-modal />
     <social-section />
   </base-article>

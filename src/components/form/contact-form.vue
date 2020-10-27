@@ -1,53 +1,53 @@
 <template>
   <form class="contact-form" :class="{ 'contact-form--blocked': wasMailSend }" @submit.prevent="saveMail()">
     <div class="contact-form__element-wrapper slide-from-top">
-      <label for="name">Name</label>
+      <label for="name">{{$t('contact.form.name.label')}}</label>
       <input
         type="text"
         id="name"
         name="name"
-        placeholder="Your name..."
+        :placeholder="$t('contact.form.name.placeholder')"
         v-model="name"
         required
       />
     </div>
 
     <div class="contact-form__element-wrapper slide-from-left">
-      <label for="email">Email</label>
+      <label for="email">{{$t('contact.form.email.label')}}</label>
       <input
         type="email"
         id="email"
         name="email"
-        placeholder="Your email..."
+        :placeholder="$t('contact.form.email.placeholder')"
         v-model="email"
         required
       />
     </div>
 
     <div class="contact-form__element-wrapper slide-from-right">
-      <label for="subject">Subject</label>
+      <label for="subject">{{$t('contact.form.subject.label')}}</label>
       <input
         type="text"
         id="subject"
         name="subject"
-        placeholder="Subject..."
+        :placeholder="$t('contact.form.subject.placeholder')"
         v-model="subject"
         required
       />
     </div>
 
     <div class="contact-form__element-wrapper slide-from-left">
-      <label for="message">Message</label>
+      <label for="message">{{$t('contact.form.message.label')}}</label>
       <textarea
         id="message"
         name="message"
-        placeholder="Your message..."
+        :placeholder="$t('contact.form.message.placeholder')"
         v-model="message"
         required
       ></textarea>
     </div>
 
-    <submit-button text="Submit" class="slide-from-bottom" />
+    <submit-button :text="$t('contact.form.buttonText')" class="slide-from-bottom" />
   </form>
 </template>
 

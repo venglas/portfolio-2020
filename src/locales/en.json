@@ -175,5 +175,27 @@
       }
     ],
     "companiesHeader": "I was working also for"
-  }
+  },
+  "contact": {
+    "header": "Do you have any questions or would you like to cooperate?",
+    "form": {
+        "name": {
+            "label": "Name",
+            "placeholder": "Your name..."
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "Your email..."
+        },
+        "subject": {
+            "label": "Subject",
+            "placeholder": "Message subject..."
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Message content..."
+        },
+        "buttonText": "Send"
+    }
+}
 }

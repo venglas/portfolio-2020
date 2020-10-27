@@ -175,5 +175,27 @@
             }
         ],
         "companiesHeader": "Pracowałem również dla"
+    },
+    "contact": {
+        "header": "Masz jakieś pytanie, lub chciałbyś podjąć wspólpracę?",
+        "form": {
+            "name": {
+                "label": "Imie",
+                "placeholder": "Twoje imie..."
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Twój email..."
+            },
+            "subject": {
+                "label": "Temat",
+                "placeholder": "Temat wiadomości..."
+            },
+            "message": {
+                "label": "Wiadomość",
+                "placeholder": "Treść wiadomości..."
+            },
+            "buttonText": "Prześlij"
+        }
     }
 }
