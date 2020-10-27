@@ -1,10 +1,13 @@
 const express = require("express");
+const mail = require("../../models/mail/mail");
 const router = express.Router();
 const Mail = require("../../models/mail/mail");
 const { checkApplicationID } = require('../../services/mail')
 
-router.get("/", async (req, res) => {
-  res.json({ test: "test" });
+router.get("/", async (res) => {
+  // const mails = new Mail({}).find()
+  // res.json(mails)
+  res.json({ msg: "elo" })
 });
 
 router.post("/", async (req, res) => {

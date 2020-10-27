@@ -15,7 +15,9 @@ app.use(express.json())
 app.use(cors())
 
 const mailRouter = require('./src/routes/mails/mail')
+const loginRouter = require('./src/routes/login/login')
 app.use('/mail', mailRouter)
+app.use('/login', loginRouter)
 
 const port = 3000;
 
