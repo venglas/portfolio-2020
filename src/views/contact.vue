@@ -5,17 +5,19 @@
     </header>
     <contact-form></contact-form>
     <successful-send-modal />
+    <social-section />
   </base-article>
 </template>
 
 <script>
+import SocialSection from '../components/contact/social-section.vue'
 import SuccessfulSendModal from '../components/form/successful-send-modal.vue'
 import ContactForm from '../components/form/contact-form.vue'
 import BaseArticle from '../components/article/base-article.vue'
 
 export default {
   components: {
-    'base-article': BaseArticle, ContactForm, SuccessfulSendModal
+    'base-article': BaseArticle, ContactForm, SuccessfulSendModal, SocialSection
   }
 }
 </script>
