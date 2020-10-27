@@ -1,6 +1,6 @@
 <template>
   <base-article class="article--panel">
-    <login-form v-if="getLoginInfo.userLogged"/>
+    <login-form v-if="!getLoginInfo.userLogged"/>
     <mails v-else/>
   </base-article>
 </template>
