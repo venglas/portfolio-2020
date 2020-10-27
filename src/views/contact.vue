@@ -22,17 +22,18 @@ export default {
 
 <style lang="scss" scoped>
 .article--contact {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    .header {
-        @include space-v-margin-big;
-        h1 {
-            color: $COLOR_base_button_border;
-            font-size: 2rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .header {
+    @include space-v-margin-big;
+    h1 {
+      color: $COLOR_base_button_border;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: center;
     }
+  }
 }
 </style>

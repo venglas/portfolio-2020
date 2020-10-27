@@ -37,6 +37,9 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   @include smooth-box-shadow;
+  @media (max-width: 520px) {
+    width: 90%;
+  }
   .btn {
     transition: all ease-in-out $TIME_fast;
   }

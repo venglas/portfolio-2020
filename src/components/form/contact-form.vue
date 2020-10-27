@@ -109,6 +109,23 @@ export default {
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: 920px) {
+    width: 70%;
+  }
+  @media (max-width: 720px) {
+    width: 90%;
+    .contact-form__element-wrapper {
+      input {
+        height: 45px;
+      }
+    }
+    input {
+      height: 45px;
+    }
+  }
+  @media (max-width: 520px) {
+    width: 100%;
+  }
   &--blocked {
     cursor: not-allowed;
     input, textarea{
