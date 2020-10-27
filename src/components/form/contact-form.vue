@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" @submit.prevent="saveMail()">
+  <form class="contact-form" :class="{ 'contact-form--blocked': wasMailSend }" @submit.prevent="saveMail()">
     <div class="contact-form__element-wrapper slide-from-top">
       <label for="name">Name</label>
       <input
@@ -70,10 +70,11 @@ export default {
     'submit-button': SubmitButton
   },
   computed: {
-    ...mapGetters('api', ['getBaseUrl', 'getHeaders', 'getApplicationID'])
+    ...mapGetters('api', ['getBaseUrl', 'getHeaders', 'getApplicationID']),
+    ...mapGetters('app', ['wasMailSend'])
   },
   methods: {
-    ...mapMutations('app', ['toggleSuccesModal']),
+    ...mapMutations('app', ['toggleSuccesModal', 'setMailSend']),
     clearForm () {
       this.name = ''
       this.email = ''
@@ -94,6 +95,7 @@ export default {
           if (res.status === 201) {
             this.toggleSuccesModal()
             this.clearForm()
+            this.setMailSend()
           }
         })
         .catch(err => console.error(err))
@@ -107,7 +109,13 @@ export default {
   display: flex;
   flex-direction: column;
   width: 50%;
-
+  &--blocked {
+    cursor: not-allowed;
+    input, textarea{
+      background-color: darken($COLOR_bg_base, 15%);
+      pointer-events: none;
+    }
+  }
   &__element-wrapper {
     display: flex;
     flex-direction: column;

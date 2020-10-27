@@ -20,7 +20,8 @@ export default {
       }
     },
     contact: {
-      succesModal: false
+      succesModal: false,
+      wasMailSend: false
     }
   },
 
@@ -38,7 +39,8 @@ export default {
     showOverlay: state => { state.showOverlay = true },
     hideOverlay: state => { state.showOverlay = false },
     setIphoneClient: state => { state.iphoneClient = true },
-    toggleSuccesModal: state => { state.contact.succesModal = !state.contact.succesModal }
+    toggleSuccesModal: state => { state.contact.succesModal = !state.contact.succesModal },
+    setMailSend: state => { state.contact.wasMailSend = true }
   },
 
   getters: {
@@ -52,6 +54,7 @@ export default {
     getModalFullInfo: state => state.projects.modal.fullInfo,
     getOverlayState: state => state.showOverlay,
     isIphoneClient: state => state.iphoneClient,
-    getSuccesModalState: state => state.contact.succesModal
+    getSuccesModalState: state => state.contact.succesModal,
+    wasMailSend: state => state.contact.wasMailSend
   }
 }
