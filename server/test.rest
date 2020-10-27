@@ -1,0 +1,15 @@
+GET http://localhost:3000/mail
+
+
+###
+
+POST http://localhost:3000/mail
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "test@mail.com",
+    "title": "test",
+    "message": "test",
+    "applicationID": "test"
+}
