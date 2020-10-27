@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 
@@ -11,8 +12,11 @@ db.on('error', err => console.error(err))
 db.once('open', () => console.log('database connected'))
 
 app.use(express.json())
+app.use(cors())
 
 const mailRouter = require('./src/routes/mails/mail')
 app.use('/mail', mailRouter)
 
-app.listen(3000, () => console.log(`server started at port: 3000`))
+const port = 3000;
+
+app.listen(port, () => console.log(`server started at port: ${port}`))

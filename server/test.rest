@@ -9,7 +9,7 @@ Content-Type: application/json
 {
     "name": "test",
     "email": "test@mail.com",
-    "title": "test",
+    "subject": "elo",
     "message": "test",
-    "applicationID": "test"
+    "applicationID": "in env file"
 }

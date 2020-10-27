@@ -1,5 +1,5 @@
 <template>
-  <form class="contact-form" @submit.prevent>
+  <form class="contact-form" @submit.prevent="saveMail()">
     <div class="contact-form__element-wrapper slide-from-top">
       <label for="name">Name</label>
       <input
@@ -7,6 +7,7 @@
         id="name"
         name="name"
         placeholder="Your name..."
+        v-model="name"
         required
       />
     </div>
@@ -18,6 +19,7 @@
         id="email"
         name="email"
         placeholder="Your email..."
+        v-model="email"
         required
       />
     </div>
@@ -29,6 +31,7 @@
         id="subject"
         name="subject"
         placeholder="Subject..."
+        v-model="subject"
         required
       />
     </div>
@@ -39,19 +42,62 @@
         id="message"
         name="message"
         placeholder="Your message..."
+        v-model="message"
         required
       ></textarea>
     </div>
 
-    <submit-button text="Submit" class="slide-from-bottom"/>
+    <submit-button text="Submit" class="slide-from-bottom" />
   </form>
 </template>
 
 <script>
+
+import { debounce } from 'lodash'
+import { mapGetters, mapMutations } from 'vuex'
 import SubmitButton from '../buttons/submit-button.vue'
+
 export default {
+  data () {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+  },
   components: {
     'submit-button': SubmitButton
+  },
+  computed: {
+    ...mapGetters('api', ['getBaseUrl', 'getHeaders', 'getApplicationID'])
+  },
+  methods: {
+    ...mapMutations('app', ['toggleSuccesModal']),
+    clearForm () {
+      this.name = ''
+      this.email = ''
+      this.subject = ''
+      this.message = ''
+    },
+    saveMail: debounce(function () {
+      this.axios.post(`${this.getBaseUrl}/mail`,
+        {
+          name: this.name,
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+          applicationID: this.getApplicationID
+        },
+        { headers: this.getHeaders })
+        .then(res => {
+          if (res.status === 201) {
+            this.toggleSuccesModal()
+            this.clearForm()
+          }
+        })
+        .catch(err => console.error(err))
+    }, 1000)
   }
 }
 </script>

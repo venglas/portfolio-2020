@@ -4,16 +4,18 @@
         <h1>Masz jakieś pytanie albo chciałbyś wspólpracować?</h1>
     </header>
     <contact-form></contact-form>
+    <successful-send-modal />
   </base-article>
 </template>
 
 <script>
+import SuccessfulSendModal from '../components/form/successful-send-modal.vue'
 import ContactForm from '../components/form/contact-form.vue'
 import BaseArticle from '../components/article/base-article.vue'
 
 export default {
   components: {
-    'base-article': BaseArticle, ContactForm
+    'base-article': BaseArticle, ContactForm, SuccessfulSendModal
   }
 }
 </script>

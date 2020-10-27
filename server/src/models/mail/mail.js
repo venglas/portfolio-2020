@@ -9,7 +9,7 @@ const mailSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  title: {
+  subject: {
     type: String,
     required: true
   },
