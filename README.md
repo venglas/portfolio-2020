@@ -1,6 +1,8 @@
 # portfolio-2020
 
 ## Project setup
+node: v14.15.1
+
 ```
 npm install
 ```
