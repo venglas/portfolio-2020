@@ -1,9 +1,9 @@
-GET http://localhost:3000/mail
+GET http://portfolio-2020-api.herokuapp.com/mail
 
 
 ###
 
-POST http://localhost:3000/mail
+POST http://portfolio-2020-api.herokuapp.com/mail
 Content-Type: application/json
 
 {
