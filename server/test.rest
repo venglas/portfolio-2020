@@ -1,4 +1,4 @@
-GET http://portfolio-2020-api.herokuapp.com/mail
+GET  https://portfolio-2020-api.herokuapp.com/mail
 
 
 ###
