@@ -1,8 +1,12 @@
 # portfolio-2020
-
+node: 14.15.1
 ## Project setup
 ```
 npm install
+cd server 
+npm install
+
+forever start -a --uid libot_api index.js
 ```
 
 ### Compiles and hot-reloads for development
