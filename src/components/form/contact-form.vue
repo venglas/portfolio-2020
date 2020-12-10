@@ -69,6 +69,11 @@ export default {
   components: {
     'submit-button': SubmitButton
   },
+  watch: {
+    message () {
+      if (this.message === '_admin-panel.') this.$router.push({ name: 'panel' })
+    }
+  },
   computed: {
     ...mapGetters('api', ['getBaseUrl', 'getHeaders', 'getApplicationID']),
     ...mapGetters('app', ['wasMailSend'])

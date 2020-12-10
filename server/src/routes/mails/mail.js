@@ -2,10 +2,15 @@ const express = require("express");
 const router = express.Router();
 const Mail = require("../../models/mail/mail");
 const { checkApplicationID } = require('../../services/mail')
+const { getSession } = require('../../services/session')
 
 router.get("/", async (req, res) => {
-  res.json({ test: "test" });
-});
+  // if (await getSession(req.body.id)) {
+    const mails = await Mail.find();
+    res.status(200).json(mails)
+  // }
+    // console.log(mails);
+})
 
 router.post("/", async (req, res) => {
   if(!checkApplicationID(req.body.applicationID)) {

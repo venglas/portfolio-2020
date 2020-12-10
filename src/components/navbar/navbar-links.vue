@@ -1,7 +1,7 @@
 <template>
   <ul class="navbar__menu">
     <router-link
-      v-for="item in $router.options.routes[1].children"
+      v-for="item in filteredRoutes"
       :key="item.name"
       :to="{ name: item.name, params: { lang: locale } }"
       tag="li"
@@ -17,7 +17,13 @@ import i18n from '../../i18n'
 
 export default {
   computed: {
-    locale: () => `${i18n.locale}`
+    locale: () => `${i18n.locale}`,
+    routes () {
+      return this.$router.options.routes[1].children
+    },
+    filteredRoutes () {
+      return this.routes.filter(route => route.show !== false)
+    }
   }
 }
 </script>
