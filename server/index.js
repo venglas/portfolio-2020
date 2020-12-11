@@ -21,6 +21,6 @@ const loginRouter = require('./src/routes/login/login')
 app.use('/mail', mailRouter)
 app.use('/login', loginRouter)
 
-const port = 3000;
+const port = process.env.PORT;
 
 app.listen(port, () => console.log(`server started at port: ${port}`))
