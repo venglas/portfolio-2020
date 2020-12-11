@@ -1,6 +1,6 @@
 <template>
-    <div class="hamburger-menu" 
-        @click="toggleMobileMenu" 
+    <div class="hamburger-menu"
+        @click="toggleMobileMenu"
         :class="{ open: getIsMobileMenuOpen }"
     >
         <span></span>
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
+import { mapMutations, mapGetters } from 'vuex'
 
 export default {
-  data() {
-    return { active: false };
+  data () {
+    return { active: false }
   },
 
   computed: {
@@ -25,7 +25,7 @@ export default {
   methods: {
     ...mapMutations('app', ['toggleMobileMenu'])
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +66,7 @@ export default {
   margin: 2rem 2.5rem;
   align-self: flex-end;
   position: absolute;
+  bottom: 0;
 
   span {
     &:nth-child(1) {

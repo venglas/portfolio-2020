@@ -6,18 +6,18 @@
 
 <script>
 export default {
-    props: {
-        fullWidth: { type: Boolean, default: false },
-        verticalSpace: { type: String, default: "" }
+  props: {
+    fullWidth: { type: Boolean, default: false },
+    verticalSpace: { type: String, default: '' }
+  },
+  computed: {
+    articleWidth () {
+      return this.fullWidth ? '100%' : ''
     },
-    computed: {
-        articleWidth() {
-            return this.fullWidth ? "100%" : ''
-        },
-        space() {
-            return this.verticalSpace ? `${this.verticalSpace} auto` : ''
-        }
+    space () {
+      return this.verticalSpace ? `${this.verticalSpace} auto` : ''
     }
+  }
 }
 </script>
 

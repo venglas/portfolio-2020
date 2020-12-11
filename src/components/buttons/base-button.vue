@@ -1,5 +1,5 @@
 <template>
-    <button 
+    <button
         class="base-button"
         @click="openLink()"
     >
@@ -9,14 +9,14 @@
 
 <script>
 export default {
-    props: {
-        href: { type: String }
-    },
-    methods: {
-        openLink() {
-            if (this.href) window.open(this.href, "_blank"); 
-        }
+  props: {
+    href: { type: String }
+  },
+  methods: {
+    openLink () {
+      if (this.href) window.open(this.href, '_blank')
     }
+  }
 }
 </script>
 

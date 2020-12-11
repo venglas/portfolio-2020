@@ -1,5 +1,9 @@
 <template>
-    <base-article full-width class="presentation-article" :style="{ 'margin-top': presentationSpaceTop }">
+    <base-article
+        full-width
+        class="presentation-article"
+        :style="{ 'margin-top': presentationSpaceTop }"
+        :class="{ 'iphone-client': isIphoneClient }">
         <div class="presentation slide-from-left">
             <octagon-wrapper class="presentation__octagon">
                 <presentation-animation />
@@ -10,7 +14,7 @@
 
         <div class="technologies slide-from-right" ref="technologies">
             <technologies-hover-info />
-            <single-technology 
+            <single-technology
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
                 :name="technology.name"
@@ -23,29 +27,30 @@
 </template>
 
 <script>
-import baseArticle from "../article/base-article";
-import octagonWrapper from "../about-header/octagon-wrapper";
-import presentationAnimation from "./presentation-animation";
-import aboutAuthor from "./about-author";
-import singleTechnology from "./single-technology";
-import technologiesHoverInfo from "./technologies-hover-info";
-import { mapGetters } from 'vuex';
+import baseArticle from '../article/base-article'
+import octagonWrapper from '../about-header/octagon-wrapper'
+import presentationAnimation from './presentation-animation'
+import aboutAuthor from './about-author'
+import singleTechnology from './single-technology'
+import technologiesHoverInfo from './technologies-hover-info'
+import { mapGetters } from 'vuex'
 
 export default {
-    components: {
-        'base-article': baseArticle,
-        'octagon-wrapper': octagonWrapper,
-        'presentation-animation': presentationAnimation,
-        'about-author': aboutAuthor,
-        'single-technology': singleTechnology,
-        "technologies-hover-info": technologiesHoverInfo
-    },
-    computed: {
-        ...mapGetters('app', ['getInfoAboutDescriptionOnHover']),
-        presentationSpaceTop() {
-            if (this.getInfoAboutDescriptionOnHover) return '30px';
-        }
+  components: {
+    'base-article': baseArticle,
+    'octagon-wrapper': octagonWrapper,
+    'presentation-animation': presentationAnimation,
+    'about-author': aboutAuthor,
+    'single-technology': singleTechnology,
+    'technologies-hover-info': technologiesHoverInfo
+  },
+  computed: {
+    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient']),
+    presentationSpaceTop () {
+      if (this.getInfoAboutDescriptionOnHover) return '30px'
+      return ''
     }
+  }
 }
 </script>
 
@@ -84,10 +89,13 @@ export default {
         width: inherit;
         display: flex;
         flex-direction: column;
-        @media (max-height: 890px) {
+        @media (max-height: 890px) and (min-width: 1024px) {
             overflow-y: scroll;
             max-height: 450px;
             padding-bottom: 50px;
+        }
+        @media (max-width: 1024px) and (min-width: 720px) {
+            padding-bottom: 4.5rem;
         }
         @include space-h-margin-huge;
         @media( max-height: $BP_second ) {

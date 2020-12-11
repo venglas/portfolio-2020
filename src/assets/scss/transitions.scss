@@ -67,3 +67,10 @@ $sides: left, top, right, bottom, leftTop, rightTop, leftBottom, rightBottom;
 .bottom-slide-enter, .bottom-slide-leave-to {
     transform: translate(-50%, 100vh);
 }
+
+.left-slide-enter-active, .left-slide-leave-active {
+    transition: transform $TIME_fast;
+}
+.left-slide-enter, .left-slide-leave-to {
+    transform: translateX(-100vw);
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="project">
+    <div class="project" onclick="">
         <div class="project__background" :style="backgroundImage"></div>
         <div class="project__inner">
             <header class="header">
@@ -18,33 +18,33 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
-import baseButton from "../buttons/base-button";
+import { mapMutations } from 'vuex'
+import baseButton from '../buttons/base-button'
 
 export default {
-    components: {
-        'base-button': baseButton
-    },
-    props: {
-        image: { type: String },
-        projectName: { type: String },
-        projectTechnologies: { type: Array },
-        fullInfo: { type: Object }
-    },
-    computed: {
-        backgroundImage() {
-            const img = require(`../../assets/img/projects/${this.image}`);
-            return { 'background-image': `url(${img})` };
-        }
-    },
-    methods: {
-        ...mapMutations('app', ['showProjectModal', 'setProjectModalInfo', 'showOverlay']),
-        openModal() {
-            this.showProjectModal();
-            this.showOverlay();
-            this.setProjectModalInfo(this.fullInfo);
-        }
+  components: {
+    'base-button': baseButton
+  },
+  props: {
+    image: { type: String },
+    projectName: { type: String },
+    projectTechnologies: { type: Array },
+    fullInfo: { type: Object }
+  },
+  computed: {
+    backgroundImage () {
+      const img = require(`../../assets/img/projects/${this.image}`)
+      return { 'background-image': `url(${img})` }
     }
+  },
+  methods: {
+    ...mapMutations('app', ['showProjectModal', 'setProjectModalInfo', 'showOverlay']),
+    openModal () {
+      this.showProjectModal()
+      this.showOverlay()
+      this.setProjectModalInfo(this.fullInfo)
+    }
+  }
 }
 </script>
 
@@ -134,8 +134,8 @@ export default {
         .button {
             transform: translateY(250%);
             opacity: 0;
-            
-            transition: 
+
+            transition:
                 opacity ease-in-out 350ms,
                 transform ease-in-out 400ms,
                 background-color ease-in-out 400ms,

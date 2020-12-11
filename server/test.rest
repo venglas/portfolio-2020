@@ -1,0 +1,15 @@
+GET  https://portfolio-2020-api.herokuapp.com/mail
+
+
+###
+
+POST http://portfolio-2020-api.herokuapp.com/mail
+Content-Type: application/json
+
+{
+    "name": "test",
+    "email": "test@mail.com",
+    "subject": "elo",
+    "message": "test",
+    "applicationID": "in env file"
+}

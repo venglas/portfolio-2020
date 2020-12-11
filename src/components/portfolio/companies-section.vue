@@ -19,37 +19,23 @@
 </template>
 
 <script>
-import singleCompany from "./single-company";
+import singleCompany from './single-company'
 
 export default {
-    components: {
-        'single-company': singleCompany
-    }
+  components: {
+    'single-company': singleCompany
+  }
 }
 </script>
 
 <style lang="scss">
 .companies-section {
+    @include space-v-padding-big;
     color: #000;
-    @media (max-height: 900px)  and (min-width: 1250px) {
-        position: absolute;
-        bottom: 25rem;
-    }
-    @media (max-width: 1250px ) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include space-v-margin-med;
-    }
-    @media (max-height: 840px) and (max-width: 1250px) {
-        display: none;
-    }
-    @media (max-width: 1025px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include space-v-padding-big;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .companies {
         display: flex;
     }

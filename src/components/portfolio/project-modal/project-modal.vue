@@ -9,7 +9,7 @@
                 <header class="header">
                     <h3>{{getModalFullInfo.name}}</h3>
                     <p class="header__technologies">
-                        <span 
+                        <span
                             v-for="technology in getModalFullInfo.technologies"
                             :key="technology"
                         >
@@ -17,7 +17,7 @@
                         </span>
                     </p>
                 </header>
-            
+
                 <p class="description">
                     {{getModalFullInfo.description}}
                     <a :href="getModalFullInfo.descriptionLink.link" target="_blank">{{getModalFullInfo.descriptionLink.name}}</a>
@@ -32,26 +32,26 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
-import imageSlider from "./image-slider/image-slider";
-import baseButton from "../../buttons/base-button";
+import { mapGetters, mapMutations } from 'vuex'
+import imageSlider from './image-slider/image-slider'
+import baseButton from '../../buttons/base-button'
 
 export default {
-    components: {
-        'image-slider': imageSlider,
-        'base-button': baseButton
-    },
-    computed: {
-        ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])
-    },
-    methods: {
-        ...mapMutations('app', ['hideProjectModal', 'hideOverlay', 'setSliderPosition']),
-        closeModal() {
-            this.hideProjectModal();
-            this.hideOverlay();
-            this.setSliderPosition(0);
-        }
+  components: {
+    'image-slider': imageSlider,
+    'base-button': baseButton
+  },
+  computed: {
+    ...mapGetters('app', ['getModalShowState', 'getModalFullInfo'])
+  },
+  methods: {
+    ...mapMutations('app', ['hideProjectModal', 'hideOverlay', 'setSliderPosition']),
+    closeModal () {
+      this.hideProjectModal()
+      this.hideOverlay()
+      this.setSliderPosition(0)
     }
+  }
 }
 </script>
 
@@ -121,7 +121,7 @@ export default {
                 font-size: 1.5rem;
                 color: $COLOR_project_technologies;
                 span {
-                    &:after { 
+                    &:after {
                         content: ',';
                         margin-left: -3px;
                     }
@@ -131,7 +131,7 @@ export default {
                 }
             }
         }
-        
+
         .description {
             @include space-v-padding-big;
             color: $COLOR_project_description;

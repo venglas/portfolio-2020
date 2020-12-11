@@ -1,11 +1,13 @@
 # portfolio-2020
-
+node: 14.15.1
 ## Project setup
 node: v14.15.1
 
 ```
 npm install
 ```
+
+api for this project is served on heroku
 
 ### Compiles and hot-reloads for development
 ```
