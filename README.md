@@ -3,11 +3,9 @@ node: 14.15.1
 ## Project setup
 ```
 npm install
-cd server 
-npm install
-
-forever start -a --uid libot_api index.js
 ```
+
+api for this project is served on heroku
 
 ### Compiles and hot-reloads for development
 ```
