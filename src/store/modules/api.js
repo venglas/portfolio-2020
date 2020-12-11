@@ -2,7 +2,7 @@
 export default {
   namespaced: true,
   state: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://portfolio-2020-api.herokuapp.com',
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Content-Type': 'application/json;charset=UTF-8'
