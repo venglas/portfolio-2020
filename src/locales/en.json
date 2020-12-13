@@ -186,7 +186,21 @@
           },
           "buttonLink": "https://github.com/venglas/linkedin-messages"
         }
-      }
+      },
+      {
+        "name": "Home screen app",
+        "technologies": ["React", "Redux Toolkit", "react draggable", "react tooltip"],
+        "image": "home-screen/slide5.jpg",
+        "fullInfo": {
+          "images": ["home-screen/slide1.jpg", "home-screen/slide2.jpg", "home-screen/slide3.jpg", "home-screen/slide4.jpg", "home-screen/slide5.jpg"],
+          "description": "The Home screen app is a home page application for your web browser. Saving links, fast bookmarks, editing existing links, changing position via drag and drop, import configuration and links from files, and other functionalities like statistics.",
+          "descriptionLink": {
+            "link": "https://github.com/venglas/home-screen",
+            "name": "App code"
+          },
+          "buttonLink": "https://home-screen.netlify.app/"
+        }
+    }
     ],
     "companiesHeader": "I was working also for"
   },

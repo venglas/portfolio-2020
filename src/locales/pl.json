@@ -168,7 +168,7 @@
                     "description": "NBA Hall Of Hate jest aplikacją webową. Użytkownicy mogą oceniać zawodników zarówno pozytywnie jak i negatywnie w formie komenatrzy jak i punktów.",
                     "descriptionLink": {
                         "link": "https://github.com/venglas/nba-hall-of-hate",
-                        "name": "link do kodu"
+                        "name": "Kod aplikacji"
                     },
                     "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
                 }
@@ -185,6 +185,20 @@
                         "name": ""
                     },
                     "buttonLink": "https://github.com/venglas/linkedin-messages"
+                }
+            },
+            {
+                "name": "Home screen app",
+                "technologies": ["React", "Redux Toolkit", "react draggable", "react tooltip"],
+                "image": "home-screen/slide5.jpg",
+                "fullInfo": {
+                    "images": ["home-screen/slide1.jpg", "home-screen/slide2.jpg", "home-screen/slide3.jpg", "home-screen/slide4.jpg", "home-screen/slide5.jpg"],
+                    "description": "Home screen jest aplikacją ekranu startowego przeglądaki. Zapisywanie linków, oraz szybkich zakładek, edycja ich, zmienianie pozycji przy uyciu funkcjonalności drag and drop, importowanie konfiguracji z pliku oraz inne funkcje jak statystyki.",
+                    "descriptionLink": {
+                        "link": "https://github.com/venglas/home-screen",
+                        "name": "Kod aplikacji"
+                    },
+                    "buttonLink": "https://home-screen.netlify.app/"
                 }
             }
         ],
