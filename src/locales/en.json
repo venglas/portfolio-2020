@@ -172,6 +172,20 @@
           },
           "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
         }
+      },
+      {
+        "name": "LinkedIn message sender",
+        "technologies": ["Vue", "Node", "puppeteer", "express", "mongoose"],
+        "image": "linkedin-message-sender/slide3.jpg",
+        "fullInfo": {
+          "images": ["linkedin-message-sender/slide1.jpg", "linkedin-message-sender/slide2.jpg", "linkedin-message-sender/slide3.jpg"],
+          "description": "The LinkedIn message sender is an application for sending personalized messages to your contacts. Persons are select by their gender and region. App has function followup message - message that will be sent on the day that you set.",
+          "descriptionLink": {
+            "link": "",
+            "name": ""
+          },
+          "buttonLink": "https://github.com/venglas/linkedin-messages"
+        }
       }
     ],
     "companiesHeader": "I was working also for"

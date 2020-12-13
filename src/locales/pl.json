@@ -172,6 +172,20 @@
                     },
                     "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
                 }
+            },
+            {
+                "name": "LinkedIn message sender",
+                "technologies": ["Vue", "Node", "puppeteer", "express", "mongoose"],
+                "image": "linkedin-message-sender/slide3.jpg",
+                "fullInfo": {
+                    "images": ["linkedin-message-sender/slide1.jpg", "linkedin-message-sender/slide2.jpg", "linkedin-message-sender/slide3.jpg"],
+                    "description": "LinkedIn message sender jest aplikacją do wysyłania spersonalizowanych wiadomości do osób z sieci. Osoby dobierane są na podstawie płci i regionu. Posiada funkcje followup message czyli wiadomość przypominającą, która zostaje wysłana w dniu na który zostaje ustawiona. Projekt wykonany na zlecenie firmy USStock.",
+                    "descriptionLink": {
+                        "link": "",
+                        "name": ""
+                    },
+                    "buttonLink": "https://github.com/venglas/linkedin-messages"
+                }
             }
         ],
         "companiesHeader": "Pracowałem również dla"
