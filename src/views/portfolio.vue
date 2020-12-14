@@ -52,19 +52,19 @@ export default {
 
 <style lang="scss" scoped>
 .article--projects {
-    position: relative;
-    margin: 0 auto;
+  position: relative;
+  margin: 0 auto;
 
-    @media (max-width: 1500px) {
-        width: 80%;
-    }
-    @media (max-width: 1400px) {
-        width: 90%;
-    }
-    .projects {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  @media (max-width: 1500px) {
+    width: 80%;
+  }
+  @media (max-width: 1400px) {
+    width: 90%;
+  }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 </style>
