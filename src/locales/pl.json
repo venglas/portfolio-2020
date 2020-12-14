@@ -200,6 +200,20 @@
                     },
                     "buttonLink": "https://home-screen.netlify.app/"
                 }
+            },
+            {
+                "name": "Retwitter",
+                "technologies": ["Node", "puppeter", "mongoose", "winston.js"],
+                "image": "retwitter/slide1.jpg",
+                "fullInfo": {
+                    "images": ["retwitter/slide1.jpg", "retwitter/slide2.jpg", "retwitter/slide3.jpg"],
+                    "description": "Retwitter jest aplikacja serwerową słuzącą do retwittowania postów osób które obserwujesz. Funkcje jakie posiada aplikacja to: lajkowanie, repost, confirm security login, add comments. Aplikacja pozwala utrzymywać ruch na twoim profilu wypełniając ciągle nowym contentem.",
+                    "descriptionLink": {
+                        "link": "",
+                        "name": ""
+                    },
+                    "buttonLink": "https://github.com/venglas/retwiter"
+                }
             }
         ],
         "companiesHeader": "Pracowałem również dla"

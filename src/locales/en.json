@@ -200,7 +200,21 @@
           },
           "buttonLink": "https://home-screen.netlify.app/"
         }
-    }
+      },
+      {
+        "name": "Retwitter",
+        "technologies": ["Node", "puppeter", "mongoose", "winston.js"],
+        "image": "retwitter/slide1.jpg",
+        "fullInfo": {
+          "images": ["retwitter/slide1.jpg", "retwitter/slide2.jpg", "retwitter/slide3.jpg"],
+          "description": "Retwitter is a server application that will retweet posts from persons that you are following. Functionalities that the app has are: liking, reposting, confirming security login, add comments. The app lets you keep active your profile by putting their new content.",
+          "descriptionLink": {
+            "link": "",
+            "name": ""
+          },
+          "buttonLink": "https://github.com/venglas/retwiter"
+        }
+      }
     ],
     "companiesHeader": "I was working also for"
   },
