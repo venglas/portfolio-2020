@@ -71,6 +71,9 @@ export default {
     @media (max-width: 500px) {
         width: 100%;
     }
+    @media(max-width: 820px) and (orientation: landscape) {
+        height: calc(100vh - #{$SIZE_navbar} - 4rem);
+    }
     &__background {
         z-index: $SIZE_z-min-max;
         position: absolute;
