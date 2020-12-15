@@ -80,6 +80,11 @@ export default {
     @media (max-width: 425px) {
         width: 100%;
     }
+    @media(max-width: 820px) and (orientation: landscape) {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+    }
     &__button-close {
         position: absolute;
         right: 0;
