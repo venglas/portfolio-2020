@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app" :class="`app--${$route.name}`">
+  <div id="app" class="app" :class="`app--${$route.name}`" ref="App">
     <navbar />
     <router-view
       :class="[
@@ -58,6 +58,12 @@ export default {
       if (window.navigator.userAgent.match(/iPhone/i)) {
         this.setIphoneClient()
       }
+    }
+  },
+  watch: {
+    '$route' () {
+      console.log(this.$refs.App)
+      this.$refs.App.scrollTo(0, 0)
     }
   }
 }

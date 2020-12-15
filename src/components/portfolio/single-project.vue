@@ -34,7 +34,6 @@ export default {
   computed: {
     backgroundImage () {
       const img = require(`../../assets/img/projects/${this.image}`)
-      console.log(img)
       return { 'background-image': `url(${img})` }
     }
   },
