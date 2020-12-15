@@ -61,8 +61,7 @@ export default {
     }
   },
   watch: {
-    '$route' () {
-      console.log(this.$refs.App)
+    $route () {
       this.$refs.App.scrollTo(0, 0)
     }
   }

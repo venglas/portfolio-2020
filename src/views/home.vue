@@ -4,7 +4,7 @@
       <h1 class="text text--1 slide-from-left">{{$t('home.hello[0]')}}</h1>
       <h2 class="text text--2 slide-from-right">{{$t('home.hello[1]')}}</h2>
       <h3 class="text text--3 slide-from-left">{{$t('home.hello[2]')}}</h3>
-      <base-button class="home__button slide-from-bottom" @click.native="$router.push({name: 'portfolio'})">{{$t('home.button')}}</base-button>
+      <base-button class="home__button slide-from-bottom" @click.native="$router.push({name: 'portfolio', params: { preventToggleMenu: true }})">{{$t('home.button')}}</base-button>
     </animated-background-stars>
   </div>
 </template>
