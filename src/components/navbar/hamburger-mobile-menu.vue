@@ -63,10 +63,11 @@ export default {
   }
 }
 .open {
-  margin: 2rem 2.5rem;
+  margin: 2rem 0;
   align-self: flex-end;
   position: absolute;
   bottom: 0;
+  transition: none;
 
   span {
     &:nth-child(1) {
