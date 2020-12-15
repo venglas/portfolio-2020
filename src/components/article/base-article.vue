@@ -1,16 +1,19 @@
 <template>
-    <article class="article" :style="{ width: articleWidth, margin: space }" >
+    <article class="article" :style="{ width: articleWidth, margin: space }" :class="{ 'iphone-client': isIphoneClient }">
         <slot />
     </article>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     fullWidth: { type: Boolean, default: false },
     verticalSpace: { type: String, default: '' }
   },
   computed: {
+    ...mapGetters('app', ['isIphoneClient']),
     articleWidth () {
       return this.fullWidth ? '100%' : ''
     },
@@ -26,7 +29,7 @@ export default {
     width: 75%;
     margin: 5rem auto;
     @media (max-width: $BP_first) {
-        width: 90%;
+      width: 90%;
     }
 }
 </style>

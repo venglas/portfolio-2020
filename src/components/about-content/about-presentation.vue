@@ -3,7 +3,7 @@
         full-width
         class="presentation-article"
         :style="{ 'margin-top': presentationSpaceTop }"
-        :class="{ 'iphone-client': isIphoneClient }">
+    >
         <div class="presentation slide-from-left">
             <octagon-wrapper class="presentation__octagon">
                 <presentation-animation />
@@ -45,7 +45,7 @@ export default {
     'technologies-hover-info': technologiesHoverInfo
   },
   computed: {
-    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient', 'getMobileView']),
+    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'getMobileView']),
     presentationSpaceTop () {
       if (this.getInfoAboutDescriptionOnHover) return '30px'
       return ''
