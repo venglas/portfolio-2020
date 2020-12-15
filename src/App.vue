@@ -108,6 +108,9 @@ body {
   @media (max-width: 720px) {
     padding-top: 0;
   }
+  @media(max-width: 820px) and (orientation: landscape) {
+    height: 100%;
+  }
   &--home {
     animation-name: router-enter;
     animation-duration: $TIME_fast;

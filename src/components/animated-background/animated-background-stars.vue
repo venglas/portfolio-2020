@@ -41,6 +41,9 @@ $shadows-big:    multiple-box-shadow(100);
         text-align: center;
         font-size: 2rem;
         overflow: hidden;
+        @media(max-width: 820px) and (orientation: landscape) {
+            position: relative;
+        }
         .text { //parent element class
             background: linear-gradient(white 40%, #38495a,);
             background-clip: text;
