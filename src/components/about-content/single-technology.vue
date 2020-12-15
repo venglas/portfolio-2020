@@ -46,7 +46,10 @@ export default {
 .single-technology {
     max-height: 35px;
     @media (max-width: 720px) {
-        max-height: max-content;
+      max-height: max-content;
+    }
+    @media(max-width: 820px) and (orientation: landscape) {
+      max-height: max-content;
     }
     &__proggress {
         display: flex;
