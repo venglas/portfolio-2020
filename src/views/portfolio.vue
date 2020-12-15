@@ -54,7 +54,9 @@ export default {
 .article--projects {
   position: relative;
   margin: 0 auto;
-
+  @media ( max-width:  720px) {
+    margin: 2rem auto;
+  }
   @media (max-width: 1500px) {
     width: 80%;
   }
