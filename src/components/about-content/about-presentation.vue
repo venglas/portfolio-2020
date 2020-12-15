@@ -13,7 +13,7 @@
         </div>
 
         <div class="technologies slide-from-right" ref="technologies">
-            <technologies-hover-info />
+            <technologies-hover-info v-if="!getMobileView"/>
             <single-technology
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
@@ -45,7 +45,7 @@ export default {
     'technologies-hover-info': technologiesHoverInfo
   },
   computed: {
-    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient']),
+    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient', 'getMobileView']),
     presentationSpaceTop () {
       if (this.getInfoAboutDescriptionOnHover) return '30px'
       return ''
