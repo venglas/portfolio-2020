@@ -15,7 +15,7 @@
 export default {
   methods: {
     changeRouterParam () {
-      this.$router.push({ params: { lang: this.$i18n.locale } })
+      this.$router.push({ params: { lang: this.$i18n.locale, preventToggleMenu: true } })
     }
   }
 }
