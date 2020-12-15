@@ -10,6 +10,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media(max-width: 820px) and (orientation: landscape) {
+        width: 100%;
+        @include space-v-margin-med;
+        .about-author__content {
+            text-align: center;
+        }
+    }
     &__header {
         @include space-v-margin-small;
     }

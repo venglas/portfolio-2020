@@ -75,6 +75,9 @@ export default {
             flex-direction: column;
             align-items: center;
         }
+        @media(max-width: 820px) and (orientation: landscape) {
+            width: 100%;
+        }
         &__octagon {
             width: 400px;
             height: 400px;
@@ -82,6 +85,10 @@ export default {
             @media (max-width: $SMALL_mobile2) {
                 width: 250px;
                 height: 250px;
+            }
+            @media(max-width: 820px) and (orientation: landscape) {
+                width: 230px;
+                height: auto;
             }
         }
     }
