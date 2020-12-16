@@ -1,9 +1,12 @@
 <template>
     <transition name="bottom-slide">
         <div class="project-modal" v-if="getModalShowState">
-            <button class="project-modal__button-close" @click="closeModal()">
+            <base-button class="project-modal__button-close" @click.native="closeModal()">
                 <span>X</span>
-            </button>
+            </base-button>
+            <!-- <button class="project-modal__button-close" @click="closeModal()">
+
+            </button> -->
             <image-slider :images="getModalFullInfo.images" />
             <section class="project-modal__content">
                 <header class="header">
@@ -90,24 +93,9 @@ export default {
         right: 0;
         top: 0;
         z-index: $SIZE_z-max;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        background-color: $COLOR_portfolio_modal_controls_bg;
-        border: none;
-        outline: none;
-        @include space-padding-big;
-        cursor: pointer;
-        transition: all ease-in-out $TIME_fast-max;
-        span {
-            transition: all ease-in-out $TIME_fast-max;
-        }
-        &:hover {
-            background-color: $COLOR_portfolio_modal_controls_bg_hover;
-            span {
-                filter: invert(1);
-            }
+        padding: .8rem 1.5rem;
+        @media (max-width: $MEDIUM_mobile),  (max-width: 820px) and (orientation: landscape){
+            padding: 1.2rem 2rem;
         }
         &:active {
             background-color: $COLOR_portfolio_modal_controls_bg_hover;
