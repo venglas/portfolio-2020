@@ -1,5 +1,5 @@
 <template>
-    <base-article class="article--projects" :class="{ 'iphone-client': isIphoneClient }">
+    <base-article class="article--projects">
         <div class="projects">
             <single-project
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
@@ -19,7 +19,6 @@
 import baseArticle from '../components/article/base-article'
 import singleProject from '../components/portfolio/single-project'
 import companiesSection from '../components/portfolio/companies-section'
-import { mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -34,9 +33,6 @@ export default {
         'slide-from-rightTop', 'slide-from-leftBottom', 'slide-from-rightBottom'
       ] // transitions.scss
     }
-  },
-  computed: {
-    ...mapGetters('app', ['isIphoneClient'])
   },
   methods: {
     randomNumberFromRange (min, max) {

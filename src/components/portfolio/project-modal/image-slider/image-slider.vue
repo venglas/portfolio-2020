@@ -49,5 +49,8 @@ export default {
     @media (max-width: 600px) {
         height: 40vh;
     }
+    @media(max-width: 820px) and (orientation: landscape) {
+      height: 250px;
+    }
 }
 </style>

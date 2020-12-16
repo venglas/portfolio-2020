@@ -43,32 +43,38 @@ export default {
     bottom: 0;
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: space-between;
     &__prev {
-        transform: rotate(180deg);
+      transform: rotate(180deg);
     }
     &__prev, &__next {
         display: flex;
-        justify-content: center;
         align-items: center;
-        background-color: $COLOR_portfolio_modal_controls_bg;
+        justify-content: flex-end;
+        background-color: transparent;
         border: none;
         outline: none;
         @include space-padding-big;
         cursor: pointer;
         transition: all ease-in-out $TIME_fast-max;
+        width: 50%;
 
         &:hover {
-            background-color:$COLOR_portfolio_modal_controls_bg_hover;
+          background-color: rgba(0, 0, 0, .03);
+          @media (max-width: 820px) and (orientation: landscape), (max-width: $MEDIUM_mobile) {
+            background-color: transparent;
             img {
-                filter: invert(1);
+              filter: none !important;
             }
+          }
+          img {
+            filter: invert(1);
+          }
         }
-        &:active {
-            background-color: rgba(0, 0, 0, 1);
-        }
+        &:active {}
         img {
-            width: 24px;
+          width: 24px;
         }
     }
 }
