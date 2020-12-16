@@ -114,6 +114,8 @@ export default {
   display: flex;
   flex-direction: column;
   width: 50%;
+  min-height: fit-content;
+
   @media (max-width: 920px) {
     width: 70%;
   }
@@ -121,11 +123,11 @@ export default {
     width: 90%;
     .contact-form__element-wrapper {
       input {
-        height: 45px;
+        min-height: 45px;
       }
     }
     input {
-      height: 45px;
+      min-height: 45px;
     }
   }
   @media (max-width: 520px) {
@@ -160,7 +162,7 @@ export default {
     }
 
     input {
-      height: 35px;
+      min-height: 35px;
     }
 
     input,

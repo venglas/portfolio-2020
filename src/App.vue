@@ -89,6 +89,10 @@ body {
   margin: 0;
   overflow: hidden;
 }
+input, textarea{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 .app {
   height: 100vh;
   overflow-y: hidden;
