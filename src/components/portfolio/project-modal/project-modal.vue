@@ -94,6 +94,7 @@ export default {
         top: 0;
         z-index: $SIZE_z-max;
         padding: .8rem 1.5rem;
+        background-color: $COLOR_bg_base;
         @media (max-width: $MEDIUM_mobile),  (max-width: 820px) and (orientation: landscape){
             padding: 1.2rem 2rem;
         }
