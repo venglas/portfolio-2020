@@ -110,6 +110,7 @@ body {
   }
   @media(max-width: 820px) and (orientation: landscape) {
     height: 100%;
+    padding-top: 2rem;
   }
   &--home {
     animation-name: router-enter;
