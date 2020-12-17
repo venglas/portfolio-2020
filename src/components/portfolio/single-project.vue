@@ -11,7 +11,8 @@
             <base-button
                 class="button"
                 @click.native="openModal()"
-            > {{$t('portfolio.project.buttonText')}}
+            >
+                {{$t('portfolio.project.buttonText')}}
             </base-button>
         </div>
     </div>
@@ -103,8 +104,10 @@ export default {
     &__inner {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-evenly;
         height: 100%;
+        width: 100%;
         .header {
             transform: translateY(-250%);
             opacity: 0;
@@ -137,6 +140,7 @@ export default {
         .button {
             transform: translateY(250%);
             opacity: 0;
+            min-width: 70%;
 
             transition:
                 opacity ease-in-out 350ms,
