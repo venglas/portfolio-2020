@@ -33,6 +33,9 @@ export default {
 .header {
     display: flex;
     justify-content: space-around;
+    @media(max-width: 820px) and (orientation: landscape) {
+        margin-top: 5rem;
+    }
     @media (max-width: $BP_second) {
         flex-wrap: wrap;
     }

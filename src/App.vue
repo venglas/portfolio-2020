@@ -64,6 +64,13 @@ export default {
     $route () {
       this.$refs.App.scrollTo(0, 0)
     }
+  },
+  mounted () {
+    window.addEventListener('orientationchange', () => {
+      if (window.scrollY > 0) {
+        window.scrollTo(0, 0)
+      }
+    })
   }
 }
 </script>
