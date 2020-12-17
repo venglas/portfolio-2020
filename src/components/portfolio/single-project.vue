@@ -141,6 +141,9 @@ export default {
             transform: translateY(250%);
             opacity: 0;
             min-width: 70%;
+            @media (max-width: 500px) {
+                min-width: 85%;
+            }
 
             transition:
                 opacity ease-in-out 350ms,
