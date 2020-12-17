@@ -6,6 +6,7 @@ export default {
     websiteHeight: null,
     showOverlay: false,
     iphoneClient: false,
+    scrollPosition: 0,
     about: {
       showedDescriptions: 0,
       infoAboutDescriptionOnHover: true
@@ -40,7 +41,8 @@ export default {
     hideOverlay: state => { state.showOverlay = false },
     setIphoneClient: state => { state.iphoneClient = true },
     toggleSuccesModal: state => { state.contact.succesModal = !state.contact.succesModal },
-    setMailSend: state => { state.contact.wasMailSend = true }
+    setMailSend: state => { state.contact.wasMailSend = true },
+    setScrollPosition: (state, payload) => { state.scrollPosition = payload }
   },
 
   getters: {
@@ -55,6 +57,7 @@ export default {
     getOverlayState: state => state.showOverlay,
     isIphoneClient: state => state.iphoneClient,
     getSuccesModalState: state => state.contact.succesModal,
-    wasMailSend: state => state.contact.wasMailSend
+    wasMailSend: state => state.contact.wasMailSend,
+    getScrollPosition: state => state.scrollPosition
   }
 }

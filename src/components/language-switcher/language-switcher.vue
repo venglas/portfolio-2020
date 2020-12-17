@@ -5,6 +5,7 @@
     class="language-switcher"
     v-model="$i18n.locale"
     @change="changeRouterParam()"
+    ref="languageSwitcher"
   >
     <option value="pl">PL🇵🇱</option>
     <option value="en">EN🇺🇸</option>

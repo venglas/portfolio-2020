@@ -44,7 +44,8 @@ export default {
       'setMobileView',
       'unsetMobileView',
       'setWebsiteHeight',
-      'setIphoneClient'
+      'setIphoneClient',
+      'setScrollPosition'
     ]),
 
     detectMobileView () {
@@ -69,6 +70,11 @@ export default {
     window.addEventListener('orientationchange', () => {
       if (window.scrollY > 0) {
         window.scrollTo(0, 0)
+      }
+    })
+    this.$refs.App.addEventListener('scroll', e => {
+      if (this.getMobileView) {
+        this.setScrollPosition(e.target.scrollTop)
       }
     })
   }
