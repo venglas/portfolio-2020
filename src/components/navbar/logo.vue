@@ -51,7 +51,7 @@ export default {
 
 svg {
   display: block;
-  font: 17rem "Montserrat";
+  font: 16rem "Montserrat";
   padding: 0 2.5rem;
   height: $SIZE_navbar;
   @media (max-width: $MAX_mobile) and (min-width: $MEDIUM_mobile2) {

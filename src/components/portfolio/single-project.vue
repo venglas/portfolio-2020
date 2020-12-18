@@ -11,7 +11,8 @@
             <base-button
                 class="button"
                 @click.native="openModal()"
-            > {{$t('portfolio.project.buttonText')}}
+            >
+                {{$t('portfolio.project.buttonText')}}
             </base-button>
         </div>
     </div>
@@ -71,6 +72,9 @@ export default {
     @media (max-width: 500px) {
         width: 100%;
     }
+    @media(max-width: 820px) and (orientation: landscape) {
+        height: calc(100vh - #{$SIZE_navbar} - 4rem);
+    }
     &__background {
         z-index: $SIZE_z-min-max;
         position: absolute;
@@ -100,8 +104,10 @@ export default {
     &__inner {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-evenly;
         height: 100%;
+        width: 100%;
         .header {
             transform: translateY(-250%);
             opacity: 0;
@@ -134,6 +140,10 @@ export default {
         .button {
             transform: translateY(250%);
             opacity: 0;
+            min-width: 70%;
+            @media (max-width: 500px) {
+                min-width: 85%;
+            }
 
             transition:
                 opacity ease-in-out 350ms,

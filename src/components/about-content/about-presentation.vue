@@ -3,8 +3,12 @@
         full-width
         class="presentation-article"
         :style="{ 'margin-top': presentationSpaceTop }"
-        :class="{ 'iphone-client': isIphoneClient }">
-        <div class="presentation slide-from-left">
+    >
+        <div
+            :class="['presentation', {'slide-from-left': showElement}]"
+            :style="{ opacity: showElement ? 1 : 0 }"
+            ref="aboutAuthor"
+        >
             <octagon-wrapper class="presentation__octagon">
                 <presentation-animation />
             </octagon-wrapper>
@@ -13,7 +17,7 @@
         </div>
 
         <div class="technologies slide-from-right" ref="technologies">
-            <technologies-hover-info />
+            <technologies-hover-info v-if="!getMobileView"/>
             <single-technology
                 v-for="technology in $t('about.presentation.technologies')"
                 :key="technology.name"
@@ -33,6 +37,7 @@ import presentationAnimation from './presentation-animation'
 import aboutAuthor from './about-author'
 import singleTechnology from './single-technology'
 import technologiesHoverInfo from './technologies-hover-info'
+import { showElementOnScroll } from '../utils'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -44,11 +49,32 @@ export default {
     'single-technology': singleTechnology,
     'technologies-hover-info': technologiesHoverInfo
   },
+  data () {
+    return {
+      scrollLimit: 0,
+      elementHeight: 0,
+      showElement: false
+    }
+  },
   computed: {
-    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'isIphoneClient']),
+    ...mapGetters('app', ['getInfoAboutDescriptionOnHover', 'getMobileView', 'getScrollPosition']),
     presentationSpaceTop () {
       if (this.getInfoAboutDescriptionOnHover) return '30px'
       return ''
+    }
+  },
+  watch: {
+    getScrollPosition () {
+      showElementOnScroll(this, +50)
+    }
+  },
+  methods: {
+  },
+  mounted () {
+    this.scrollLimit = this.$refs.aboutAuthor.offsetTop
+    this.elementHeight = this.$refs.aboutAuthor.offsetHeight
+    if (!this.getMobileView) {
+      this.showElement = true
     }
   }
 }
@@ -75,6 +101,9 @@ export default {
             flex-direction: column;
             align-items: center;
         }
+        @media(max-width: 820px) and (orientation: landscape) {
+            width: 100%;
+        }
         &__octagon {
             width: 400px;
             height: 400px;
@@ -82,6 +111,10 @@ export default {
             @media (max-width: $SMALL_mobile2) {
                 width: 250px;
                 height: 250px;
+            }
+            @media(max-width: 820px) and (orientation: landscape) {
+                width: 230px;
+                height: auto;
             }
         }
     }

@@ -20,6 +20,12 @@ export default {
         }
     }
 }
+@media(max-width: 820px) and (orientation: landscape) {
+    .single-technology .single-technology-description {
+        transform: scaleY(1);
+        border-bottom: 5px solid white;
+    }
+}
 
 .single-technology-description {
     pointer-events: none; //remove hover

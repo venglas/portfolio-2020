@@ -4,7 +4,7 @@
       <h1 class="text text--1 slide-from-left">{{$t('home.hello[0]')}}</h1>
       <h2 class="text text--2 slide-from-right">{{$t('home.hello[1]')}}</h2>
       <h3 class="text text--3 slide-from-left">{{$t('home.hello[2]')}}</h3>
-      <base-button class="home__button slide-from-bottom" @click.native="$router.push({name: 'portfolio'})">{{$t('home.button')}}</base-button>
+      <base-button class="home__button slide-from-bottom" @click.native="$router.push({name: 'portfolio', params: { preventToggleMenu: true }})">{{$t('home.button')}}</base-button>
     </animated-background-stars>
   </div>
 </template>
@@ -60,50 +60,26 @@ export default {
     }
     @media (max-width: 850px) {
       letter-spacing: 5px;
-      &--1 {
-        font-size: 5rem;
-      }
-      &--2 {
-        font-size: 4rem;
-      }
-      &--3 {
-        font-size: 3rem;
-      }
+      &--1 { font-size: 5rem; }
+      &--2 { font-size: 4rem; }
+      &--3 { font-size: 3rem; }
     }
     @media (max-width: 720px) {
-      &--1 {
-        font-size: 4rem;
-      }
-      &--2 {
-        font-size: 3rem;
-      }
-      &--3 {
-        font-size: 2rem;
-      }
+      &--1 { font-size: 4rem; }
+      &--2 { font-size: 3rem; }
+      &--3 { font-size: 2rem; }
     }
     @media (max-width: 570px) {
       letter-spacing: 1px;
-      &--1 {
-        font-size: 3.2rem;
-      }
-      &--2 {
-        font-size: 2.8rem;
-      }
-      &--3 {
-        font-size: 2.4rem;
-      }
+      &--1 { font-size: 3.2rem; }
+      &--2 { font-size: 2.8rem; }
+      &--3 { font-size: 2.4rem; }
     }
     @media (max-width: 430px) {
       letter-spacing: 2px;
-      &--1 {
-        font-size: 3rem;
-      }
-      &--2 {
-        font-size: 2.2rem;
-      }
-      &--3 {
-        font-size: 1.8rem;
-      }
+      &--1 { font-size: 3rem; }
+      &--2 { font-size: 2.2rem; }
+      &--3 { font-size: 1.8rem; }
     }
   }
 }

@@ -30,7 +30,7 @@ export default {
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: $SIZE_z-med;
+    z-index: $SIZE_z-max;
     background-color: rgba(0, 0, 0, .6);
 }
 </style>

@@ -1,3 +1,6 @@
 .iphone-client {
     padding-bottom: 12.5rem;
+    @media(max-width: 820px) and (orientation: landscape) {
+        padding-bottom: 5rem;
+    }
 }

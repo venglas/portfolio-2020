@@ -172,6 +172,48 @@
           },
           "buttonLink": "https://lucid-wright-54f76e.netlify.app/"
         }
+      },
+      {
+        "name": "LinkedIn message sender",
+        "technologies": ["Vue", "Node", "puppeteer", "express", "mongoose"],
+        "image": "linkedin-message-sender/slide3.jpg",
+        "fullInfo": {
+          "images": ["linkedin-message-sender/slide1.jpg", "linkedin-message-sender/slide2.jpg", "linkedin-message-sender/slide3.jpg"],
+          "description": "The LinkedIn message sender is an application for sending personalized messages to your contacts. Persons are select by their gender and region. App has function followup message - message that will be sent on the day that you set.",
+          "descriptionLink": {
+            "link": "",
+            "name": ""
+          },
+          "buttonLink": "https://github.com/venglas/linkedin-messages"
+        }
+      },
+      {
+        "name": "Home screen app",
+        "technologies": ["React", "Redux Toolkit", "react draggable", "react tooltip"],
+        "image": "home-screen/slide5.jpg",
+        "fullInfo": {
+          "images": ["home-screen/slide1.jpg", "home-screen/slide2.jpg", "home-screen/slide3.jpg", "home-screen/slide4.jpg", "home-screen/slide5.jpg"],
+          "description": "The Home screen app is a home page application for your web browser. Saving links, fast bookmarks, editing existing links, changing position via drag and drop, import configuration and links from files, and other functionalities like statistics.",
+          "descriptionLink": {
+            "link": "https://github.com/venglas/home-screen",
+            "name": "App code"
+          },
+          "buttonLink": "https://home-screen.netlify.app/"
+        }
+      },
+      {
+        "name": "Retwitter",
+        "technologies": ["Node", "puppeter", "mongoose", "winston.js"],
+        "image": "retwitter/slide1.jpg",
+        "fullInfo": {
+          "images": ["retwitter/slide1.jpg", "retwitter/slide2.jpg", "retwitter/slide3.jpg"],
+          "description": "Retwitter is a server application that will retweet posts from persons that you are following. Functionalities that the app has are: liking, reposting, confirming security login, add comments. The app lets you keep active your profile by putting their new content.",
+          "descriptionLink": {
+            "link": "",
+            "name": ""
+          },
+          "buttonLink": "https://github.com/venglas/retwiter"
+        }
       }
     ],
     "companiesHeader": "I was working also for"

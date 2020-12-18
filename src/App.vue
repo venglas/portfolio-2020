@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app" :class="`app--${$route.name}`">
+  <div id="app" class="app" :class="`app--${$route.name}`" ref="App">
     <navbar />
     <router-view
       :class="[
@@ -44,7 +44,8 @@ export default {
       'setMobileView',
       'unsetMobileView',
       'setWebsiteHeight',
-      'setIphoneClient'
+      'setIphoneClient',
+      'setScrollPosition'
     ]),
 
     detectMobileView () {
@@ -59,6 +60,23 @@ export default {
         this.setIphoneClient()
       }
     }
+  },
+  watch: {
+    $route () {
+      this.$refs.App.scrollTo(0, 0)
+    }
+  },
+  mounted () {
+    window.addEventListener('orientationchange', () => {
+      if (window.scrollY > 0) {
+        window.scrollTo(0, 0)
+      }
+    })
+    this.$refs.App.addEventListener('scroll', e => {
+      if (this.getMobileView) {
+        this.setScrollPosition(e.target.scrollTop)
+      }
+    })
   }
 }
 </script>
@@ -84,6 +102,10 @@ body {
   margin: 0;
   overflow: hidden;
 }
+input, textarea{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 .app {
   height: 100vh;
   overflow-y: hidden;
@@ -92,6 +114,9 @@ body {
   }
   &--portfolio {
     overflow-y: scroll;
+  }
+  &--home {
+    overflow: hidden;
   }
 }
 .router-view {
@@ -102,6 +127,10 @@ body {
   top: $SIZE_navbar;
   @media (max-width: 720px) {
     padding-top: 0;
+  }
+  @media(max-width: 820px) and (orientation: landscape) {
+    height: 100%;
+    padding-top: 2rem;
   }
   &--home {
     animation-name: router-enter;

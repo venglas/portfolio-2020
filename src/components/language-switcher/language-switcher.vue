@@ -5,6 +5,7 @@
     class="language-switcher"
     v-model="$i18n.locale"
     @change="changeRouterParam()"
+    ref="languageSwitcher"
   >
     <option value="pl">PL🇵🇱</option>
     <option value="en">EN🇺🇸</option>
@@ -15,7 +16,7 @@
 export default {
   methods: {
     changeRouterParam () {
-      this.$router.push({ params: { lang: this.$i18n.locale } })
+      this.$router.push({ params: { lang: this.$i18n.locale, preventToggleMenu: true } })
     }
   }
 }

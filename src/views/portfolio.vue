@@ -1,5 +1,5 @@
 <template>
-    <base-article class="article--projects" :class="{ 'iphone-client': isIphoneClient }">
+    <base-article class="article--projects">
         <div class="projects">
             <single-project
                 v-for="{name, image, technologies, fullInfo} in $t('portfolio.projects')"
@@ -19,7 +19,6 @@
 import baseArticle from '../components/article/base-article'
 import singleProject from '../components/portfolio/single-project'
 import companiesSection from '../components/portfolio/companies-section'
-import { mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -35,9 +34,6 @@ export default {
       ] // transitions.scss
     }
   },
-  computed: {
-    ...mapGetters('app', ['isIphoneClient'])
-  },
   methods: {
     randomNumberFromRange (min, max) {
       return Math.floor(Math.random() * (max - min) + min)
@@ -52,19 +48,21 @@ export default {
 
 <style lang="scss" scoped>
 .article--projects {
-    position: relative;
-    margin: 0 auto;
-
-    @media (max-width: 1500px) {
-        width: 80%;
-    }
-    @media (max-width: 1400px) {
-        width: 90%;
-    }
-    .projects {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  position: relative;
+  margin: 0 auto;
+  @media ( max-width:  720px) {
+    margin: 2rem auto;
+  }
+  @media (max-width: 1500px) {
+    width: 80%;
+  }
+  @media (max-width: 1400px) {
+    width: 90%;
+  }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 </style>

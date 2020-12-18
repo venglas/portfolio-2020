@@ -32,7 +32,8 @@ export default {
   },
   watch: {
     $route () {
-      this.toggleMobileMenu()
+      const { preventToggleMenu } = this.$route.params
+      if (!preventToggleMenu) this.toggleMobileMenu()
     }
   }
 }
