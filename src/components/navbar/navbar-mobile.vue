@@ -6,7 +6,7 @@
       v-if="!getModalShowState"
     >
       <logo />
-      <navbar-links v-if="getIsMobileMenuOpen" />
+      <navbar-links v-if="showMenu" class="links" />
       <hamburger-mobile-menu />
     </nav>
   </transition>
@@ -24,6 +24,11 @@ export default {
     logo,
     'navbar-links': navbarLinks
   },
+  data () {
+    return {
+      showMenu: false
+    }
+  },
   computed: {
     ...mapGetters('app', ['getIsMobileMenuOpen', 'getModalShowState'])
   },
@@ -34,6 +39,11 @@ export default {
     $route () {
       const { preventToggleMenu } = this.$route.params
       if (!preventToggleMenu) this.toggleMobileMenu()
+    },
+    getIsMobileMenuOpen () {
+      setTimeout(() => {
+        this.showMenu = this.getIsMobileMenuOpen
+      }, 200)
     }
   }
 }
@@ -44,16 +54,23 @@ export default {
   display: flex;
   height: $SIZE_navbar_mobile;
   max-height: 442.5px;
+  min-height: 0;
   transition: all ease-in-out $TIME_fast;
   z-index: 999;
   position: relative;
+  .links {
+    opacity: 0;
+  }
   &--mobile {
     position: sticky;
     top: 0;
   }
   &--mobile-open {
     flex-direction: column;
-    height: auto;
+    min-height: 442.5px;
+    .links {
+      opacity: 1;
+    }
   }
 }
 </style>
