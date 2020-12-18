@@ -1,15 +1,15 @@
 const isCookieExist = cookieName => {
   return document.cookie.includes(cookieName)
 }
-
+// throw new Error(`Cookie ${cookieName} not exist.`)
 const getCookieValue = cookieName => {
-  if (!isCookieExist(cookieName)) return
-  // throw new Error(`Cookie ${cookieName} not exist.`)
-  const cookie = document.cookie.split(';').filter(cookie => cookie.includes(cookieName))[0].split('=')[1]
-  try {
-    return JSON.parse(cookie)
-  } catch {
-    return cookie
+  if (isCookieExist(cookieName)) {
+    const cookie = document.cookie.split(';').filter(cookie => cookie.includes(cookieName))[0].split('=')[1]
+    try {
+      return JSON.parse(cookie)
+    } catch {
+      return cookie
+    }
   }
 }
 
@@ -27,4 +27,4 @@ const setCookie = (cookieName, cookieValue, expiredInDays) => {
   document.cookie = `${cookieName} = ${cookieValue}; expires=${setCookieExpiringTime(expiredInDays).toGMTString()}`
 }
 
-export { getCookieValue, setCookieExpiringTime, setCookie }
+export { getCookieValue, setCookieExpiringTime, setCookie, isCookieExist }

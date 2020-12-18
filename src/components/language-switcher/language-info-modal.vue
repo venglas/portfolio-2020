@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { getCookieValue, setCookie } from '../helpers/cookies'
+import { setCookie, isCookieExist } from '../helpers/cookies'
 import baseButton from '../buttons/base-button'
 
 export default {
@@ -27,7 +27,7 @@ export default {
     }
   },
   created () {
-    this.showInfo = getCookieValue('showLanguageInfo')
+    this.showInfo = !isCookieExist('showLanguageInfo')
   },
   methods: {
     closeModal () {

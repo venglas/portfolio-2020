@@ -22,6 +22,7 @@
     }
     &__content {
         text-align: justify;
+        padding-bottom: 1rem;
     }
 }
 </style>
