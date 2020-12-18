@@ -53,7 +53,6 @@ export default {
 .navbar {
   display: flex;
   height: $SIZE_navbar_mobile;
-  max-height: 442.5px;
   min-height: 0;
   transition: all ease-in-out $TIME_fast;
   z-index: 999;
@@ -68,6 +67,12 @@ export default {
   &--mobile-open {
     flex-direction: column;
     min-height: 442.5px;
+    @media (max-width: $MAX_mobile) {
+      min-height: 200px;
+    }
+    @media (max-width: $MEDIUM_mobile) {
+      min-height: 442.5px;
+    }
     .links {
       opacity: 1;
     }
