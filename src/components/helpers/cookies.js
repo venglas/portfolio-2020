@@ -1,7 +1,7 @@
 const isCookieExist = cookieName => {
   return document.cookie.includes(cookieName)
 }
-// throw new Error(`Cookie ${cookieName} not exist.`)
+
 const getCookieValue = cookieName => {
   if (isCookieExist(cookieName)) {
     const cookie = document.cookie.split(';').filter(cookie => cookie.includes(cookieName))[0].split('=')[1]
