@@ -25,7 +25,8 @@ $shadows-big:    multiple-box-shadow(100);
 
 .router-view--mobile {
     .background-stars {
-        height: calc(100vh - #{$SIZE_navbar_mobile});
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -34,6 +35,10 @@ $shadows-big:    multiple-box-shadow(100);
     width: 100vw;
     height: calc(100vh - #{$SIZE_navbar});
     overflow: hidden;
+    @media (max-width: 820px) and (orientation: landscape) {
+        position: absolute;
+        bottom: 0;
+    }
     .wrapper__slot {
         width: 95%;
         z-index: 0;

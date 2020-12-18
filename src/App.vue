@@ -115,6 +115,9 @@ input, textarea{
   &--portfolio {
     overflow-y: scroll;
   }
+  &--home {
+    overflow: hidden;
+  }
 }
 .router-view {
   height: calc(100vh - #{$SIZE_navbar});
