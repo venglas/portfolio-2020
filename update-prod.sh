@@ -1,5 +1,5 @@
 git pull
-nvm use v14.15.1
+# nvm use v14.15.1
 npm run build
 cd /var/www/html
 rm -rf *
