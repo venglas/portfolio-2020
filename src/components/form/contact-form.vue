@@ -1,7 +1,11 @@
 <template>
-  <form class="contact-form" :class="{ 'contact-form--blocked': wasMailSend }" @submit.prevent="saveMail()">
+  <form
+    class="contact-form"
+    :class="{ 'contact-form--blocked': wasMailSend }"
+    @submit.prevent="saveMail()"
+  >
     <div class="contact-form__element-wrapper slide-from-top">
-      <label for="name">{{$t('contact.form.name.label')}}</label>
+      <label for="name">{{ $t("contact.form.name.label") }}</label>
       <input
         type="text"
         id="name"
@@ -13,7 +17,7 @@
     </div>
 
     <div class="contact-form__element-wrapper slide-from-left">
-      <label for="email">{{$t('contact.form.email.label')}}</label>
+      <label for="email">{{ $t("contact.form.email.label") }}</label>
       <input
         type="email"
         id="email"
@@ -25,7 +29,7 @@
     </div>
 
     <div class="contact-form__element-wrapper slide-from-right">
-      <label for="subject">{{$t('contact.form.subject.label')}}</label>
+      <label for="subject">{{ $t("contact.form.subject.label") }}</label>
       <input
         type="text"
         id="subject"
@@ -37,7 +41,7 @@
     </div>
 
     <div class="contact-form__element-wrapper slide-from-left">
-      <label for="message">{{$t('contact.form.message.label')}}</label>
+      <label for="message">{{ $t("contact.form.message.label") }}</label>
       <textarea
         id="message"
         name="message"
@@ -47,66 +51,73 @@
       ></textarea>
     </div>
 
-    <submit-button :text="$t('contact.form.buttonText')" class="slide-from-bottom" />
+    <submit-button
+      :text="$t('contact.form.buttonText')"
+      class="slide-from-bottom"
+    />
   </form>
 </template>
 
 <script>
-
-import { debounce } from 'lodash'
-import { mapGetters, mapMutations } from 'vuex'
-import SubmitButton from '../buttons/submit-button.vue'
+import { debounce } from "lodash";
+import { mapGetters, mapMutations } from "vuex";
+import SubmitButton from "../buttons/submit-button.vue";
 
 export default {
-  data () {
+  data() {
     return {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    }
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    };
   },
   components: {
-    'submit-button': SubmitButton
+    "submit-button": SubmitButton
   },
   watch: {
-    message () {
-      if (this.message === '_admin-panel.') this.$router.push({ name: 'panel' })
+    message() {
+      if (this.message === "_admin-panel.")
+        this.$router.push({ name: "panel" });
     }
   },
   computed: {
-    ...mapGetters('api', ['getBaseUrl', 'getHeaders', 'getApplicationID']),
-    ...mapGetters('app', ['wasMailSend'])
+    ...mapGetters("api", ["getBaseUrl", "getHeaders", "getApplicationID"]),
+    ...mapGetters("app", ["wasMailSend"])
   },
   methods: {
-    ...mapMutations('app', ['toggleSuccesModal', 'setMailSend']),
-    clearForm () {
-      this.name = ''
-      this.email = ''
-      this.subject = ''
-      this.message = ''
+    ...mapMutations("app", ["toggleSuccesModal", "setMailSend"]),
+    clearForm() {
+      this.name = "";
+      this.email = "";
+      this.subject = "";
+      this.message = "";
     },
-    saveMail: debounce(function () {
-      this.axios.post(`${this.getBaseUrl}/mail`,
-        {
-          name: this.name,
-          email: this.email,
-          subject: this.subject,
-          message: this.message,
-          applicationID: this.getApplicationID
-        },
-        { headers: this.getHeaders })
+    saveMail: debounce(function() {
+      console.log("12312312");
+      this.axios
+        .post(
+          `${this.getBaseUrl}/mail`,
+          {
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message,
+            applicationID: this.getApplicationID
+          },
+          { headers: this.getHeaders }
+        )
         .then(res => {
           if (res.status === 201) {
-            this.toggleSuccesModal()
-            this.clearForm()
-            this.setMailSend()
+            this.toggleSuccesModal();
+            this.clearForm();
+            this.setMailSend();
           }
         })
-        .catch(err => console.error(err))
+        .catch(err => console.error(err));
     }, 1000)
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -135,7 +146,8 @@ export default {
   }
   &--blocked {
     cursor: not-allowed;
-    input, textarea{
+    input,
+    textarea {
       background-color: darken($COLOR_bg_base, 15%);
       pointer-events: none;
     }

@@ -2,21 +2,21 @@
 export default {
   namespaced: true,
   state: {
-    baseURL: 'https://portfolio-2020-api.herokuapp.com',
+    baseURL: "http://localhost:9090",
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json;charset=UTF-8'
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json;charset=UTF-8"
     },
-    applicationID: 'portfolio-1000203hg-9090s-nqpx91-uipnfia-666-daoq18v-bnv',
+    applicationID: "portfolio-1000203hg-9090s-nqpx91-uipnfia-666-daoq18v-bnv",
     loginInfo: {
-      session: '',
-      id: '',
+      session: "",
+      id: "",
       userLogged: false
     }
   },
   mutations: {
-    setLoginInfo (state, payload) {
-      state.loginInfo = payload
+    setLoginInfo(state, payload) {
+      state.loginInfo = payload;
     }
   },
   getters: {
@@ -25,4 +25,4 @@ export default {
     getApplicationID: state => state.applicationID,
     getLoginInfo: state => state.loginInfo
   }
-}
+};

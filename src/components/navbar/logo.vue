@@ -20,23 +20,23 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-  data () {
+  data() {
     return {
-      text: 'Bartek dev'
-    }
+      text: "Bart dev"
+    };
   },
   computed: {
-    ...mapGetters('app', ['getIsMobileMenuOpen'])
+    ...mapGetters("app", ["getIsMobileMenuOpen"])
   },
   watch: {
-    $route () {
-      this.text = this.$route.name.toUpperCase()
+    $route() {
+      this.text = this.$route.name.toUpperCase();
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
