@@ -6,7 +6,7 @@ const port = process.env.PORT;
 const app = express();
 app.use(
   cors({
-    origin: "*",
+    origin: "http://bartek-dev.pl",
     optionsSuccessStatus: 200
   })
 );
