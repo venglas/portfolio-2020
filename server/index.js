@@ -4,7 +4,12 @@ const mailRouter = require("./src/routes/mails/mail");
 const port = process.env.PORT;
 
 const app = express();
-app.use(cors({ origin: true }));
+app.use(
+  cors({
+    origin: "*",
+    optionsSuccessStatus: 200
+  })
+);
 app.use(express.json());
 
 app.use("/mail", mailRouter);
