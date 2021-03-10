@@ -94,7 +94,6 @@ export default {
       this.message = "";
     },
     saveMail: debounce(function() {
-      console.log("12312312");
       this.axios
         .post(
           `${this.getBaseUrl}/mail`,
